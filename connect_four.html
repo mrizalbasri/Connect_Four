@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎮 Connect Four</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+
+        .container {
+            text-align: center;
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            transition: transform 0.3s;
+            max-width: 95vw;
+        }
+
+        .container.game-over {
+            animation: pulseWinner 0.6s 2 ease-in-out;
+        }
+
+        @keyframes pulseWinner {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 2.2em;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .mode-selection {
+            padding: 20px;
+        }
+
+        .mode-selection h2 {
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 1.8em;
+        }
+
+        .mode-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .mode-btn {
+            padding: 20px 40px;
+            font-size: 1.3em;
+            min-width: 200px;
+        }
+
+        .game-mode-info {
+            font-size: 1.1em;
+            color: #666;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .game-info {
+            margin-bottom: 20px;
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #444;
+            min-height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 10px;
+        }
+
+        .thinking {
+            color: #777;
+            font-style: italic;
+        }
+
+        .current-player span {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .player-indicator {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: inline-block;
+            border: 3px solid #333;
+        }
+
+        .board {
+            display: inline-block;
+            background: #0066cc;
+            padding: 15px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .column {
+            display: inline-block;
+            vertical-align: top;
+            margin: 0 2px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .column:hover:not(.disabled) {
+            transform: translateY(-5px);
+        }
+
+        .column.disabled {
+            cursor: not-allowed;
+            opacity: 0.6;
+        }
+
+        .column.disabled:hover {
+            transform: none;
+        }
+
+        .cell {
+            width: 60px;
+            height: 60px;
+            background: white;
+            border-radius: 50%;
+            margin: 4px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: inset 0 3px 6px rgba(0,0,0,0.2);
+        }
+
+        .piece {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            position: absolute;
+            top: -100%;
+            transition: top 0.5s cubic-bezier(0.5, 0, 0.5, 1);
+        }
+
+        .piece.dropped {
+            top: 0;
+        }
+
+        .piece.red {
+            background: radial-gradient(circle at 30% 30%, #ff6b6b, #c92a2a);
+        }
+
+        .piece.yellow {
+            background: radial-gradient(circle at 30% 30%, #ffd93d, #f59f00);
+        }
+
+        .piece.winning {
+            animation: winPulse 1.2s 2;
+            z-index: 10;
+            transform: scale(1.1);
+        }
+
+        @keyframes winPulse {
+            0%, 100% { 
+                box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.8);
+            }
+            50% { 
+                box-shadow: 0 0 0 12px rgba(255, 215, 0, 0);
+            }
+        }
+
+        .controls {
+            margin-top: 25px;
+        }
+
+        button {
+            padding: 14px 36px;
+            font-size: 1.15em;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.25s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        button:hover:not(:disabled) {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+
+        button:active:not(:disabled) {
+            transform: translateY(0);
+        }
+
+        .back-btn {
+            background: linear-gradient(135deg, #95a5a6 0%, #7f8c8d 100%);
+            margin-left: 10px;
+        }
+
+        .winner-message {
+            font-size: 1.4em;
+            color: #e74c3c;
+            font-weight: bold;
+            animation: celebrate 0.5s ease-in-out, textGlow 1.5s infinite alternate;
+        }
+
+        .winner-message.yellow-win {
+            color: #f39c12;
+        }
+
+        .winner-message.draw {
+            color: #95a5a6;
+        }
+
+        @keyframes celebrate {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        @keyframes textGlow {
+            from { text-shadow: 0 0 5px rgba(255,255,255,0.5); }
+            to { text-shadow: 0 0 15px rgba(255,215,0,0.8), 0 0 25px rgba(255,215,0,0.6); }
+        }
+
+        #confettiCanvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 9998;
+            animation: fadeIn 0.3s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .win-alert {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            background: white;
+            padding: 40px 60px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+            z-index: 9999;
+            text-align: center;
+            animation: popIn 0.5s forwards;
+        }
+
+        @keyframes popIn {
+            0% { transform: translate(-50%, -50%) scale(0); }
+            50% { transform: translate(-50%, -50%) scale(1.1); }
+            100% { transform: translate(-50%, -50%) scale(1); }
+        }
+
+        .win-alert h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .win-alert p {
+            font-size: 1.4em;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .win-alert button {
+            margin: 0 10px;
+        }
+
+        @media (max-width: 600px) {
+            .cell {
+                width: 45px;
+                height: 45px;
+                margin: 2px;
+            }
+            h1 { font-size: 1.8em; }
+            .game-info { font-size: 1.1em; }
+            .mode-btn {
+                min-width: 150px;
+                padding: 15px 30px;
+                font-size: 1.1em;
+            }
+            .win-alert {
+                padding: 30px 40px;
+            }
+            .win-alert h2 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="container">
+        <h1>🎮 Connect Four</h1>
+        
+        <!-- Mode Selection -->
+        <div class="mode-selection" id="modeSelection">
+            <h2>Pilih Mode Permainan</h2>
+            <div class="mode-buttons">
+                <button class="mode-btn" onclick="startGame('ai')">
+                    🤖 vs Komputer
+                </button>
+                <button class="mode-btn" onclick="startGame('player')">
+                    👥 vs Pemain
+                </button>
+            </div>
+        </div>
+
+        <!-- Game Area -->
+        <div class="game-area" id="gameArea" style="display: none;">
+            <div class="game-mode-info" id="gameModeInfo"></div>
+            <div class="game-info" id="gameInfo">
+                <span class="current-player">
+                    Giliran: <span class="player-indicator" id="playerIndicator"></span>
+                </span>
+            </div>
+            <div class="board" id="board"></div>
+            <div class="controls">
+                <button onclick="resetGame()">🔄 Main Lagi</button>
+                <button onclick="backToMenu()" class="back-btn">🏠 Menu</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Confetti Canvas -->
+    <canvas id="confettiCanvas"></canvas>
+
+    <script>
+        const ROWS = 6;
+        const COLS = 7;
+        let board = [];
+        let currentPlayer = 'red';
+        let gameOver = false;
+        let isProcessing = false;
+        let winningPositions = [];
+        let gameMode = null; // 'ai' atau 'player'
+
+        function startGame(mode) {
+            gameMode = mode;
+            document.getElementById('modeSelection').style.display = 'none';
+            document.getElementById('gameArea').style.display = 'block';
+            
+            const modeInfo = document.getElementById('gameModeInfo');
+            if (mode === 'ai') {
+                modeInfo.textContent = '🤖 Mode: vs Komputer';
+            } else {
+                modeInfo.textContent = '👥 Mode: 2 Pemain';
+            }
+            
+            initBoard();
+        }
+
+        function backToMenu() {
+            document.getElementById('modeSelection').style.display = 'block';
+            document.getElementById('gameArea').style.display = 'none';
+            gameMode = null;
+        }
+
+        function initBoard() {
+            board = Array(ROWS).fill(null).map(() => Array(COLS).fill(null));
+            gameOver = false;
+            currentPlayer = 'red';
+            isProcessing = false;
+            winningPositions = [];
+            const container = document.getElementById('container');
+            container.classList.remove('game-over');
+            
+            renderBoard();
+            updateGameInfo();
+        }
+
+        function renderBoard() {
+            const boardEl = document.getElementById('board');
+            boardEl.innerHTML = '';
+
+            for (let col = 0; col < COLS; col++) {
+                const columnEl = document.createElement('div');
+                columnEl.className = 'column';
+                columnEl.dataset.col = col;
+                columnEl.onclick = () => handleColumnClick(col);
+
+                for (let row = 0; row < ROWS; row++) {
+                    const cellEl = document.createElement('div');
+                    cellEl.className = 'cell';
+                    cellEl.id = `cell-${row}-${col}`;
+                    columnEl.appendChild(cellEl);
+                }
+
+                boardEl.appendChild(columnEl);
+            }
+        }
+
+        function handleColumnClick(col) {
+            if (gameOver || isProcessing) return;
+            
+            // Untuk mode AI, hanya pemain merah yang bisa klik
+            if (gameMode === 'ai' && currentPlayer === 'yellow') return;
+            
+            // Untuk mode 2 player, siapa saja bisa klik
+            makeMove(col, currentPlayer);
+        }
+
+        function makeMove(col, player) {
+            if (gameOver || isProcessing) return;
+
+            const row = getLowestEmptyRow(col);
+            if (row === -1) return;
+
+            isProcessing = true;
+            board[row][col] = player;
+
+            const cellEl = document.getElementById(`cell-${row}-${col}`);
+            const pieceEl = document.createElement('div');
+            pieceEl.className = `piece ${player}`;
+            cellEl.appendChild(pieceEl);
+
+            setTimeout(() => {
+                pieceEl.classList.add('dropped');
+            }, 10);
+
+            setTimeout(() => {
+                let winPositions = [];
+                const hasWon = checkWinWithPositions(row, col, player, winPositions);
+                
+                if (hasWon) {
+                    gameOver = true;
+                    winningPositions = winPositions;
+                    highlightWinningPieces();
+                    setTimeout(() => {
+                        showWinnerAlert(player);
+                        launchConfetti();
+                    }, 800);
+                } else if (isBoardFull()) {
+                    gameOver = true;
+                    setTimeout(() => {
+                        showDrawAlert();
+                    }, 800);
+                } else {
+                    currentPlayer = currentPlayer === 'red' ? 'yellow' : 'red';
+                    updateGameInfo();
+                    isProcessing = false;
+
+                    // Hanya jalankan AI jika mode AI dan giliran kuning
+                    if (gameMode === 'ai' && currentPlayer === 'yellow' && !gameOver) {
+                        updateGameInfo();
+                        setTimeout(() => {
+                            computerMove();
+                        }, 800);
+                    }
+                }
+            }, 550);
+        }
+
+        function getLowestEmptyRow(col) {
+            for (let row = ROWS - 1; row >= 0; row--) {
+                if (board[row][col] === null) {
+                    return row;
+                }
+            }
+            return -1;
+        }
+
+        function checkWinWithPositions(row, col, player, positions) {
+            positions.push({r: row, c: col});
+
+            const directions = [
+                [0, 1], [1, 0], [1, 1], [1, -1]
+            ];
+
+            for (const [dRow, dCol] of directions) {
+                const count = 1 + 
+                    countContinuous(row, col, dRow, dCol, player) +
+                    countContinuous(row, col, -dRow, -dCol, player);
+                
+                if (count >= 4) {
+                    positions.length = 0;
+                    positions.push({r: row, c: col});
+                    addContinuous(row, col, dRow, dCol, player, positions);
+                    addContinuous(row, col, -dRow, -dCol, player, positions);
+                    return true;
+                }
+            }
+            positions.length = 0;
+            return false;
+        }
+
+        function countContinuous(row, col, dRow, dCol, player) {
+            let count = 0;
+            let r = row + dRow;
+            let c = col + dCol;
+            while (r >= 0 && r < ROWS && c >= 0 && c < COLS && board[r][c] === player) {
+                count++;
+                r += dRow;
+                c += dCol;
+            }
+            return count;
+        }
+
+        function addContinuous(row, col, dRow, dCol, player, positions) {
+            let r = row + dRow;
+            let c = col + dCol;
+            while (r >= 0 && r < ROWS && c >= 0 && c < COLS && board[r][c] === player) {
+                positions.push({r, c});
+                r += dRow;
+                c += dCol;
+            }
+        }
+
+        function isBoardFull() {
+            return board[0].every(cell => cell !== null);
+        }
+
+        function highlightWinningPieces() {
+            setTimeout(() => {
+                winningPositions.forEach(({r, c}) => {
+                    const cell = document.getElementById(`cell-${r}-${c}`);
+                    const piece = cell.querySelector('.piece');
+                    if (piece) piece.classList.add('winning');
+                });
+            }, 300);
+        }
+
+        function showWinnerAlert(player) {
+            const overlay = document.createElement('div');
+            overlay.className = 'overlay';
+            overlay.id = 'winOverlay';
+
+            const alert = document.createElement('div');
+            alert.className = 'win-alert';
+            
+            let playerName, emoji;
+            if (gameMode === 'ai') {
+                playerName = player === 'red' ? 'Anda Menang!' : 'Komputer Menang!';
+                emoji = player === 'red' ? '🎉🏆' : '🤖💻';
+            } else {
+                playerName = player === 'red' ? 'Pemain Merah Menang!' : 'Pemain Kuning Menang!';
+                emoji = '🎉🏆';
+            }
+
+            alert.innerHTML = `
+                <h2>${emoji}</h2>
+                <p>${playerName}</p>
+                <button onclick="closeAlert(); resetGame();">🔄 Main Lagi</button>
+                <button onclick="closeAlert(); backToMenu();" class="back-btn">🏠 Menu</button>
+            `;
+
+            document.body.appendChild(overlay);
+            document.body.appendChild(alert);
+
+            const gameInfo = document.getElementById('gameInfo');
+            const colorClass = player === 'red' ? '' : 'yellow-win';
+            gameInfo.innerHTML = `<span class="winner-message ${colorClass}">🎉 ${playerName} 🎉</span>`;
+        }
+
+        function showDrawAlert() {
+            const overlay = document.createElement('div');
+            overlay.className = 'overlay';
+            overlay.id = 'winOverlay';
+
+            const alert = document.createElement('div');
+            alert.className = 'win-alert';
+            
+            alert.innerHTML = `
+                <h2>🤝</h2>
+                <p>Permainan Seri!</p>
+                <button onclick="closeAlert(); resetGame();">🔄 Main Lagi</button>
+                <button onclick="closeAlert(); backToMenu();" class="back-btn">🏠 Menu</button>
+            `;
+
+            document.body.appendChild(overlay);
+            document.body.appendChild(alert);
+
+            const gameInfo = document.getElementById('gameInfo');
+            gameInfo.innerHTML = '<span class="winner-message draw">🤝 Permainan Seri! 🤝</span>';
+        }
+
+        function closeAlert() {
+            const overlay = document.getElementById('winOverlay');
+            const alert = document.querySelector('.win-alert');
+            if (overlay) overlay.remove();
+            if (alert) alert.remove();
+        }
+
+        function launchConfetti() {
+            const canvas = document.getElementById('confettiCanvas');
+            const ctx = canvas.getContext('2d');
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+
+            const confetti = [];
+            const confettiCount = 150;
+            const colors = ['#ff6b6b', '#ffd93d', '#4ecdc4', '#a8e6cf', '#ff8b94', '#95e1d3'];
+
+            for (let i = 0; i < confettiCount; i++) {
+                confetti.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height - canvas.height,
+                    r: Math.random() * 6 + 4,
+                    d: Math.random() * confettiCount,
+                    color: colors[Math.floor(Math.random() * colors.length)],
+                    tilt: Math.random() * 10 - 10,
+                    tiltAngleIncremental: Math.random() * 0.07 + 0.05,
+                    tiltAngle: 0
+                });
+            }
+
+            let animationFrame;
+            function draw() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                confetti.forEach((c, i) => {
+                    ctx.beginPath();
+                    ctx.lineWidth = c.r / 2;
+                    ctx.strokeStyle = c.color;
+                    ctx.moveTo(c.x + c.tilt + c.r / 4, c.y);
+                    ctx.lineTo(c.x + c.tilt, c.y + c.tilt + c.r / 4);
+                    ctx.stroke();
+
+                    c.tiltAngle += c.tiltAngleIncremental;
+                    c.y += (Math.cos(c.d) + 3 + c.r / 2) / 2;
+                    c.x += Math.sin(c.d);
+                    c.tilt = Math.sin(c.tiltAngle - i / 3) * 15;
+
+                    if (c.y > canvas.height) {
+                        confetti[i] = {
+                            x: Math.random() * canvas.width,
+                            y: -20,
+                            r: c.r,
+                            d: c.d,
+                            color: c.color,
+                            tilt: c.tilt,
+                            tiltAngleIncremental: c.tiltAngleIncremental,
+                            tiltAngle: c.tiltAngle
+                        };
+                    }
+                });
+
+                animationFrame = requestAnimationFrame(draw);
+            }
+
+            draw();
+
+            setTimeout(() => {
+                cancelAnimationFrame(animationFrame);
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+            }, 5000);
+        }
+
+        // ===== AI KOMPUTER =====
+        function computerMove() {
+            if (gameOver || isProcessing) return;
+            
+            const bestCol = getBestMove();
+            if (bestCol !== -1) {
+                makeMove(bestCol, 'yellow');
+            }
+        }
+
+        function getBestMove() {
+            for (let col = 0; col < COLS; col++) {
+                if (canWin(col, 'yellow')) return col;
+            }
+            for (let col = 0; col < COLS; col++) {
+                if (canWin(col, 'red')) return col;
+            }
+            for (let col = 0; col < COLS; col++) {
+                if (canMakeThree(col, 'yellow')) return col;
+            }
+            for (let col = 0; col < COLS; col++) {
+                if (canMakeThree(col, 'red')) return col;
+            }
+            const centerCols = [3, 2, 4, 1, 5, 0, 6];
+            for (const col of centerCols) {
+                if (getLowestEmptyRow(col) !== -1) return col;
+            }
+            const available = Array.from({length: COLS}, (_, i) => i)
+                .filter(col => getLowestEmptyRow(col) !== -1);
+            return available.length ? available[Math.floor(Math.random() * available.length)] : -1;
+        }
+
+        function canWin(col, player) {
+            const row = getLowestEmptyRow(col);
+            if (row === -1) return false;
+            board[row][col] = player;
+            const result = checkWinSimple(row, col, player);
+            board[row][col] = null;
+            return result;
+        }
+
+        function canMakeThree(col, player) {
+            const row = getLowestEmptyRow(col);
+            if (row === -1) return false;
+            board[row][col] = player;
+            const result = checkThreeInRow(row, col, player);
+            board[row][col] = null;
+            return result;
+        }
+
+        function checkWinSimple(row, col, player) {
+            return checkDirectionSimple(row, col, 0, 1, player) ||
+                   checkDirectionSimple(row, col, 1, 0, player) ||
+                   checkDirectionSimple(row, col, 1, 1, player) ||
+                   checkDirectionSimple(row, col, 1, -1, player);
+        }
+
+        function checkDirectionSimple(row, col, dRow, dCol, player) {
+            let count = 1;
+            count += countContinuous(row, col, dRow, dCol, player);
+            count += countContinuous(row, col, -dRow, -dCol, player);
+            return count >= 4;
+        }
+
+        function checkThreeInRow(row, col, player) {
+            return checkThreeDirection(row, col, 0, 1, player) ||
+                   checkThreeDirection(row, col, 1, 0, player) ||
+                   checkThreeDirection(row, col, 1, 1, player) ||
+                   checkThreeDirection(row, col, 1, -1, player);
+        }
+
+        function checkThreeDirection(row, col, dRow, dCol, player) {
+            let count = 1;
+            count += countContinuous(row, col, dRow, dCol, player);
+            count += countContinuous(row, col, -dRow, -dCol, player);
+            return count >= 3;
+        }
+
+        function updateGameInfo() {
+            const gameInfo = document.getElementById('gameInfo');
+            
+            if (gameMode === 'ai' && currentPlayer === 'yellow' && !gameOver && !isProcessing) {
+                gameInfo.innerHTML = `<span class="thinking">🤔 Komputer sedang berpikir...</span>`;
+                return;
+            }
+
+            let playerName;
+            if (gameMode === 'ai') {
+                playerName = currentPlayer === 'red' ? 'Anda (Merah)' : 'Komputer (Kuning)';
+            } else {
+                playerName = currentPlayer === 'red' ? 'Pemain Merah' : 'Pemain Kuning';
+            }
+            
+            gameInfo.innerHTML = `<span class="current-player">Giliran: ${playerName} <span class="player-indicator" id="playerIndicator"></span></span>`;
+            
+            const indicator = document.getElementById('playerIndicator');
+            indicator.style.background = currentPlayer === 'red' 
+                ? 'radial-gradient(circle at 30% 30%, #ff6b6b, #c92a2a)' 
+                : 'radial-gradient(circle at 30% 30%, #ffd93d, #f59f00)';
+        }
+
+        function resetGame() {
+            closeAlert();
+            initBoard();
+        }
+    </script>
+</body>
+</html>
