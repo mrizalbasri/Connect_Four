@@ -153,4 +153,4 @@ Saran dan perbaikan sangat diterima! Beberapa ide untuk pengembangan:
 
 **Selamat Bermain! 🎉**
 
-*Dibuat dengan ❤️ menggunakan vanilla HTML, CSS, dan JavaScript*
+*Dibuat dengan menggunakan vanilla HTML, CSS, dan JavaScript*
