@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connect Four - AI Research Edition</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
             --primary: #4361ee;
@@ -363,10 +364,13 @@
         <!-- MODE SELECTION -->
         <div id="modeSelection" class="mode-selection">
             <button class="mode-btn" onclick="startGame('ai')">
-                <span>🤖</span> Lawan Komputer
+                <i class="fa-solid fa-robot"></i> Lawan Komputer
             </button>
             <button class="mode-btn" onclick="startGame('player')">
-                <span>👥</span> Lawan Pemain
+                <i class="fa-solid fa-user-group"></i> Lawan Pemain
+            </button>
+            <button class="mode-btn" onclick="startGame('ai-vs-ai')">
+                <i class="fa-solid fa-chess-knight"></i> Tonton AI vs AI
             </button>
         </div>
 
@@ -379,14 +383,14 @@
                 
                 <div class="ai-selector" id="aiSelector" style="display:none;">
                     <select onchange="updateAIStyle(this.value)">
-                        <option value="attack">⚔️ Mode Serang</option>
-                        <option value="defend">🛡️ Mode Bertahan</option>
+                        <option value="attack">Mode Serang (Agresif)</option>
+                        <option value="defend">Mode Bertahan (Pintar)</option>
                     </select>
                 </div>
 
                 <div class="control-btns">
-                    <button class="control-btn btn-secondary" onclick="resetGame()" style="padding: 8px 16px;">🔄 Reset</button>
-                    <button class="control-btn btn-secondary" onclick="backToMenu()" style="padding: 8px 16px;">🏠 Menu</button>
+                    <button class="control-btn btn-secondary" onclick="resetGame()" style="padding: 8px 16px;"><i class="fa-solid fa-rotate-right"></i> Reset</button>
+                    <button class="control-btn btn-secondary" onclick="backToMenu()" style="padding: 8px 16px;"><i class="fa-solid fa-house"></i> Menu</button>
                 </div>
             </div>
 
@@ -399,8 +403,11 @@
     <!-- RESEARCH PANEL -->
     <div class="research-panel" id="researchPanel">
         <div class="log-header">
-            <h3>📊 Data Analisis AI</h3>
-            <button class="download-btn" onclick="downloadLogs()">💾 JSON</button>
+            <h3><i class="fa-solid fa-chart-line"></i> Data Analisis AI</h3>
+            <div style="display:flex; gap:5px;">
+                <button class="download-btn" onclick="clearLogs()" style="background:#ef233c;"><i class="fa-solid fa-trash"></i></button>
+                <button class="download-btn" onclick="downloadLogs()"><i class="fa-solid fa-download"></i> JSON</button>
+            </div>
         </div>
         <div class="log-content" id="logContent">
             <div style="text-align:center; color: #999; margin-top: 50px;">
@@ -413,496 +420,25 @@
 <!-- WIN MODAL -->
 <div class="overlay" id="winOverlay">
     <div class="modal">
-        <h2 id="winEmoji">🏆</h2>
+    <div class="modal">
+        <div id="winIcon" style="font-size: 3rem; margin-bottom: 10px; color: var(--primary);">
+            <i class="fa-solid fa-trophy"></i>
+        </div>
         <p id="winMessage">Player Wins!</p>
         <div class="control-btns">
-            <button class="control-btn btn-primary" onclick="resetGame()">Main Lagi</button>
-            <button class="control-btn btn-secondary" onclick="backToMenu()">Menu</button>
+            <button class="control-btn btn-primary" onclick="resetGame()"><i class="fa-solid fa-rotate-right"></i> Main Lagi</button>
+            <button class="control-btn btn-secondary" onclick="downloadLogs()"><i class="fa-solid fa-download"></i> Data</button>
+            <button class="control-btn btn-secondary" onclick="backToMenu()"><i class="fa-solid fa-house"></i> Menu</button>
         </div>
     </div>
 </div>
 
-<script>
-    const ROWS = 6;
-    const COLS = 7;
-    let board = []; // 6x7, null or 'red'/'yellow'
-    let currentPlayer = 'red'; // 'red' starts
-    let gameMode = null; // 'ai' or 'player'
-    let aiStyle = 'attack';
-    let gameOver = false;
-    let isProcessing = false;
-    let logs = [];
-    let turnCount = 0;
-    let gameId = ''; // Unique ID for each session
+<script src="js/ai_reflex.js"></script>
+<script src="js/ai_defend.js"></script>
+<script src="js/game.js"></script>
 
-    // --- GAME CONTROL ---
-
-    function startGame(mode) {
-        console.log("Starting game mode:", mode);
-        gameMode = mode;
-        document.getElementById('modeSelection').style.display = 'none';
-        document.getElementById('gameArea').style.display = 'block';
-        document.getElementById('aiSelector').style.display = mode === 'ai' ? 'block' : 'none';
-        
-        // --- SYNC UI TO VARIABLE ---
-        if (mode === 'ai') {
-            const selector = document.querySelector('#aiSelector select');
-            if (selector) aiStyle = selector.value;
-        }
-
-        document.getElementById('researchPanel').style.display = mode === 'ai' ? 'flex' : 'none';
-        resetGame();
-    }
-
-    function backToMenu() {
-        document.getElementById('modeSelection').style.display = 'flex';
-        document.getElementById('gameArea').style.display = 'none';
-        document.getElementById('researchPanel').style.display = 'none';
-        closeModal();
-    }
-
-    function resetGame() {
-        console.log("Resetting game...");
-        board = Array(ROWS).fill(null).map(() => Array(COLS).fill(null));
-        currentPlayer = 'red';
-        gameOver = false;
-        isProcessing = false; // Important reset
-        turnCount = 0;
-        gameId = Date.now().toString() + '_' + Math.random().toString(36).substr(2, 9);
-        logs = [];
-        closeModal();
-        renderBoard();
-        document.getElementById('logContent').innerHTML = '<div style="text-align:center; color: #999; margin-top: 50px;">Log data keputusan AI<br>akan muncul di sini...</div>';
-        updateTurnDisplay();
-    }
-
-    function closeModal() {
-        document.getElementById('winOverlay').classList.remove('active');
-    }
-
-    function updateAIStyle(style) {
-        aiStyle = style;
-        console.log("AI Style updated:", style);
-        // Otomatis reset game agar data riset tidak tercampur (Attack vs Defend)
-        resetGame(); 
-    }
-
-    function updateTurnDisplay() {
-        const badge = document.getElementById('turnIndicator');
-        const dot = badge.querySelector('.player-dot');
-        const text = document.getElementById('turnText');
-
-        if (currentPlayer === 'red') {
-            dot.style.background = 'var(--red-piece)';
-            text.innerText = gameMode === 'ai' ? 'Giliran Anda' : 'Pemain Merah';
-        } else {
-            dot.style.background = 'var(--yellow-piece)';
-            text.innerText = gameMode === 'ai' ? 'AI Berpikir...' : 'Pemain Kuning';
-        }
-    }
-
-    // --- BOARD RENDER ---
-
-    function renderBoard() {
-        const boardEl = document.getElementById('board');
-        boardEl.innerHTML = '';
-
-        // Create columns for event handling
-        for (let c = 0; c < COLS; c++) {
-            const colDiv = document.createElement('div');
-            colDiv.style.display = 'inline-block';
-            colDiv.onclick = () => handleColumnClick(c);
-            
-            for (let r = 0; r < ROWS; r++) {
-                const cellWrapper = document.createElement('div');
-                cellWrapper.className = 'cell-wrapper';
-                cellWrapper.id = `cell-${r}-${c}`; // Identity
-                
-                // Visual layers
-                const bg = document.createElement('div'); bg.className = 'cell-bg';
-                const mask = document.createElement('div'); mask.className = 'cell-mask';
-                
-                cellWrapper.appendChild(bg); // White bg
-                cellWrapper.appendChild(mask); // Blue mask with hole
-                colDiv.appendChild(cellWrapper);
-            }
-            boardEl.appendChild(colDiv);
-        }
-    }
-
-    // --- LOGIC ---
-
-    function handleColumnClick(col) {
-        if (gameOver || isProcessing) return;
-        if (gameMode === 'ai' && currentPlayer === 'yellow') return; // AI turn
-
-        dropPiece(col);
-    }
-
-    function dropPiece(col) {
-        if (gameOver || isProcessing) return;
-
-        // Find lowest empty row
-        let row = -1;
-        for (let r = ROWS - 1; r >= 0; r--) {
-            if (!board[r][col]) {
-                row = r;
-                break;
-            }
-        }
-
-        if (row === -1) return; // Column full
-
-        // Execute Move
-        isProcessing = true; // Lock input during animation
-        
-        // Update Logic
-        board[row][col] = currentPlayer;
-        turnCount++;
-
-        // Visual Animation
-        const cell = document.getElementById(`cell-${row}-${col}`);
-        const piece = document.createElement('div');
-        piece.className = `piece ${currentPlayer}`;
-        cell.appendChild(piece);
-        
-        // Trigger animation
-        requestAnimationFrame(() => piece.classList.add('dropped'));
-
-        // Check Win/Next Turn
-        setTimeout(() => {
-            try {
-                if (checkWin(row, col, currentPlayer)) {
-                    gameOver = true;
-                    piece.classList.add('winning'); // Mark winning piece
-                    showWinModal(currentPlayer);
-                    isProcessing = false;
-                } else if (checkDraw()) {
-                    gameOver = true;
-                    showDrawModal();
-                    isProcessing = false;
-                } else {
-                    // Switch Turn
-                    currentPlayer = currentPlayer === 'red' ? 'yellow' : 'red';
-                    updateTurnDisplay();
-                    isProcessing = false; // Unlock so AI can trigger or player can click
-
-                    // AI Trigger
-                    if (gameMode === 'ai' && currentPlayer === 'yellow' && !gameOver) {
-                        setTimeout(triggerAI, 500);
-                    }
-                }
-            } catch (err) {
-                console.error("Game Logic Error:", err);
-                alert("Terjadi Error di JS: " + err.message);
-                isProcessing = false; // Force unlock
-            }
-        }, 600); // 600ms waits for animation
-    }
-
-    function triggerAI() {
-        if (gameOver) return;
-        // NOTE: We do NOT set isProcessing = true here.
-        // We let dropPiece handle the locking.
-        // This prevents the bug where AI locks itself out.
-        
-        try {
-            // Run AI Logic
-            const decision = getBestMove();
-            dropPiece(decision);
-        } catch (e) {
-            console.error("AI Crashed:", e);
-            alert("Maaf, AI mengalami kesalahan. Game akan di-reset.");
-            isProcessing = false;
-        }
-    }
-
-    // --- AI BRAIN (SAFE MODE) ---
-
-    function getBestMove() {
-        const startTime = performance.now(); // Start Timer
-        const moves = [];
-        
-        for (let c = 0; c < COLS; c++) {
-            // Check if column is valid
-            if (board[0][c] !== null) continue; // Column full
-
-            // Find row for this column
-            let r = -1;
-            for (let i = ROWS - 1; i >= 0; i--) {
-                if (!board[i][c]) { r = i; break; }
-            }
-            if (r === -1) continue;
-
-            let score = 0;
-            if (aiStyle === 'attack') {
-                score = evaluateAttack(r, c);
-            } else {
-                score = evaluateDefend(r, c);
-            }
-            moves.push({ col: c, score: score });
-        }
-
-        // Sort by Score Descending
-        moves.sort((a, b) => b.score - a.score);
-        
-        // Log Data
-        const bestScore = moves[0].score;
-        const candidates = moves.filter(m => m.score >= bestScore - 5); // Add some randomness among top moves
-        const chosen = candidates[Math.floor(Math.random() * candidates.length)];
-        
-        const endTime = performance.now(); // End Timer
-        const timeTaken = (endTime - startTime).toFixed(2); // Duration in ms
-
-        logDecision(moves, chosen, timeTaken);
-
-        return chosen.col;
-    }
-
-    // --- AI OTAK 1 (MODE SERANG) ---
-    function evaluateAttack(row, col) {
-        let score = 0;
-        const aiColor = 'yellow';
-        const pColor = 'red';
-
-        // 1. AGRESIF: Fokus Cari Kemenangan Sendiri (Bobot x2.0)
-        board[row][col] = aiColor; 
-        if (checkWin(row, col, aiColor)) {
-            score += 100000; // Menang = Prioritas Mutlak
-        } else {
-            const potential = evaluateHeuristics(row, col, aiColor);
-            score += potential * 2.0; // Poin dikali lipat!
-        }
-        board[row][col] = null; 
-
-        // 2. CUEK: Hanya Blokir Jika Sangat Terpaksa (Sisa x0.1)
-        board[row][col] = pColor; 
-        if (checkWin(row, col, pColor)) {
-            score += 50000; // Blokir Kekalahan (Wajib)
-        } else {
-            const threat = evaluateHeuristics(row, col, pColor);
-            score += threat * 0.1; // Hampir tidak peduli ancaman kecil
-        }
-        board[row][col] = null;
-
-        // Bonus Tengah
-        score += (3 - Math.abs(col - 3)) * 5;
-        score += Math.floor(Math.random() * 10);
-        
-        // Anti Blunder (Standar)
-        score += checkBlunder(row, col, aiColor, pColor);
-        
-        return score;
-    }
-
-    // --- AI OTAK 2 (MODE BERTAHAN) ---
-    function evaluateDefend(row, col) {
-        let score = 0;
-        const aiColor = 'yellow';
-        const pColor = 'red';
-
-        // 1. PASIF: Menang Itu Bonus, Bukan Tujuan Utama (Bobot x0.5)
-        board[row][col] = aiColor; 
-        if (checkWin(row, col, aiColor)) {
-            score += 100000; 
-        } else {
-            const potential = evaluateHeuristics(row, col, aiColor);
-            score += potential * 0.5; // Kurang berminat nyerang
-        }
-        board[row][col] = null; 
-
-        // 2. PARANOID: Blokir Segala Gerak-Gerik Musuh (Bobot x1.5)
-        board[row][col] = pColor; 
-        if (checkWin(row, col, pColor)) {
-            score += 55000; // Sedikit lebih prioritas blokir dibanding Attack Mode
-        } else {
-            const threat = evaluateHeuristics(row, col, pColor);
-            score += threat * 1.5; // Sangat peduli ancaman sekecil apapun
-        }
-        board[row][col] = null;
-
-        // Bonus Tengah
-        score += (3 - Math.abs(col - 3)) * 5; 
-        score += Math.floor(Math.random() * 10);
-
-        // Anti Blunder (Standar)
-        score += checkBlunder(row, col, aiColor, pColor);
-
-        return score;
-    }
-
-    function checkBlunder(row, col, aiColor, pColor) {
-        if (row > 0) {
-            board[row][col] = aiColor;
-            board[row-1][col] = pColor;
-            let penalty = 0;
-            if (checkWin(row-1, col, pColor)) penalty = -20000;
-            board[row-1][col] = null;
-            board[row][col] = null;
-            return penalty;
-        }
-        return 0;
-    }
-
-    function evaluateHeuristics(row, col, player) {
-        // Fungsi ini hanya menghitung skor murni berdasarkan posisi
-        // Bobot (Agresif vs Defensif) ditentukan di function pemanggil
-        
-        let total = 0;
-        const dirs = [[0,1], [1,0], [1,1], [1,-1]];
-        
-        for (let d of dirs) {
-            let count = 1; // Bidak yang baru ditaruh
-            
-            // Cek arah positif (+)
-            let r = row + d[0], c = col + d[1];
-            while (isValid(r,c) && board[r][c] === player) { count++; r += d[0]; c += d[1]; }
-            let open1 = isValid(r,c) && board[r][c] === null;
-
-            // Cek arah negatif (-)
-            r = row - d[0], c = col - d[1];
-            while (isValid(r,c) && board[r][c] === player) { count++; r -= d[0]; c -= d[1]; }
-            let open2 = isValid(r,c) && board[r][c] === null;
-
-            // SKORING DASAR (Tanpa bias kepribadian)
-            if (count >= 4) total += 1000; // Harusnya kena checkWin, tapi sekadar jaga-jaga
-            else if (count === 3 && (open1 || open2)) total += 100; // Ancaman serius (3 in a row)
-            else if (count === 2 && (open1 && open2)) total += 20;  // Potensi (2 in a row + ruang)
-        }
-        return total;
-    }
-
-    function isValid(r, c) {
-        return r >= 0 && r < ROWS && c >= 0 && c < COLS;
-    }
-    
-    // --- UTILITIES ---
-
-    function checkWin(r, c, player) {
-        const dirs = [[0,1], [1,0], [1,1], [1,-1]];
-        for (let d of dirs) {
-            let count = 1;
-             // + dir
-            let tr = r + d[0], tc = c + d[1];
-            while (isValid(tr,tc) && board[tr][tc] === player) { count++; tr += d[0]; tc += d[1]; }
-            // - dir
-            tr = r - d[0], tc = c - d[1];
-            while (isValid(tr,tc) && board[tr][tc] === player) { count++; tr -= d[0]; tc -= d[1]; }
-            
-            if (count >= 4) return true;
-        }
-        return false;
-    }
-
-    function checkDraw() {
-        return board[0].every(cells => cells !== null);
-    }
-
-    function showWinModal(winner) {
-        // --- SAVE DATA HERE ---
-        if (gameMode === 'ai') saveAllLogs(winner);
-        
-        const modal = document.getElementById('winOverlay');
-        const msg = document.getElementById('winMessage');
-        const emoji = document.getElementById('winEmoji');
-        
-        modal.classList.add('active');
-        if (gameMode === 'ai') {
-            if (winner === 'red') {
-                emoji.innerText = "🎉";
-                msg.innerText = "Anda Menang!";
-                msg.style.color = "var(--primary)";
-            } else {
-                emoji.innerText = "🤖";
-                msg.innerText = "Komputer Menang!";
-                msg.style.color = "var(--red-piece)";
-            }
-        } else {
-            emoji.innerText = "🏆";
-            msg.innerText = winner === 'red' ? "Merah Menang!" : "Kuning Menang!";
-        }
-    }
-
-    function showDrawModal() {
-        if (gameMode === 'ai') saveAllLogs('draw');
-        document.getElementById('winOverlay').classList.add('active');
-        document.getElementById('winEmoji').innerText = "🤝";
-        document.getElementById('winMessage').innerText = "Seri!";
-    }
-
-    function saveAllLogs(result) {
-        if (logs.length === 0) return;
-
-        // Add Result Info to all logs of this session
-        logs.forEach(l => l.game_result = result);
-
-        fetch('http://localhost:5000/log', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(logs)
-        })
-        .then(res => {
-            if(res.ok) console.log("SEMUA DATA GAME TERSIMPAN KE SERVER!");
-            else console.log("Gagal simpan ke server.");
-        })
-        .catch(e => console.error("Server error:", e));
-    }
-
-    // --- LOGGING ---
-
-    function logDecision(moves, selected, timeTaken) {
-        const logPanel = document.getElementById('logContent');
-        const entryId = logs.length + 1;
-        
-        const logData = {
-            game_id: gameId,
-            log_id: entryId,
-            global_turn: turnCount,
-            mode: aiStyle,
-            thinking_time_ms: parseFloat(timeTaken), // AI Performance data
-            chosen_col: selected.col,
-            score: selected.score,
-            options: moves,
-            board_state: JSON.parse(JSON.stringify(board)) // Capture context
-        };
-
-        // Save to memory
-        logs.push(logData);
-
-        // --- NEW: SEND TO SERVER REMOVED ---
-        // Data is now kept in 'logs' array until Game Over.
-
-        // Add to UI
-        if (logPanel && logPanel.innerText.includes('Log data')) logPanel.innerHTML = ''; 
-
-        if (logPanel) { 
-            const div = document.createElement('div');
-            div.className = 'log-entry';
-            if (selected.score > 2000) div.classList.add('high-score');
-            
-            const topMoves = moves.slice(0, 3).map(m => `Col ${m.col+1} (${m.score})`).join(', ');
-
-            div.innerHTML = `
-                <strong>Turn #${entryId} [${aiStyle.toUpperCase()}]</strong>
-                <span style="float:right; font-size:0.8em; color:#666;">⏱️ ${timeTaken}ms</span><br>
-                Memilih: Kolom ${selected.col + 1}<br>
-                <small style="color:#666">Top 3: ${topMoves}</small>
-            `;
-            
-            logPanel.prepend(div);
-        }
-    }
-
-    function downloadLogs() {
-        const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(logs, null, 2));
-        const anchor = document.createElement('a');
-        anchor.href = dataStr;
-        anchor.download = "connect_four_logs.json";
-        document.body.appendChild(anchor);
-        anchor.click();
-        anchor.remove();
-    }
-</script>
+</body>
+</html>
 
 </body>
 </html>

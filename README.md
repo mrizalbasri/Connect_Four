@@ -1,156 +1,54 @@
-# 🎮 Connect Four Game
+# 🤖 Connect Four AI Research
 
-Permainan Connect Four klasik dengan tampilan modern dan fitur AI yang dibuat menggunakan HTML, CSS, dan JavaScript murni.
+Project ini adalah implementasi game Connect Four yang berfokus pada riset perbandingan dua algoritma AI yang berbeda.
 
-## ✨ Fitur
+## 🧠 Algoritma yang Digunakan
 
-- **Dua Mode Permainan**
-  - 🤖 **vs Komputer**: Bermain melawan AI dengan strategi cerdas
-  - 👥 **vs Pemain**: Bermain berdua dengan teman di perangkat yang sama
+### 1. AI Reflex (Otak Kiri)
 
-- **Antarmuka Modern**
-  - Desain responsif yang bekerja di desktop dan mobile
-  - Animasi smooth untuk drop piece
-  - Efek visual yang menarik
-  - Tema gradient purple yang elegan
+- **Nama Algoritma**: **Greedy Best-First Strategy** (Heuristic Search)
+- **Konsep**:
+  - Algoritma ini "serakah" (greedy). Ia menilai setiap kolom berdasarkan keuntungan **saat ini saja** (Depth 1).
+  - Ia menggunakan fungsi **Heuristik** sederhana: memberikan poin tinggi untuk langkah yang menghasilkan 3-baris atau 4-baris, tanpa mempedulikan balasan lawan di masa depan (kecuali ancaman langsung).
+- **Karakter**: Cepat, Impulsif, Agresif.
 
-- **Fitur Visual**
-  - ✨ Efek confetti saat menang
-  - 💫 Animasi highlight untuk keping pemenang
-  - 🎨 Indikator pemain yang jelas
-  - 📱 Fully responsive design
+### 2. AI Defend (Otak Kanan)
 
-- **AI yang Cerdas**
-  - Prioritas menyerang (mencoba menang)
-  - Pertahanan (blokir pemain dari menang)
-  - Strategi membuat 3 berturut-turut
-  - Preferensi kolom tengah
+- **Nama Algoritma**: **Minimax Algorithm** dengan **Alpha-Beta Pruning**
+- **Konsep**:
+  - **Minimax**: Algoritma rekursif yang mengeksplorasi pohon kemungkinan (Game Tree). Ia berasumsi lawan akan selalu bermain optimal (Minimizing loss).
+  - **Alpha-Beta Pruning**: Teknik optimasi untuk memotong (prune) cabang pohon yang tidak perlu dihitung, sehingga AI bisa berpikir lebih dalam (Depth 4) tanpa lemot.
+- **Karakter**: Strategis, Defensif, Memprediksi Masa Depan.
 
-## 🎯 Cara Bermain
+---
 
-1. **Pilih Mode**: Pilih antara bermain vs Komputer atau vs Pemain
-2. **Drop Keping**: Klik pada kolom untuk menjatuhkan keping Anda
-3. **Menang**: Sambungkan 4 keping dengan warna yang sama secara horizontal, vertikal, atau diagonal
-4. **Main Lagi**: Gunakan tombol "Main Lagi" atau kembali ke menu untuk mengubah mode
+## 🎮 Mode Permainan
 
-## 🚀 Instalasi & Penggunaan
+1. **Lawan Komputer (Manusia vs AI)**
+   - Anda bermain sebagai Pemain Merah.
+   - Anda melawan AI Kuning.
+   - Anda bisa memilih lawan: "Mode Serang" (Greedy) atau "Mode Bertahan" (Minimax).
 
-### Cara 1: Langsung Buka File
-1. Download file `connect_four.html`
-2. Buka file dengan browser favorit Anda (Chrome, Firefox, Safari, Edge)
-3. Mulai bermain!
+2. **Lawan Pemain (Manusia vs Manusia)**
+   - Mode klasik untuk bermain berdua di satu layar.
 
-### Cara 2: Menggunakan Live Server (Rekomendasi untuk Development)
-```bash
-# Jika menggunakan VS Code dengan Live Server extension
-1. Buka folder project di VS Code
-2. Klik kanan pada connect_four.html
-3. Pilih "Open with Live Server"
+3. **⚔️ Tonton AI vs AI** (Simulasi)
+   - Mode otomatis: **Greedy AI (Merah) vs Minimax AI (Kuning)**.
+   - Cocok untuk mendemonstrasikan bagaimana algoritma strategis (Minimax) biasanya mengalahkan algoritma instingtif (Greedy).
+   - Dilengkapi **Log Analisis** untuk memantau `Score` dan `Thinking Time`.
+
+## 📂 Struktur File
+
+```text
+/project
+├── connect_four.html    # UI & Tampilan
+├── /js
+│   ├── game.js          # Game Loop Controller
+│   ├── ai_reflex.js     # Implementasi Greedy Algorithm
+│   └── ai_defend.js     # Implementasi Minimax Algorithm
+└── README.md            # Dokumentasi Riset
 ```
 
+## 🛠️ Cara Menjalankan
 
-## 🎮 Kontrol
-
-- **Klik Kolom**: Menjatuhkan keping di kolom yang dipilih
-- **Tombol Main Lagi**: Memulai permainan baru dengan mode yang sama
-- **Tombol Menu**: Kembali ke menu pemilihan mode
-- **Hover Kolom**: Menampilkan preview di kolom yang akan dipilih
-
-## 🤖 Strategi AI
-
-AI menggunakan strategi berlapis:
-
-1. **Prioritas Tertinggi**: Menang jika memungkinkan
-2. **Prioritas Kedua**: Blokir lawan dari menang
-3. **Prioritas Ketiga**: Membuat 3 berturut-turut
-4. **Prioritas Keempat**: Blokir lawan dari membuat 3 berturut-turut
-5. **Default**: Preferensi kolom tengah untuk kontrol board
-
-## 📱 Responsiveness
-
-Game ini sepenuhnya responsif dan akan menyesuaikan:
-- **Desktop**: Ukuran penuh dengan cell 60x60px
-- **Mobile**: Ukuran yang disesuaikan dengan cell 45x45px
-- **Tablet**: Otomatis menyesuaikan dengan ukuran layar
-
-## 🎨 Kustomisasi
-
-Anda dapat dengan mudah mengkustomisasi:
-
-### Mengubah Warna
-```css
-/* Di bagian style, cari dan ubah: */
-.piece.red {
-    background: radial-gradient(circle at 30% 30%, #ff6b6b, #c92a2a);
-}
-
-.piece.yellow {
-    background: radial-gradient(circle at 30% 30%, #ffd93d, #f59f00);
-}
-```
-
-### Mengubah Ukuran Board
-```javascript
-// Di bagian script, ubah konstanta:
-const ROWS = 6;  // Ubah jumlah baris
-const COLS = 7;  // Ubah jumlah kolom
-```
-
-### Mengubah Ukuran Cell
-```css
-.cell {
-    width: 60px;   /* Ubah lebar */
-    height: 60px;  /* Ubah tinggi */
-}
-```
-
-## 🔧 Teknologi yang Digunakan
-
-- **HTML5**: Struktur game
-- **CSS3**: Styling, animasi, dan responsive design
-- **JavaScript (Vanilla)**: Logic game dan AI
-- **Canvas API**: Efek confetti
-
-## 📋 Persyaratan
-
-- Browser modern (Chrome 90+, Firefox 88+, Safari 14+, Edge 90+)
-- JavaScript harus diaktifkan
-- Tidak memerlukan library atau framework eksternal
-
-## 🐛 Troubleshooting
-
-**Game tidak merespon klik**
-- Pastikan JavaScript diaktifkan di browser
-- Coba refresh halaman
-- Periksa console browser untuk error
-
-**Animasi terlihat patah-patah**
-- Tutup tab atau aplikasi lain untuk menghemat resource
-- Gunakan browser terbaru
-- Pastikan hardware acceleration diaktifkan
-
-**Layout tidak responsive**
-- Clear cache browser
-- Pastikan viewport meta tag ada di HTML
-- Coba zoom browser ke 100%
-
-## 📄 Lisensi
-
-Project ini bersifat open source dan bebas digunakan untuk keperluan pribadi dan edukasi.
-
-## 🤝 Kontribusi
-
-Saran dan perbaikan sangat diterima! Beberapa ide untuk pengembangan:
-- Tingkat kesulitan AI (Easy, Medium, Hard)
-- Leaderboard dengan local storage
-- Sound effects
-- Tema warna yang dapat diubah
-- Multiplayer online
-- Undo move
-- Replay sistem
-
-
-
-**Selamat Bermain! 🎉**
-
-*Dibuat dengan menggunakan vanilla HTML, CSS, dan JavaScript*
+Cukup buka file `connect_four.html` di browser modern apa saja. Tidak perlu instalasi khusus.
