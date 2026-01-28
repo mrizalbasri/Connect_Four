@@ -32,8 +32,6 @@ function startGame(mode) {
     document.getElementById('researchPanel').style.display = (mode === 'ai' || mode === 'ai-vs-ai') ? 'flex' : 'none';
     
     resetGame();
-    
-    // if (mode === 'ai-vs-ai') { ... } // Logic moved to resetGame to support 'Play Again' button
 }
 
 function backToMenu() {
@@ -50,10 +48,9 @@ function resetGame() {
     isProcessing = false;
     turnCount = 0;
     gameId = Date.now().toString() + '_' + Math.random().toString(36).substr(2, 9);
-    // logs = []; // JANGAN DI-RESET! Biar bisa menumpuk datanya untuk riset.
+    
     closeModal();
     renderBoard();
-    // document.getElementById('logContent').innerHTML = ... // JANGAN RESET TAMPILAN LOG JUGA
     updateTurnDisplay();
 
     // Kickoff AI vs AI after reset (e.g. Play Again button)
@@ -303,7 +300,7 @@ function logDecision(moves, selected, timeTaken, modeName) {
             global_turn: turnCount,
             mode: modeName || aiStyle,
             thinking_time_ms: parseFloat(timeTaken), 
-            nodes_explored: selected.nodes || 0, // NEW DATA FIELD
+            nodes_explored: selected.nodes || 0,
             chosen_col: selected.col,
             score: selected.score,
             board_state: JSON.parse(JSON.stringify(board)) 
@@ -333,8 +330,6 @@ function logDecision(moves, selected, timeTaken, modeName) {
 function saveAllLogs(result) {
     if (logs.length === 0) return;
     logs.forEach(l => l.game_result = result);
-    // Dummy fetch
-    console.log("Saving logs...", logs);
 }
 
 function downloadLogs() {

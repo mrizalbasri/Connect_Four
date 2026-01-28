@@ -32,11 +32,10 @@ function getReflexMove(boardState, playerColor) {
     const chosen = candidates[Math.floor(Math.random() * candidates.length)];
     
     const timeTaken = (performance.now() - startTime).toFixed(2);
-    console.log(`[REFLEX AI] Move: Col ${chosen.col}, Score: ${chosen.score}, Time: ${timeTaken}ms, Nodes: ${nodesExplored_reflex}`);
+    console.log(`[REFLEX AI] Move: Col ${chosen.col}, Score: ${chosen.score}, Decisions: ${nodesExplored_reflex}`);
     
-    // Log visual jika ada fungsi logging
+    // Log visual
     if (typeof logDecision === 'function') {
-        // Pass node count for research data
         const selectedWithNodes = { col: chosen.col, score: chosen.score, nodes: nodesExplored_reflex };
         logDecision(moves, selectedWithNodes, timeTaken, 'Reflex (Agresif)');
     }
@@ -51,31 +50,29 @@ function evaluateReflex(board, row, col, aiColor) {
     // Board sementara untuk simulasi
     board[row][col] = aiColor; 
     
-    // 1. PRIORITAS UTAMA: Menang Sekarang (Instinct)
+    // 1. Menang Sekarang (Instinct)
     if (checkWinBoard(board, aiColor)) {
         board[row][col] = null;
         return 1000000;
     }
     
-    // 2. PRIORITAS KEDUA: Blokir Lawan Menang (Reflex)
-    // Cek apakah lawan akan menang di petak ini jika kita tidak menempatinya?
+    // 2. Blokir Lawan (Defense)
     board[row][col] = oppColor;
     if (checkWinBoard(board, oppColor)) {
-        score += 500000; // Sangat penting, tapi kalah prioritas dari menang sendiri
+        score += 500000;
     }
-    board[row][col] = null; // Reset simulasi
+    board[row][col] = null; 
 
-    // 3. SKORING AGRESIF (Cari Deret)
-    // Beri nilai simulasi seolah kita taruh di sini
+    // 3. Potensi Serangan
     board[row][col] = aiColor;
     const attackPotential = evaluateHeuristics(board, row, col, aiColor);
-    score += attackPotential * 2.0; // Bobot Serang tinggi (x2)
+    score += attackPotential * 2.0; 
     board[row][col] = null;
 
-    // 4. Center Control (Naluri Tengah)
+    // 4. Center Control
     score += (3 - Math.abs(col - 3)) * 10;
 
-    // 5. Randomness (Manusiawi)
+    // 5. Randomness
     score += Math.floor(Math.random() * 20);
 
     return score;
@@ -112,5 +109,3 @@ function isValidPos(r, c) {
     return r >= 0 && r < 6 && c >= 0 && c < 7;
 }
 
-// Helper untuk Shared Utilities perlu ada di game.js atau diakses global
-// Asumsi: game.js memuat fungsi getValidLocations, getOpenRow, checkWinBoard, dll.

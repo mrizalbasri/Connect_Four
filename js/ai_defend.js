@@ -1,7 +1,7 @@
 // ai_defend.js - AI "Defend" (Bertahan & Mikir)
 // Menggunakan Minimax Algorithm dengan Alpha-Beta Pruning
 
-const SEARCH_DEPTH = 4; // Kedalaman berpikir (4 langkah ke depan)
+const SEARCH_DEPTH = 4 ; // Kedalaman berpikir (4 langkah ke depan)
 let nodesExplored_defend = 0; // Global counter untuk statistik riset
 
 function getDefendMove(boardState, playerColor) {
@@ -20,9 +20,6 @@ function getDefendMove(boardState, playerColor) {
 
     // Log visual
     if (typeof logDecision === 'function') {
-        // Kita menyelipkan data nodesExplored di argumen extra atau modifikasi object
-        // Karena logDecision terima (moves, selected, time, modeName)
-        // Kita hack sedikit: selected object kita tambahkan property 'nodes'
         const selectedWithNodes = { col: result.column, score: result.score, nodes: nodesExplored_defend };
         logDecision([], selectedWithNodes, timeTaken, 'Defend (Minimax)');
     }
@@ -96,15 +93,15 @@ function scoreBoard(b, piece) {
     let score = 0;
     const oppPiece = piece === 'red' ? 'yellow' : 'red';
 
-    // Prioritas bertahan: Penalti berat jika lawan punya 3-in-row terbuka
-    // Minimax sudah handle win/loss di terminal node, tapi ini untuk depth limit.
+    // Prioritas bertahan & menyerang
 
     // Center Preference
     for(let r=0; r<6; r++) {
         if(b[r][3] === piece) score += 3;
     }
 
-    // Evaluasi Windows (Horiz, Vert, Diag)
+    // Evaluasi Windows: Horizontal, Vertical, Diagonal
+    
     // Horizontal
     for (let r = 0; r < 6; r++) {
         for (let c = 0; c < 4; c++) {
@@ -117,13 +114,13 @@ function scoreBoard(b, piece) {
             score += evaluateWindow([b[r][c], b[r+1][c], b[r+2][c], b[r+3][c]], piece, oppPiece);
         }
     }
-    // Pos Slope
+    // Diagonal Positif
     for (let r = 0; r < 3; r++) {
         for (let c = 0; c < 4; c++) {
             score += evaluateWindow([b[r][c], b[r+1][c+1], b[r+2][c+2], b[r+3][c+3]], piece, oppPiece);
         }
     }
-    // Neg Slope
+    // Diagonal Negatif
     for (let r = 0; r < 3; r++) {
         for (let c = 0; c < 4; c++) {
             score += evaluateWindow([b[r+3][c], b[r+2][c+1], b[r+1][c+2], b[r][c+3]], piece, oppPiece);
