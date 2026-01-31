@@ -78,6 +78,7 @@
             font-weight: 800;
             font-size: 2.5rem;
             background: linear-gradient(to right, var(--primary), var(--accent));
+            background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             margin-bottom: 30px;
@@ -352,6 +353,146 @@
             h1 { font-size: 1.8rem; }
             .game-card { padding: 20px; }
         }
+        
+        /* CONFIG OPTION STYLES */
+        .config-option {
+            position: relative;
+            cursor: pointer;
+            display: block;
+        }
+        
+        .config-option input[type="radio"] {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        }
+        
+        .option-content {
+            background: white;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 16px;
+            text-align: center;
+            transition: all 0.2s ease;
+            position: relative;
+            height: 100%;
+        }
+        
+        .config-option:hover .option-content {
+            border-color: #667eea;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+        }
+        
+        .config-option input[type="radio"]:checked + .option-content {
+            border-color: #667eea;
+            background: linear-gradient(135deg, #f0f4ff 0%, #e8eeff 100%);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+        }
+        
+        .option-icon {
+            font-size: 2rem;
+            margin-bottom: 8px;
+        }
+        
+        .option-title {
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: #2b2d42;
+            margin-bottom: 4px;
+        }
+        
+        .option-desc {
+            font-size: 0.75rem;
+            color: #666;
+        }
+        
+        .option-badge {
+            display: inline-block;
+            background: #e2e8f0;
+            color: #64748b;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            margin-top: 8px;
+        }
+        
+        .option-badge.recommended {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+        }
+        
+        /* QUICK BUTTONS */
+        .quick-btn {
+            padding: 8px 16px;
+            border: 2px solid #e2e8f0;
+            background: white;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+            color: #64748b;
+        }
+        
+        .quick-btn:hover {
+            border-color: #667eea;
+            color: #667eea;
+        }
+        
+        .quick-btn.active {
+            background: #667eea;
+            border-color: #667eea;
+            color: white;
+        }
+        
+        /* CONFIG BUTTONS */
+        .config-btn {
+            padding: 14px 24px;
+            border: none;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        
+        .config-btn.primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+        }
+        
+        .config-btn.primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4);
+        }
+        
+        .config-btn.secondary {
+            background: #f1f5f9;
+            color: #64748b;
+        }
+        
+        .config-btn.secondary:hover {
+            background: #e2e8f0;
+        }
+        
+        @media (max-width: 600px) {
+            .option-content {
+                padding: 12px;
+            }
+            .option-icon {
+                font-size: 1.5rem;
+            }
+            .option-title {
+                font-size: 0.85rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -370,8 +511,112 @@
                 <i class="fa-solid fa-user-group"></i> Lawan Pemain
             </button>
             <button class="mode-btn" onclick="startGame('ai-vs-ai')">
-                <i class="fa-solid fa-chess-knight"></i> Tonton AI vs AI
+                <i class="fa-solid fa-eye"></i> Tonton AI vs AI
             </button>
+            <button class="mode-btn" onclick="showAIvsAIConfig()">
+                <i class="fa-solid fa-flask"></i> Mode Eksperimen
+            </button>
+        </div>
+        
+        <!-- AI VS AI CONFIGURATION PANEL -->
+        <div id="aiVsAiConfig" style="display:none; margin-top:30px; max-width:600px; width:100%;">
+            <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding:20px; border-radius:16px 16px 0 0; color:white;">
+                <h2 style="margin:0; font-size:1.5rem; display:flex; align-items:center; gap:10px;">
+                    <i class="fa-solid fa-flask"></i> Konfigurasi Eksperimen AI
+                </h2>
+                <p style="margin:10px 0 0 0; opacity:0.9; font-size:0.9rem;">Atur parameter untuk penelitian ilmiah</p>
+            </div>
+            
+            <div style="background:white; padding:25px; border-radius:0 0 16px 16px; box-shadow:0 10px 30px rgba(0,0,0,0.1);">
+                <!-- FIRST PLAYER MODE -->
+                <div style="margin-bottom:25px;">
+                    <label style="display:block; font-weight:700; font-size:1rem; margin-bottom:12px; color:#2b2d42;">
+                        <i class="fa-solid fa-flag-checkered"></i> Siapa yang Jalan Duluan?
+                    </label>
+                    <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
+                        <label class="config-option" data-mode="random">
+                            <input type="radio" name="firstPlayerMode" value="random" checked onchange="updateFirstPlayerMode(this.value)">
+                            <div class="option-content">
+                                <div class="option-icon">🎲</div>
+                                <div class="option-title">Random</div>
+                                <div class="option-desc">50:50 setiap game</div>
+                                <div class="option-badge recommended">Rekomendasi</div>
+                            </div>
+                        </label>
+                        
+                        <label class="config-option" data-mode="alternate">
+                            <input type="radio" name="firstPlayerMode" value="alternate" onchange="updateFirstPlayerMode(this.value)">
+                            <div class="option-content">
+                                <div class="option-icon">🔄</div>
+                                <div class="option-title">Bergantian</div>
+                                <div class="option-desc">Ganjil/Genap</div>
+                                <div class="option-badge">Fair</div>
+                            </div>
+                        </label>
+                        
+                        <label class="config-option" data-mode="red">
+                            <input type="radio" name="firstPlayerMode" value="red" onchange="updateFirstPlayerMode(this.value)">
+                            <div class="option-content">
+                                <div class="option-icon">🔴</div>
+                                <div class="option-title">Reflex Duluan</div>
+                                <div class="option-desc">Merah selalu first</div>
+                            </div>
+                        </label>
+                        
+                        <label class="config-option" data-mode="yellow">
+                            <input type="radio" name="firstPlayerMode" value="yellow" onchange="updateFirstPlayerMode(this.value)">
+                            <div class="option-content">
+                                <div class="option-icon">🟡</div>
+                                <div class="option-title">Minimax Duluan</div>
+                                <div class="option-desc">Kuning selalu first</div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                
+                <!-- BATCH SIZE -->
+                <div style="margin-bottom:25px;">
+                    <label style="display:block; font-weight:700; font-size:1rem; margin-bottom:12px; color:#2b2d42;">
+                        <i class="fa-solid fa-hashtag"></i> Jumlah Game untuk Test
+                    </label>
+                    <div style="display:flex; gap:10px; align-items:center;">
+                        <input type="number" id="batchSizeInput" value="50" min="1" max="500" 
+                               oninput="updateEstimatedTime()"
+                               style="flex:1; padding:12px 16px; border:2px solid #e2e8f0; border-radius:8px; font-size:1rem; font-weight:600;">
+                        <div style="display:flex; gap:5px;">
+                            <button onclick="setBatchSize(10)" class="quick-btn">10</button>
+                            <button onclick="setBatchSize(50)" class="quick-btn active">50</button>
+                            <button onclick="setBatchSize(100)" class="quick-btn">100</button>
+                        </div>
+                    </div>
+                    <div style="margin-top:8px; font-size:0.85rem; color:#666;">
+                        <i class="fa-solid fa-info-circle"></i> Rekomendasi: 50-100 game untuk hasil valid
+                    </div>
+                </div>
+                
+                <!-- ESTIMATED TIME -->
+                <div style="background:#f8fafc; padding:15px; border-radius:8px; margin-bottom:20px; border-left:4px solid #667eea;">
+                    <div style="display:flex; justify-content:space-between; align-items:center;">
+                        <div>
+                            <div style="font-size:0.85rem; color:#666; margin-bottom:4px;">Estimasi Waktu</div>
+                            <div style="font-size:1.2rem; font-weight:700; color:#2b2d42;" id="estimatedTime">~2 menit</div>
+                        </div>
+                        <div style="font-size:2rem; opacity:0.3;">
+                            <i class="fa-regular fa-clock"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- ACTION BUTTONS -->
+                <div style="display:flex; gap:10px;">
+                    <button onclick="backToMenu()" class="config-btn secondary" style="flex:1;">
+                        <i class="fa-solid fa-arrow-left"></i> Kembali
+                    </button>
+                    <button onclick="startAIvsAIExperiment()" class="config-btn primary" style="flex:2;">
+                        <i class="fa-solid fa-play"></i> Mulai Eksperimen
+                    </button>
+                </div>
+            </div>
         </div>
 
         <!-- GAME AREA -->
@@ -404,9 +649,32 @@
     <div class="research-panel" id="researchPanel">
         <div class="log-header">
             <h3><i class="fa-solid fa-chart-line"></i> Data Analisis AI</h3>
-            <div style="display:flex; gap:5px;">
-                <button class="download-btn" onclick="clearLogs()" style="background:#ef233c;"><i class="fa-solid fa-trash"></i></button>
-                <button class="download-btn" onclick="downloadLogs()"><i class="fa-solid fa-download"></i> JSON</button>
+            <div style="display:flex; flex-direction:column; gap:10px; width:100%;">
+                <!-- BATCH MODE CONTROLS (only show in experiment mode) -->
+                <div id="batchControls" style="display:none;">
+                    <div style="display:flex; gap:5px; align-items:center; background:#f1f5f9; padding:5px; border-radius:8px;">
+                         <span style="font-size:0.8rem; font-weight:600; padding-left:5px;">Batch:</span>
+                         <input type="number" id="batchInput" value="50" min="1" max="1000" style="width:60px; padding:4px; border:1px solid #ccc; border-radius:4px;">
+                         <button class="download-btn" onclick="runCustomBatch()" style="background:var(--primary); flex:1;" title="Run Auto Games"><i class="fa-solid fa-play"></i> Run</button>
+                    </div>
+                </div>
+                
+                <!-- WATCH MODE CONTROLS (only show in watch mode) -->
+                <div id="watchControls" style="display:none;">
+                    <div style="display:flex; gap:5px;">
+                        <button class="download-btn" onclick="resetGame()" style="background:#10b981; flex:1;">
+                            <i class="fa-solid fa-rotate-right"></i> Game Baru
+                        </button>
+                        <button class="download-btn" onclick="toggleAutoPlay()" id="autoPlayBtn" style="background:#f59e0b; flex:1;">
+                            <i class="fa-solid fa-play"></i> Auto
+                        </button>
+                    </div>
+                </div>
+                
+                <div style="display:flex; gap:5px; justify-content:space-between;">
+                    <button class="download-btn" onclick="clearLogs()" style="background:#ef233c; flex:1;"><i class="fa-solid fa-trash"></i> Clear</button>
+                    <button class="download-btn" onclick="downloadLogs()" style="flex:1;"><i class="fa-solid fa-download"></i> JSON</button>
+                </div>
             </div>
         </div>
         <div class="log-content" id="logContent">

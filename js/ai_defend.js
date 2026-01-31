@@ -47,11 +47,14 @@ function minimax(boardState, depth, alpha, beta, maximizingPlayer, myself) {
         return { score: scoreBoard(boardState, myself), column: null };
     }
 
+    // MOVE ORDERING: Cek kolom tengah dulu untuk Alpha-Beta Pruning lebih efektif
+    const orderedCols = [3, 2, 4, 1, 5, 0, 6].filter(c => validLocations.includes(c));
+
     if (maximizingPlayer) {
         let value = -Infinity;
-        let column = validLocations[Math.floor(Math.random() * validLocations.length)]; // Random start
+        let column = orderedCols[0]; // Start with center
         
-        for (let col of validLocations) {
+        for (let col of orderedCols) {
             const row = getOpenRow(boardState, col);
             const bCopy = JSON.parse(JSON.stringify(boardState));
             bCopy[row][col] = myself;
@@ -63,15 +66,15 @@ function minimax(boardState, depth, alpha, beta, maximizingPlayer, myself) {
                 column = col;
             }
             alpha = Math.max(alpha, value);
-            if (alpha >= beta) break;
+            if (alpha >= beta) break; // Alpha-Beta Pruning
         }
         return { score: value, column: column };
     } else {
         // Minimizing Player (Lawan)
         let value = Infinity;
-        let column = validLocations[Math.floor(Math.random() * validLocations.length)];
+        let column = orderedCols[0];
         
-        for (let col of validLocations) {
+        for (let col of orderedCols) {
             const row = getOpenRow(boardState, col);
             const bCopy = JSON.parse(JSON.stringify(boardState));
             bCopy[row][col] = opponent;
@@ -83,7 +86,7 @@ function minimax(boardState, depth, alpha, beta, maximizingPlayer, myself) {
                 column = col;
             }
             beta = Math.min(beta, value);
-            if (alpha >= beta) break;
+            if (alpha >= beta) break; // Alpha-Beta Pruning
         }
         return { score: value, column: column };
     }
@@ -93,11 +96,10 @@ function scoreBoard(b, piece) {
     let score = 0;
     const oppPiece = piece === 'red' ? 'yellow' : 'red';
 
-    // Prioritas bertahan & menyerang
-
-    // Center Preference
+    // Center Preference (turunkan dari 10 ke 4)
     for(let r=0; r<6; r++) {
-        if(b[r][3] === piece) score += 3;
+        if(b[r][3] === piece) score += 4; // Center column
+        if(b[r][2] === piece || b[r][4] === piece) score += 2; // Near center
     }
 
     // Evaluasi Windows: Horizontal, Vertical, Diagonal
@@ -136,13 +138,14 @@ function evaluateWindow(window, piece, oppPiece) {
     let countEmpty = window.filter(x => x === null).length;
     let countOpp = window.filter(x => x === oppPiece).length;
 
-    // Defensif: Sangat takut pada 3 punya lawan
-    if (countOpp === 3 && countEmpty === 1) score -= 80; // Hati-hati!
+    // DEFENSIF: Turunkan dari -500 ke -100 (lebih seimbang)
+    if (countOpp === 3 && countEmpty === 1) score -= 100; 
+    else if (countOpp === 2 && countEmpty === 2) score -= 20;
     
-    // Ofensif standar
-    if (countPiece === 4) score += 100;
-    else if (countPiece === 3 && countEmpty === 1) score += 5;
-    else if (countPiece === 2 && countEmpty === 2) score += 2;
+    // OFENSIF: Turunkan dari +100 ke +30 (lebih seimbang)
+    if (countPiece === 4) score += 1000; // Tidak akan tercapai (terminal)
+    else if (countPiece === 3 && countEmpty === 1) score += 30; // Turun dari 100
+    else if (countPiece === 2 && countEmpty === 2) score += 5; // Turun dari 10
 
     return score;
 }

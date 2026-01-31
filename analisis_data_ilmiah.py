@@ -6,7 +6,7 @@ import seaborn as sns
 # 1. BACA DATA
 
 try:
-    with open('connect_four_logs.json', 'r', encoding='utf-8') as f:
+    with open('connect_four_logs1.json', 'r', encoding='utf-8') as f:
         content = f.read()
         if not content.strip():
             print("Error: File 'connect_four_logs.json' KOSONG (0 bytes).")
@@ -38,9 +38,21 @@ if 'nodes_explored' not in df.columns:
 else:
     df['nodes_explored'] = df['nodes_explored'].fillna(0)
 
+# Isi NaN first_player dengan 'red' (untuk data lama)
+if 'first_player' not in df.columns:
+    df['first_player'] = 'red'
+else:
+    df['first_player'] = df['first_player'].fillna('red')
+
+# Isi NaN first_player_mode dengan 'random' (untuk data lama)
+if 'first_player_mode' not in df.columns:
+    df['first_player_mode'] = 'random'
+else:
+    df['first_player_mode'] = df['first_player_mode'].fillna('random')
+
 # --- VISUALISASI 1: PERBANDINGAN KOMPLEKSITAS (NODES EXPLORED) ---
 plt.figure(figsize=(10, 6))
-sns.barplot(x='mode', y='nodes_explored', data=df, palette="viridis", errorbar=None)
+sns.barplot(x='mode', y='nodes_explored', data=df, hue='mode', palette="viridis", errorbar=None, legend=False)
 plt.title('Rata-rata Node yang Dieksplorasi (Logika Berpikir)')
 plt.ylabel('Jumlah Node (Unit)')
 plt.xlabel('Algoritma AI')
@@ -55,7 +67,7 @@ print("Grafik 1 disimpan: grafik_kompleksitas_node.png (Nodes Explored)")
 
 # --- VISUALISASI 2: WAKTU BERPIKIR (TIME COMPLEXITY) ---
 plt.figure(figsize=(10, 6))
-sns.boxplot(x='mode', y='thinking_time_ms', data=df, palette="Set2")
+sns.boxplot(x='mode', y='thinking_time_ms', data=df, hue='mode', palette="Set2", legend=False)
 plt.title('Perbandingan Waktu Berpikir (Time Complexity)')
 plt.ylabel('Waktu Eksekusi (ms)')
 plt.savefig('grafik_waktu.png')
@@ -81,3 +93,54 @@ print("Grafik 4 disimpan: grafik_distribusi_skor.png")
 
 print("\n--- ANALISIS SELESAI ---")
 print("Gunakan gambar-gambar PNG yang dihasilkan untuk makalah/karya ilmiah Anda.")
+
+# --- ANALISIS TAMBAHAN: FIRST-MOVE ADVANTAGE ---
+print("\n=== ANALISIS FIRST-MOVE ADVANTAGE ===")
+
+# Ambil data per game (hanya baris terakhir setiap game)
+game_summary = df.groupby('game_id').last()
+
+if 'first_player' in game_summary.columns and 'game_result' in game_summary.columns:
+    # Tampilkan mode yang digunakan
+    if 'first_player_mode' in game_summary.columns:
+        mode_used = game_summary['first_player_mode'].mode()[0] if len(game_summary['first_player_mode'].mode()) > 0 else 'unknown'
+        print(f"\n🎯 Mode First Player: {mode_used.upper()}")
+    
+    # Hitung win rate berdasarkan siapa yang jalan duluan
+    first_move_stats = game_summary.groupby('first_player')['game_result'].value_counts().unstack(fill_value=0)
+    
+    print("\n📊 Win Rate Berdasarkan First Player:")
+    print(first_move_stats)
+    
+    # Hitung persentase
+    for player in first_move_stats.index:
+        total = first_move_stats.loc[player].sum()
+        if player in first_move_stats.columns:
+            wins = first_move_stats.loc[player, player]
+            win_rate = (wins / total * 100) if total > 0 else 0
+            ai_name = "REFLEX" if player == "red" else "MINIMAX"
+            print(f"\n{ai_name} ({player.upper()}) jalan duluan:")
+            print(f"  - Menang: {wins}/{total} ({win_rate:.1f}%)")
+            
+            # Hitung lawan menang
+            opponent = 'yellow' if player == 'red' else 'red'
+            if opponent in first_move_stats.columns:
+                opp_wins = first_move_stats.loc[player, opponent]
+                opp_rate = (opp_wins / total * 100) if total > 0 else 0
+                opp_name = "MINIMAX" if opponent == "yellow" else "REFLEX"
+                print(f"  - {opp_name} menang: {opp_wins}/{total} ({opp_rate:.1f}%)")
+    
+    # Visualisasi First-Move Advantage
+    plt.figure(figsize=(10, 6))
+    first_move_stats.plot(kind='bar', stacked=False, color=['#ff7b7b', '#ffe066', '#cccccc'])
+    plt.title('First-Move Advantage Analysis')
+    plt.xlabel('Pemain yang Jalan Duluan')
+    plt.ylabel('Jumlah Game')
+    plt.legend(title='Pemenang', labels=['Red Wins', 'Yellow Wins', 'Draw'])
+    plt.xticks(rotation=0)
+    plt.tight_layout()
+    plt.savefig('grafik_first_move_advantage.png')
+    print("\nGrafik 5 disimpan: grafik_first_move_advantage.png")
+else:
+    print("\n⚠️ Data 'first_player' tidak tersedia. Jalankan game dengan versi terbaru untuk analisis ini.")
+
