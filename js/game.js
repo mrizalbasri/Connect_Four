@@ -23,16 +23,24 @@ let alternateCounter = 0; // For alternate mode
 let isExperimentMode = false; // Distinguish between watch and experiment
 let autoPlayEnabled = false; // For watch mode auto-play
 
+// Challenge Mode State
+let isChallengeMode = false;
+let challengeRound = 0; // 0, 1, 2 (3 rounds)
+let challengeScores = { player: 0, computer: 0 }; // Win counter
+let challengeHistory = []; // Track each round result
+
 // --- GAME CONTROL ---
 
 function startGame(mode) {
   console.log("Starting game mode:", mode);
   gameMode = mode;
   isExperimentMode = false; // Regular watch mode
+  isChallengeMode = false; // Not challenge mode
   
   document.getElementById("modeSelection").style.display = "none";
   document.getElementById("gameArea").style.display = "block";
   document.getElementById("aiVsAiConfig").style.display = "none";
+  document.getElementById("challengeHeader").style.display = "none";
 
   const showAiOpts = mode === "ai";
   document.getElementById("aiSelector").style.display = showAiOpts ? "block" : "none";
@@ -59,6 +67,48 @@ function startGame(mode) {
   }
 
   resetGame();
+}
+
+function startChallengeMode() {
+  console.log("Starting Challenge Mode!");
+  
+  isChallengeMode = true;
+  gameMode = "ai";
+  challengeRound = 0;
+  challengeScores = { player: 0, computer: 0 };
+  challengeHistory = [];
+  
+  document.getElementById("modeSelection").style.display = "none";
+  document.getElementById("gameArea").style.display = "block";
+  document.getElementById("aiVsAiConfig").style.display = "none";
+  document.getElementById("challengeHeader").style.display = "block";
+  document.getElementById("aiSelector").style.display = "none";
+  document.getElementById("researchPanel").style.display = "none";
+  
+  // Set Round 1 AI to Attack
+  aiStyle = "attack";
+  
+  updateChallengeUI();
+  resetGame();
+}
+
+function updateChallengeUI() {
+  // Update scores
+  document.getElementById("playerScore").textContent = challengeScores.player;
+  document.getElementById("computerScore").textContent = challengeScores.computer;
+  
+  // Update round indicators
+  for (let i = 1; i <= 3; i++) {
+    const roundEl = document.getElementById(`round${i}`);
+    if (roundEl) {
+      roundEl.classList.remove("active", "completed");
+      if (i === challengeRound + 1) {
+        roundEl.classList.add("active");
+      } else if (i < challengeRound + 1) {
+        roundEl.classList.add("completed");
+      }
+    }
+  }
 }
 
 function showAIvsAIConfig() {
@@ -526,6 +576,12 @@ function showWinModal(winner) {
     }
   }
   
+  // CHALLENGE MODE LOGIC
+  if (isChallengeMode) {
+    handleChallengeRoundEnd(winner);
+    return;
+  }
+  
   // Watch mode with auto-play
   if (gameMode === "ai-vs-ai" && autoPlayEnabled && !isExperimentMode) {
     console.log(`[AUTO-PLAY] Game selesai (Winner: ${winner}), mulai game baru...`);
@@ -561,6 +617,41 @@ function showWinModal(winner) {
   }
 }
 
+function handleChallengeRoundEnd(winner) {
+  // Update scores
+  if (winner === "red") {
+    challengeScores.player++;
+  } else {
+    challengeScores.computer++;
+  }
+  
+  challengeHistory.push({
+    round: challengeRound + 1,
+    winner: winner === "red" ? "player" : "computer",
+    algorithm: aiStyle
+  });
+  
+  console.log(`[CHALLENGE] Round ${challengeRound + 1} selesai. Winner: ${winner}`);
+  console.log(`[CHALLENGE] Score: Player ${challengeScores.player} - ${challengeScores.computer} Computer`);
+  
+  // Check if someone won (2 wins)
+  if (challengeScores.player >= 2 || challengeScores.computer >= 2) {
+    showChallengeEndModal();
+    return;
+  }
+  
+  // Move to next round
+  challengeRound++;
+  
+  // Set AI for next round (Round 2 & 3 = Defend)
+  if (challengeRound >= 1) {
+    aiStyle = "defend";
+  }
+  
+  // Show round end modal
+  showChallengeRoundModal(winner);
+}
+
 function updateBatchUI() {
   const logHeader = document.querySelector("#researchPanel h3");
   if (logHeader) {
@@ -585,6 +676,23 @@ function showDrawModal() {
     }
   }
   
+  // CHALLENGE MODE - Draw = replay round
+  if (isChallengeMode) {
+    const modal = document.getElementById("winOverlay");
+    const msg = document.getElementById("winMessage");
+    const iconEl = document.getElementById("winIcon");
+    
+    modal.classList.add("active");
+    iconEl.innerHTML = '<i class="fa-solid fa-handshake"></i>';
+    msg.innerHTML = `
+      <div style="margin-bottom:20px;">Seri! Round ${challengeRound + 1} diulang</div>
+      <button class="control-btn btn-primary" onclick="closeModal(); resetGame();" style="padding:12px 24px;">
+        <i class="fa-solid fa-rotate-right"></i> Main Lagi
+      </button>
+    `;
+    return;
+  }
+  
   // Watch mode with auto-play
   if (gameMode === "ai-vs-ai" && autoPlayEnabled && !isExperimentMode) {
     console.log(`[AUTO-PLAY] Game seri, mulai game baru...`);
@@ -596,6 +704,107 @@ function showDrawModal() {
   document.getElementById("winIcon").innerHTML =
     '<i class="fa-solid fa-handshake"></i>';
   document.getElementById("winMessage").innerText = "Seri!";
+}
+
+function showChallengeRoundModal(winner) {
+  const modal = document.getElementById("winOverlay");
+  const msg = document.getElementById("winMessage");
+  const iconEl = document.getElementById("winIcon");
+  
+  modal.classList.add("active");
+  
+  const winnerText = winner === "red" ? "Anda" : "Komputer";
+  const nextRound = challengeRound + 1;
+  const nextAlgo = aiStyle === "attack" ? "Serang" : "Defend";
+  
+  iconEl.innerHTML = winner === "red" 
+    ? '<i class="fa-solid fa-trophy" style="color:#10b981;"></i>' 
+    : '<i class="fa-solid fa-robot" style="color:#ef4444;"></i>';
+  
+  msg.innerHTML = `
+    <div style="font-size:1.5rem; font-weight:700; margin-bottom:15px;">
+      Round ${challengeRound} Selesai!
+    </div>
+    <div style="font-size:1.2rem; margin-bottom:20px;">
+      ${winnerText} Menang!
+    </div>
+    <div style="background:#f8fafc; padding:15px; border-radius:12px; margin-bottom:20px;">
+      <div style="font-size:2rem; font-weight:800; color:#2b2d42;">
+        ${challengeScores.player} - ${challengeScores.computer}
+      </div>
+      <div style="font-size:0.9rem; color:#666;">Anda vs Komputer</div>
+    </div>
+    <div style="background:#fff4e1; padding:12px; border-radius:8px; margin-bottom:20px; font-size:0.9rem;">
+      <strong>Round ${nextRound}:</strong> Lawan AI ${nextAlgo} 🛡️
+    </div>
+    <button class="control-btn btn-primary" onclick="closeModal(); updateChallengeUI(); resetGame();" style="padding:12px 24px;">
+      <i class="fa-solid fa-arrow-right"></i> Lanjut ke Round ${nextRound}
+    </button>
+  `;
+}
+
+function showChallengeEndModal() {
+  const modal = document.getElementById("winOverlay");
+  const msg = document.getElementById("winMessage");
+  const iconEl = document.getElementById("winIcon");
+  
+  modal.classList.add("active");
+  
+  const playerWon = challengeScores.player >= 2;
+  
+  if (playerWon) {
+    iconEl.innerHTML = '<i class="fa-solid fa-trophy" style="color:#fbbf24; font-size:4rem;"></i>';
+    msg.innerHTML = `
+      <div style="font-size:2rem; font-weight:800; margin-bottom:15px; color:#10b981;">
+        🎉 SELAMAT! 🎉
+      </div>
+      <div style="font-size:1.3rem; margin-bottom:20px;">
+        Anda Menang Challenge!
+      </div>
+      <div style="background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%); padding:20px; border-radius:12px; margin-bottom:20px; color:white;">
+        <div style="font-size:3rem; margin-bottom:10px;">🍫</div>
+        <div style="font-size:1.2rem; font-weight:700;">Anda Dapat Coklat!</div>
+      </div>
+      <div style="background:#f8fafc; padding:15px; border-radius:12px; margin-bottom:20px;">
+        <div style="font-size:0.9rem; color:#666; margin-bottom:10px;">Hasil Akhir:</div>
+        <div style="font-size:2rem; font-weight:800; color:#2b2d42;">
+          ${challengeScores.player} - ${challengeScores.computer}
+        </div>
+      </div>
+      <div class="control-btns" style="justify-content:center;">
+        <button class="control-btn btn-primary" onclick="closeModal(); startChallengeMode();" style="padding:12px 24px;">
+          <i class="fa-solid fa-rotate-right"></i> Main Lagi
+        </button>
+        <button class="control-btn btn-secondary" onclick="closeModal(); backToMenu();" style="padding:12px 24px;">
+          <i class="fa-solid fa-house"></i> Menu
+        </button>
+      </div>
+    `;
+  } else {
+    iconEl.innerHTML = '<i class="fa-solid fa-robot" style="color:#ef4444; font-size:4rem;"></i>';
+    msg.innerHTML = `
+      <div style="font-size:2rem; font-weight:800; margin-bottom:15px; color:#ef4444;">
+        Komputer Menang!
+      </div>
+      <div style="font-size:1.1rem; margin-bottom:20px; color:#666;">
+        Jangan menyerah! Coba lagi!
+      </div>
+      <div style="background:#f8fafc; padding:15px; border-radius:12px; margin-bottom:20px;">
+        <div style="font-size:0.9rem; color:#666; margin-bottom:10px;">Hasil Akhir:</div>
+        <div style="font-size:2rem; font-weight:800; color:#2b2d42;">
+          ${challengeScores.player} - ${challengeScores.computer}
+        </div>
+      </div>
+      <div class="control-btns" style="justify-content:center;">
+        <button class="control-btn btn-primary" onclick="closeModal(); startChallengeMode();" style="padding:12px 24px;">
+          <i class="fa-solid fa-rotate-right"></i> Coba Lagi
+        </button>
+        <button class="control-btn btn-secondary" onclick="closeModal(); backToMenu();" style="padding:12px 24px;">
+          <i class="fa-solid fa-house"></i> Menu
+        </button>
+      </div>
+    `;
+  }
 }
 
 function showBatchSummary() {

@@ -493,6 +493,25 @@
                 font-size: 0.85rem;
             }
         }
+        
+        /* CHALLENGE MODE STYLES */
+        .round-indicator {
+            background: rgba(255,255,255,0.2);
+            padding: 10px 20px;
+            border-radius: 10px;
+            transition: all 0.3s;
+        }
+        
+        .round-indicator.active {
+            opacity: 1 !important;
+            background: rgba(255,255,255,0.4);
+            transform: scale(1.1);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        
+        .round-indicator.completed {
+            opacity: 0.6 !important;
+        }
     </style>
 </head>
 <body>
@@ -506,6 +525,9 @@
         <div id="modeSelection" class="mode-selection">
             <button class="mode-btn" onclick="startGame('ai')">
                 <i class="fa-solid fa-robot"></i> Lawan Komputer
+            </button>
+            <button class="mode-btn" onclick="startChallengeMode()" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; border: none;">
+                <i class="fa-solid fa-trophy"></i> Challenge Mode 🍫
             </button>
             <button class="mode-btn" onclick="startGame('player')">
                 <i class="fa-solid fa-user-group"></i> Lawan Pemain
@@ -621,6 +643,45 @@
 
         <!-- GAME AREA -->
         <div id="gameArea" style="display: none;">
+            <!-- CHALLENGE MODE HEADER -->
+            <div id="challengeHeader" style="display:none; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); padding:20px; border-radius:16px; margin-bottom:20px; color:white; text-align:center;">
+                <h2 style="margin:0 0 10px 0; font-size:1.8rem;">
+                    <i class="fa-solid fa-trophy"></i> CHALLENGE MODE 🍫
+                </h2>
+                <div style="font-size:1rem; opacity:0.9; margin-bottom:15px;">
+                    Best of 3 - Menang 2x dapat Coklat!
+                </div>
+                
+                <!-- Round Indicator -->
+                <div style="display:flex; justify-content:center; gap:15px; margin-bottom:15px;">
+                    <div class="round-indicator" id="round1" style="opacity:0.5;">
+                        <div style="font-size:0.8rem;">Round 1</div>
+                        <div style="font-size:1.2rem; font-weight:700;">⚔️ Serang</div>
+                    </div>
+                    <div class="round-indicator" id="round2" style="opacity:0.5;">
+                        <div style="font-size:0.8rem;">Round 2</div>
+                        <div style="font-size:1.2rem; font-weight:700;">🛡️ Defend</div>
+                    </div>
+                    <div class="round-indicator" id="round3" style="opacity:0.5;">
+                        <div style="font-size:0.8rem;">Round 3</div>
+                        <div style="font-size:1.2rem; font-weight:700;">🛡️ Defend</div>
+                    </div>
+                </div>
+                
+                <!-- Score Board -->
+                <div style="display:flex; justify-content:center; gap:30px; background:rgba(255,255,255,0.2); padding:15px; border-radius:12px;">
+                    <div>
+                        <div style="font-size:0.9rem; opacity:0.9;">Anda</div>
+                        <div style="font-size:2.5rem; font-weight:800;" id="playerScore">0</div>
+                    </div>
+                    <div style="font-size:2rem; align-self:center;">VS</div>
+                    <div>
+                        <div style="font-size:0.9rem; opacity:0.9;">Komputer</div>
+                        <div style="font-size:2.5rem; font-weight:800;" id="computerScore">0</div>
+                    </div>
+                </div>
+            </div>
+            
             <div class="header-controls">
                 <div class="status-badge" id="turnIndicator">
                     Giliran: <span class="player-dot" style="background: var(--red-piece);"></span> <span id="turnText">Player 1</span>
