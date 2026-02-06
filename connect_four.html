@@ -157,6 +157,18 @@
             outline: none;
         }
 
+        .difficulty-selector select {
+            padding: 6px 10px;
+            border-radius: 6px;
+            border: 1px solid #e2e8f0;
+            font-family: inherit;
+            font-size: 0.85rem;
+            color: var(--text);
+            cursor: pointer;
+            outline: none;
+            background: linear-gradient(135deg, #fef3c7, #fde68a);
+        }
+
         .board {
             background: var(--board-blue);
             padding: 12px;
@@ -536,7 +548,7 @@
                 <i class="fa-solid fa-robot"></i> Lawan Komputer
             </button>
             <button class="mode-btn" onclick="startChallengeMode()" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; border: none;">
-                <i class="fa-solid fa-trophy"></i> Challenge Mode 🍫
+                <i class="fa-solid fa-trophy"></i> Challenge Mode 
             </button>
             <button class="mode-btn" onclick="startGame('player')">
                 <i class="fa-solid fa-user-group"></i> Lawan Pemain
@@ -655,25 +667,25 @@
             <!-- CHALLENGE MODE HEADER -->
             <div id="challengeHeader" style="display:none; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); padding:20px; border-radius:16px; margin-bottom:20px; color:white; text-align:center;">
                 <h2 style="margin:0 0 10px 0; font-size:1.8rem;">
-                    <i class="fa-solid fa-trophy"></i> CHALLENGE MODE 🍫
+                    <i class="fa-solid fa-trophy"></i> CHALLENGE MODE
                 </h2>
                 <div style="font-size:1rem; opacity:0.9; margin-bottom:15px;">
-                    Best of 3 - Menang 2x dapat Coklat!
+                    Best of 3 - Menang 2x untuk Menang!
                 </div>
                 
                 <!-- Round Indicator -->
                 <div style="display:flex; justify-content:center; gap:15px; margin-bottom:15px;">
                     <div class="round-indicator" id="round1" style="opacity:0.5;">
                         <div style="font-size:0.8rem;">Round 1</div>
-                        <div style="font-size:1.2rem; font-weight:700;">⚔️ Serang</div>
+                        <div style="font-size:1.2rem; font-weight:700;">🎮</div>
                     </div>
                     <div class="round-indicator" id="round2" style="opacity:0.5;">
                         <div style="font-size:0.8rem;">Round 2</div>
-                        <div style="font-size:1.2rem; font-weight:700;">🛡️ Defend</div>
+                        <div style="font-size:1.2rem; font-weight:700;">🎮</div>
                     </div>
                     <div class="round-indicator" id="round3" style="opacity:0.5;">
                         <div style="font-size:0.8rem;">Round 3</div>
-                        <div style="font-size:1.2rem; font-weight:700;">🛡️ Defend</div>
+                        <div style="font-size:1.2rem; font-weight:700;">🎮</div>
                     </div>
                 </div>
                 
@@ -698,8 +710,16 @@
                 
                 <div class="ai-selector" id="aiSelector" style="display:none;">
                     <select onchange="updateAIStyle(this.value)">
-                        <option value="attack">Mode Serang (Agresif)</option>
-                        <option value="defend">Mode Bertahan (Pintar)</option>
+                        <option value="attack">AI Mode 1</option>
+                        <option value="defend">AI Mode 2</option>
+                    </select>
+                </div>
+                
+                <div class="difficulty-selector" id="difficultySelector" style="display:none;">
+                    <select onchange="updateDifficulty(this.value)">
+                        <option value="easy">Easy (Depth 2)</option>
+                        <option value="medium" selected>Medium (Depth 4)</option>
+                        <option value="hard">Hard (Depth 6)</option>
                     </select>
                 </div>
 

@@ -1,13 +1,16 @@
 [
   {
-    "game_id": "1769359167156_o6pm9f215",
+    "game_id": "1770305612711_93efoq54h",
     "log_id": 1,
-    "global_turn": 0,
-    "mode": "Reflex (Agresif)",
-    "thinking_time_ms": 0.1,
-    "nodes_explored": 7,
+    "global_turn": 1,
+    "player": "red",
+    "mode": "Human",
+    "thinking_time_ms": 1027.2,
+    "nodes_explored": 0,
     "chosen_col": 2,
-    "score": 24,
+    "score": null,
+    "red_moves_so_far": 1,
+    "yellow_moves_so_far": 0,
     "board_state": [
       [
         null,
@@ -64,17 +67,25 @@
         null
       ]
     ],
-    "game_result": "yellow"
+    "first_player": "red",
+    "first_player_mode": "random",
+    "game_result": "yellow",
+    "red_total_moves": 11,
+    "yellow_total_moves": 11,
+    "total_moves": 22
   },
   {
-    "game_id": "1769359167156_o6pm9f215",
+    "game_id": "1770305612711_93efoq54h",
     "log_id": 2,
     "global_turn": 1,
-    "mode": "Defend (Minimax)",
-    "thinking_time_ms": 6.7,
-    "nodes_explored": 532,
+    "player": "red",
+    "mode": "Reflex (Agresif)",
+    "thinking_time_ms": 0.6,
+    "nodes_explored": 21,
     "chosen_col": 3,
-    "score": 3,
+    "score": 150,
+    "red_moves_so_far": 1,
+    "yellow_moves_so_far": 0,
     "board_state": [
       [
         null,
@@ -131,17 +142,25 @@
         null
       ]
     ],
-    "game_result": "yellow"
+    "first_player": "red",
+    "first_player_mode": "random",
+    "game_result": "yellow",
+    "red_total_moves": 11,
+    "yellow_total_moves": 11,
+    "total_moves": 22
   },
   {
-    "game_id": "1769359167156_o6pm9f215",
+    "game_id": "1770305612711_93efoq54h",
     "log_id": 3,
-    "global_turn": 2,
-    "mode": "Reflex (Agresif)",
-    "thinking_time_ms": 0.1,
-    "nodes_explored": 7,
-    "chosen_col": 4,
-    "score": 29,
+    "global_turn": 3,
+    "player": "red",
+    "mode": "Human",
+    "thinking_time_ms": 1070.5,
+    "nodes_explored": 0,
+    "chosen_col": 2,
+    "score": null,
+    "red_moves_so_far": 2,
+    "yellow_moves_so_far": 1,
     "board_state": [
       [
         null,
@@ -198,84 +217,25 @@
         null
       ]
     ],
-    "game_result": "yellow"
+    "first_player": "red",
+    "first_player_mode": "random",
+    "game_result": "yellow",
+    "red_total_moves": 11,
+    "yellow_total_moves": 11,
+    "total_moves": 22
   },
   {
-    "game_id": "1769359167156_o6pm9f215",
+    "game_id": "1770305612711_93efoq54h",
     "log_id": 4,
     "global_turn": 3,
-    "mode": "Defend (Minimax)",
-    "thinking_time_ms": 7.3,
-    "nodes_explored": 689,
-    "chosen_col": 3,
-    "score": 8,
-    "board_state": [
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        "red",
-        "yellow",
-        "red",
-        null,
-        null
-      ]
-    ],
-    "game_result": "yellow"
-  },
-  {
-    "game_id": "1769359167156_o6pm9f215",
-    "log_id": 5,
-    "global_turn": 4,
+    "player": "red",
     "mode": "Reflex (Agresif)",
-    "thinking_time_ms": 0.1,
-    "nodes_explored": 7,
-    "chosen_col": 1,
-    "score": 14,
+    "thinking_time_ms": 0.4,
+    "nodes_explored": 21,
+    "chosen_col": 3,
+    "score": 350,
+    "red_moves_so_far": 2,
+    "yellow_moves_so_far": 1,
     "board_state": [
       [
         null,
@@ -316,7 +276,82 @@
       [
         null,
         null,
+        "red",
         null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        "red",
+        "yellow",
+        null,
+        null,
+        null
+      ]
+    ],
+    "first_player": "red",
+    "first_player_mode": "random",
+    "game_result": "yellow",
+    "red_total_moves": 11,
+    "yellow_total_moves": 11,
+    "total_moves": 22
+  },
+  {
+    "game_id": "1770305612711_93efoq54h",
+    "log_id": 5,
+    "global_turn": 5,
+    "player": "red",
+    "mode": "Human",
+    "thinking_time_ms": 119.1,
+    "nodes_explored": 0,
+    "chosen_col": 2,
+    "score": null,
+    "red_moves_so_far": 3,
+    "yellow_moves_so_far": 2,
+    "board_state": [
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        "red",
         "yellow",
         null,
         null,
@@ -327,89 +362,30 @@
         null,
         "red",
         "yellow",
-        "red",
+        null,
         null,
         null
       ]
     ],
-    "game_result": "yellow"
+    "first_player": "red",
+    "first_player_mode": "random",
+    "game_result": "yellow",
+    "red_total_moves": 11,
+    "yellow_total_moves": 11,
+    "total_moves": 22
   },
   {
-    "game_id": "1769359167156_o6pm9f215",
+    "game_id": "1770305612711_93efoq54h",
     "log_id": 6,
     "global_turn": 5,
-    "mode": "Defend (Minimax)",
-    "thinking_time_ms": 7.4,
-    "nodes_explored": 681,
-    "chosen_col": 3,
-    "score": 17,
-    "board_state": [
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        "yellow",
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        "red",
-        "red",
-        "yellow",
-        "red",
-        null,
-        null
-      ]
-    ],
-    "game_result": "yellow"
-  },
-  {
-    "game_id": "1769359167156_o6pm9f215",
-    "log_id": 7,
-    "global_turn": 6,
+    "player": "red",
     "mode": "Reflex (Agresif)",
-    "thinking_time_ms": 0.2,
-    "nodes_explored": 7,
-    "chosen_col": 3,
-    "score": 500035,
+    "thinking_time_ms": 0.1,
+    "nodes_explored": 14,
+    "chosen_col": 2,
+    "score": 900000,
+    "red_moves_so_far": 3,
+    "yellow_moves_so_far": 2,
     "board_state": [
       [
         null,
@@ -441,7 +417,16 @@
       [
         null,
         null,
+        "red",
         null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        "red",
         "yellow",
         null,
         null,
@@ -450,100 +435,107 @@
       [
         null,
         null,
-        null,
-        "yellow",
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        "red",
         "red",
         "yellow",
-        "red",
+        null,
         null,
         null
       ]
     ],
-    "game_result": "yellow"
+    "first_player": "red",
+    "first_player_mode": "random",
+    "game_result": "yellow",
+    "red_total_moves": 11,
+    "yellow_total_moves": 11,
+    "total_moves": 22
   },
   {
-    "game_id": "1769359167156_o6pm9f215",
+    "game_id": "1770305612711_93efoq54h",
+    "log_id": 7,
+    "global_turn": 7,
+    "player": "red",
+    "mode": "Human",
+    "thinking_time_ms": 295.9,
+    "nodes_explored": 0,
+    "chosen_col": 3,
+    "score": null,
+    "red_moves_so_far": 4,
+    "yellow_moves_so_far": 3,
+    "board_state": [
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        "yellow",
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        "red",
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        "red",
+        "yellow",
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        "red",
+        "yellow",
+        null,
+        null,
+        null
+      ]
+    ],
+    "first_player": "red",
+    "first_player_mode": "random",
+    "game_result": "yellow",
+    "red_total_moves": 11,
+    "yellow_total_moves": 11,
+    "total_moves": 22
+  },
+  {
+    "game_id": "1770305612711_93efoq54h",
     "log_id": 8,
     "global_turn": 7,
-    "mode": "Defend (Minimax)",
-    "thinking_time_ms": 2.1,
-    "nodes_explored": 411,
-    "chosen_col": 0,
-    "score": 13,
-    "board_state": [
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        "red",
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        "yellow",
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        "yellow",
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        "red",
-        "red",
-        "yellow",
-        "red",
-        null,
-        null
-      ]
-    ],
-    "game_result": "yellow"
-  },
-  {
-    "game_id": "1769359167156_o6pm9f215",
-    "log_id": 9,
-    "global_turn": 8,
+    "player": "red",
     "mode": "Reflex (Agresif)",
-    "thinking_time_ms": 0.1,
-    "nodes_explored": 7,
-    "chosen_col": 5,
-    "score": 27,
+    "thinking_time_ms": 0.4,
+    "nodes_explored": 21,
+    "chosen_col": 2,
+    "score": 300,
+    "red_moves_so_far": 4,
+    "yellow_moves_so_far": 3,
     "board_state": [
       [
         null,
@@ -566,7 +558,16 @@
       [
         null,
         null,
+        "yellow",
         null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        "red",
         "red",
         null,
         null,
@@ -575,7 +576,7 @@
       [
         null,
         null,
-        null,
+        "red",
         "yellow",
         null,
         null,
@@ -584,100 +585,107 @@
       [
         null,
         null,
-        null,
-        "yellow",
-        null,
-        null,
-        null
-      ],
-      [
-        "yellow",
-        "red",
         "red",
         "yellow",
-        "red",
+        null,
         null,
         null
       ]
     ],
-    "game_result": "yellow"
+    "first_player": "red",
+    "first_player_mode": "random",
+    "game_result": "yellow",
+    "red_total_moves": 11,
+    "yellow_total_moves": 11,
+    "total_moves": 22
   },
   {
-    "game_id": "1769359167156_o6pm9f215",
+    "game_id": "1770305612711_93efoq54h",
+    "log_id": 9,
+    "global_turn": 9,
+    "player": "red",
+    "mode": "Human",
+    "thinking_time_ms": 953.3,
+    "nodes_explored": 0,
+    "chosen_col": 4,
+    "score": null,
+    "red_moves_so_far": 5,
+    "yellow_moves_so_far": 4,
+    "board_state": [
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        "yellow",
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        "yellow",
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        "red",
+        "red",
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        "red",
+        "yellow",
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        "red",
+        "yellow",
+        null,
+        null,
+        null
+      ]
+    ],
+    "first_player": "red",
+    "first_player_mode": "random",
+    "game_result": "yellow",
+    "red_total_moves": 11,
+    "yellow_total_moves": 11,
+    "total_moves": 22
+  },
+  {
+    "game_id": "1770305612711_93efoq54h",
     "log_id": 10,
     "global_turn": 9,
-    "mode": "Defend (Minimax)",
-    "thinking_time_ms": 5.7,
-    "nodes_explored": 1034,
-    "chosen_col": 5,
-    "score": 13,
-    "board_state": [
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        "red",
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        "yellow",
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        "yellow",
-        null,
-        null,
-        null
-      ],
-      [
-        "yellow",
-        "red",
-        "red",
-        "yellow",
-        "red",
-        "red",
-        null
-      ]
-    ],
-    "game_result": "yellow"
-  },
-  {
-    "game_id": "1769359167156_o6pm9f215",
-    "log_id": 11,
-    "global_turn": 10,
+    "player": "red",
     "mode": "Reflex (Agresif)",
-    "thinking_time_ms": 0,
-    "nodes_explored": 7,
-    "chosen_col": 5,
-    "score": 27,
+    "thinking_time_ms": 0.3,
+    "nodes_explored": 21,
+    "chosen_col": 3,
+    "score": 150,
+    "red_moves_so_far": 5,
+    "yellow_moves_so_far": 4,
     "board_state": [
       [
         null,
@@ -691,7 +699,7 @@
       [
         null,
         null,
-        null,
+        "yellow",
         null,
         null,
         null,
@@ -700,7 +708,16 @@
       [
         null,
         null,
+        "yellow",
         null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        "red",
         "red",
         null,
         null,
@@ -709,7 +726,7 @@
       [
         null,
         null,
-        null,
+        "red",
         "yellow",
         null,
         null,
@@ -718,100 +735,107 @@
       [
         null,
         null,
+        "red",
+        "yellow",
+        "red",
         null,
-        "yellow",
-        null,
-        "yellow",
-        null
-      ],
-      [
-        "yellow",
-        "red",
-        "red",
-        "yellow",
-        "red",
-        "red",
         null
       ]
     ],
-    "game_result": "yellow"
+    "first_player": "red",
+    "first_player_mode": "random",
+    "game_result": "yellow",
+    "red_total_moves": 11,
+    "yellow_total_moves": 11,
+    "total_moves": 22
   },
   {
-    "game_id": "1769359167156_o6pm9f215",
+    "game_id": "1770305612711_93efoq54h",
+    "log_id": 11,
+    "global_turn": 11,
+    "player": "red",
+    "mode": "Human",
+    "thinking_time_ms": 518.8,
+    "nodes_explored": 0,
+    "chosen_col": 4,
+    "score": null,
+    "red_moves_so_far": 6,
+    "yellow_moves_so_far": 5,
+    "board_state": [
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        "yellow",
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        "yellow",
+        "yellow",
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        "red",
+        "red",
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        "red",
+        "yellow",
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        "red",
+        "yellow",
+        "red",
+        null,
+        null
+      ]
+    ],
+    "first_player": "red",
+    "first_player_mode": "random",
+    "game_result": "yellow",
+    "red_total_moves": 11,
+    "yellow_total_moves": 11,
+    "total_moves": 22
+  },
+  {
+    "game_id": "1770305612711_93efoq54h",
     "log_id": 12,
     "global_turn": 11,
-    "mode": "Defend (Minimax)",
-    "thinking_time_ms": 4.7,
-    "nodes_explored": 669,
-    "chosen_col": 4,
-    "score": 20,
-    "board_state": [
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        "red",
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        "yellow",
-        null,
-        "red",
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        "yellow",
-        null,
-        "yellow",
-        null
-      ],
-      [
-        "yellow",
-        "red",
-        "red",
-        "yellow",
-        "red",
-        "red",
-        null
-      ]
-    ],
-    "game_result": "yellow"
-  },
-  {
-    "game_id": "1769359167156_o6pm9f215",
-    "log_id": 13,
-    "global_turn": 12,
+    "player": "red",
     "mode": "Reflex (Agresif)",
-    "thinking_time_ms": 0.1,
-    "nodes_explored": 7,
-    "chosen_col": 2,
-    "score": 500020,
+    "thinking_time_ms": 0.5,
+    "nodes_explored": 21,
+    "chosen_col": 3,
+    "score": 350,
+    "red_moves_so_far": 6,
+    "yellow_moves_so_far": 5,
     "board_state": [
       [
         null,
@@ -825,7 +849,7 @@
       [
         null,
         null,
-        null,
+        "yellow",
         null,
         null,
         null,
@@ -834,7 +858,16 @@
       [
         null,
         null,
+        "yellow",
+        "yellow",
         null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        "red",
         "red",
         null,
         null,
@@ -843,109 +876,116 @@
       [
         null,
         null,
-        null,
-        "yellow",
-        null,
         "red",
+        "yellow",
+        "red",
+        null,
         null
       ],
       [
         null,
         null,
+        "red",
+        "yellow",
+        "red",
         null,
-        "yellow",
-        "yellow",
-        "yellow",
-        null
-      ],
-      [
-        "yellow",
-        "red",
-        "red",
-        "yellow",
-        "red",
-        "red",
         null
       ]
     ],
-    "game_result": "yellow"
+    "first_player": "red",
+    "first_player_mode": "random",
+    "game_result": "yellow",
+    "red_total_moves": 11,
+    "yellow_total_moves": 11,
+    "total_moves": 22
   },
   {
-    "game_id": "1769359167156_o6pm9f215",
+    "game_id": "1770305612711_93efoq54h",
+    "log_id": 13,
+    "global_turn": 13,
+    "player": "red",
+    "mode": "Human",
+    "thinking_time_ms": 985.1,
+    "nodes_explored": 0,
+    "chosen_col": 4,
+    "score": null,
+    "red_moves_so_far": 7,
+    "yellow_moves_so_far": 6,
+    "board_state": [
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        "yellow",
+        "yellow",
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        "yellow",
+        "yellow",
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        "red",
+        "red",
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        "red",
+        "yellow",
+        "red",
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        "red",
+        "yellow",
+        "red",
+        null,
+        null
+      ]
+    ],
+    "first_player": "red",
+    "first_player_mode": "random",
+    "game_result": "yellow",
+    "red_total_moves": 11,
+    "yellow_total_moves": 11,
+    "total_moves": 22
+  },
+  {
+    "game_id": "1770305612711_93efoq54h",
     "log_id": 14,
     "global_turn": 13,
-    "mode": "Defend (Minimax)",
-    "thinking_time_ms": 3.9,
-    "nodes_explored": 771,
-    "chosen_col": 2,
-    "score": -51,
-    "board_state": [
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        "red",
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        "yellow",
-        null,
-        "red",
-        null
-      ],
-      [
-        null,
-        null,
-        "red",
-        "yellow",
-        "yellow",
-        "yellow",
-        null
-      ],
-      [
-        "yellow",
-        "red",
-        "red",
-        "yellow",
-        "red",
-        "red",
-        null
-      ]
-    ],
-    "game_result": "yellow"
-  },
-  {
-    "game_id": "1769359167156_o6pm9f215",
-    "log_id": 15,
-    "global_turn": 14,
+    "player": "red",
     "mode": "Reflex (Agresif)",
     "thinking_time_ms": 0,
-    "nodes_explored": 7,
-    "chosen_col": 1,
-    "score": 10,
+    "nodes_explored": 14,
+    "chosen_col": 4,
+    "score": 900000,
+    "red_moves_so_far": 7,
+    "yellow_moves_so_far": 6,
     "board_state": [
       [
         null,
@@ -959,17 +999,8 @@
       [
         null,
         null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        "red",
+        "yellow",
+        "yellow",
         null,
         null,
         null
@@ -980,7 +1011,16 @@
         "yellow",
         "yellow",
         null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
         "red",
+        "red",
+        "red",
+        null,
         null
       ],
       [
@@ -988,98 +1028,114 @@
         null,
         "red",
         "yellow",
-        "yellow",
-        "yellow",
+        "red",
+        null,
         null
       ],
       [
+        null,
+        null,
+        "red",
         "yellow",
         "red",
-        "red",
-        "yellow",
-        "red",
-        "red",
+        null,
         null
       ]
     ],
-    "game_result": "yellow"
+    "first_player": "red",
+    "first_player_mode": "random",
+    "game_result": "yellow",
+    "red_total_moves": 11,
+    "yellow_total_moves": 11,
+    "total_moves": 22
   },
   {
-    "game_id": "1769359167156_o6pm9f215",
+    "game_id": "1770305612711_93efoq54h",
+    "log_id": 15,
+    "global_turn": 15,
+    "player": "red",
+    "mode": "Human",
+    "thinking_time_ms": 3998.9,
+    "nodes_explored": 0,
+    "chosen_col": 1,
+    "score": null,
+    "red_moves_so_far": 8,
+    "yellow_moves_so_far": 7,
+    "board_state": [
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        "yellow",
+        "yellow",
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        "yellow",
+        "yellow",
+        "yellow",
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        "red",
+        "red",
+        "red",
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        "red",
+        "yellow",
+        "red",
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        "red",
+        "yellow",
+        "red",
+        null,
+        null
+      ]
+    ],
+    "first_player": "red",
+    "first_player_mode": "random",
+    "game_result": "yellow",
+    "red_total_moves": 11,
+    "yellow_total_moves": 11,
+    "total_moves": 22
+  },
+  {
+    "game_id": "1770305612711_93efoq54h",
     "log_id": 16,
     "global_turn": 15,
-    "mode": "Defend (Minimax)",
-    "thinking_time_ms": 2.7,
-    "nodes_explored": 522,
-    "chosen_col": 1,
-    "score": 24,
-    "board_state": [
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        "red",
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        "yellow",
-        "yellow",
-        null,
-        "red",
-        null
-      ],
-      [
-        null,
-        "red",
-        "red",
-        "yellow",
-        "yellow",
-        "yellow",
-        null
-      ],
-      [
-        "yellow",
-        "red",
-        "red",
-        "yellow",
-        "red",
-        "red",
-        null
-      ]
-    ],
-    "game_result": "yellow"
-  },
-  {
-    "game_id": "1769359167156_o6pm9f215",
-    "log_id": 17,
-    "global_turn": 16,
+    "player": "red",
     "mode": "Reflex (Agresif)",
-    "thinking_time_ms": 0.1,
-    "nodes_explored": 7,
+    "thinking_time_ms": 0.2,
+    "nodes_explored": 21,
     "chosen_col": 4,
-    "score": 500030,
+    "score": 300,
+    "red_moves_so_far": 8,
+    "yellow_moves_so_far": 7,
     "board_state": [
       [
         null,
@@ -1093,8 +1149,8 @@
       [
         null,
         null,
-        null,
-        null,
+        "yellow",
+        "yellow",
         null,
         null,
         null
@@ -1102,19 +1158,28 @@
       [
         null,
         null,
-        null,
-        "red",
-        null,
+        "yellow",
+        "yellow",
+        "yellow",
         null,
         null
       ],
       [
         null,
-        "yellow",
-        "yellow",
-        "yellow",
         null,
         "red",
+        "red",
+        "red",
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        "red",
+        "yellow",
+        "red",
+        null,
         null
       ],
       [
@@ -1122,98 +1187,105 @@
         "red",
         "red",
         "yellow",
-        "yellow",
-        "yellow",
-        null
-      ],
-      [
-        "yellow",
         "red",
-        "red",
-        "yellow",
-        "red",
-        "red",
+        null,
         null
       ]
     ],
-    "game_result": "yellow"
+    "first_player": "red",
+    "first_player_mode": "random",
+    "game_result": "yellow",
+    "red_total_moves": 11,
+    "yellow_total_moves": 11,
+    "total_moves": 22
   },
   {
-    "game_id": "1769359167156_o6pm9f215",
+    "game_id": "1770305612711_93efoq54h",
+    "log_id": 17,
+    "global_turn": 17,
+    "player": "red",
+    "mode": "Human",
+    "thinking_time_ms": 2006,
+    "nodes_explored": 0,
+    "chosen_col": 5,
+    "score": null,
+    "red_moves_so_far": 9,
+    "yellow_moves_so_far": 8,
+    "board_state": [
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        "yellow",
+        "yellow",
+        "yellow",
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        "yellow",
+        "yellow",
+        "yellow",
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        "red",
+        "red",
+        "red",
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        "red",
+        "yellow",
+        "red",
+        null,
+        null
+      ],
+      [
+        null,
+        "red",
+        "red",
+        "yellow",
+        "red",
+        null,
+        null
+      ]
+    ],
+    "first_player": "red",
+    "first_player_mode": "random",
+    "game_result": "yellow",
+    "red_total_moves": 11,
+    "yellow_total_moves": 11,
+    "total_moves": 22
+  },
+  {
+    "game_id": "1770305612711_93efoq54h",
     "log_id": 18,
     "global_turn": 17,
-    "mode": "Defend (Minimax)",
-    "thinking_time_ms": 2.1,
-    "nodes_explored": 416,
-    "chosen_col": 0,
-    "score": 21,
-    "board_state": [
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        "red",
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        "yellow",
-        "yellow",
-        "yellow",
-        "red",
-        "red",
-        null
-      ],
-      [
-        null,
-        "red",
-        "red",
-        "yellow",
-        "yellow",
-        "yellow",
-        null
-      ],
-      [
-        "yellow",
-        "red",
-        "red",
-        "yellow",
-        "red",
-        "red",
-        null
-      ]
-    ],
-    "game_result": "yellow"
-  },
-  {
-    "game_id": "1769359167156_o6pm9f215",
-    "log_id": 19,
-    "global_turn": 18,
+    "player": "red",
     "mode": "Reflex (Agresif)",
     "thinking_time_ms": 0.1,
-    "nodes_explored": 7,
-    "chosen_col": 0,
-    "score": 500005,
+    "nodes_explored": 21,
+    "chosen_col": 3,
+    "score": 150,
+    "red_moves_so_far": 9,
+    "yellow_moves_so_far": 8,
     "board_state": [
       [
         null,
@@ -1227,41 +1299,41 @@
       [
         null,
         null,
-        null,
-        null,
-        null,
+        "yellow",
+        "yellow",
+        "yellow",
         null,
         null
       ],
       [
         null,
         null,
-        null,
-        "red",
-        null,
+        "yellow",
+        "yellow",
+        "yellow",
         null,
         null
       ],
       [
         null,
-        "yellow",
-        "yellow",
-        "yellow",
+        null,
         "red",
         "red",
+        "red",
+        null,
         null
       ],
       [
+        null,
+        null,
+        "red",
         "yellow",
         "red",
-        "red",
-        "yellow",
-        "yellow",
-        "yellow",
+        null,
         null
       ],
       [
-        "yellow",
+        null,
         "red",
         "red",
         "yellow",
@@ -1270,90 +1342,106 @@
         null
       ]
     ],
-    "game_result": "yellow"
+    "first_player": "red",
+    "first_player_mode": "random",
+    "game_result": "yellow",
+    "red_total_moves": 11,
+    "yellow_total_moves": 11,
+    "total_moves": 22
   },
   {
-    "game_id": "1769359167156_o6pm9f215",
+    "game_id": "1770305612711_93efoq54h",
+    "log_id": 19,
+    "global_turn": 19,
+    "player": "red",
+    "mode": "Human",
+    "thinking_time_ms": 4557.9,
+    "nodes_explored": 0,
+    "chosen_col": 5,
+    "score": null,
+    "red_moves_so_far": 10,
+    "yellow_moves_so_far": 9,
+    "board_state": [
+      [
+        null,
+        null,
+        null,
+        "yellow",
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        "yellow",
+        "yellow",
+        "yellow",
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        "yellow",
+        "yellow",
+        "yellow",
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        "red",
+        "red",
+        "red",
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        "red",
+        "yellow",
+        "red",
+        null,
+        null
+      ],
+      [
+        null,
+        "red",
+        "red",
+        "yellow",
+        "red",
+        "red",
+        null
+      ]
+    ],
+    "first_player": "red",
+    "first_player_mode": "random",
+    "game_result": "yellow",
+    "red_total_moves": 11,
+    "yellow_total_moves": 11,
+    "total_moves": 22
+  },
+  {
+    "game_id": "1770305612711_93efoq54h",
     "log_id": 20,
     "global_turn": 19,
-    "mode": "Defend (Minimax)",
-    "thinking_time_ms": 4.2,
-    "nodes_explored": 854,
-    "chosen_col": 6,
-    "score": 14,
-    "board_state": [
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        "red",
-        null,
-        null,
-        null
-      ],
-      [
-        "red",
-        "yellow",
-        "yellow",
-        "yellow",
-        "red",
-        "red",
-        null
-      ],
-      [
-        "yellow",
-        "red",
-        "red",
-        "yellow",
-        "yellow",
-        "yellow",
-        null
-      ],
-      [
-        "yellow",
-        "red",
-        "red",
-        "yellow",
-        "red",
-        "red",
-        null
-      ]
-    ],
-    "game_result": "yellow"
-  },
-  {
-    "game_id": "1769359167156_o6pm9f215",
-    "log_id": 21,
-    "global_turn": 20,
+    "player": "red",
     "mode": "Reflex (Agresif)",
     "thinking_time_ms": 0,
-    "nodes_explored": 7,
-    "chosen_col": 6,
-    "score": 500005,
+    "nodes_explored": 12,
+    "chosen_col": 5,
+    "score": 900000,
+    "red_moves_so_far": 10,
+    "yellow_moves_so_far": 9,
     "board_state": [
       [
         null,
         null,
         null,
-        null,
+        "yellow",
         null,
         null,
         null
@@ -1361,66 +1449,149 @@
       [
         null,
         null,
+        "yellow",
+        "yellow",
+        "yellow",
+        null,
+        null
+      ],
+      [
         null,
         null,
-        null,
+        "yellow",
+        "yellow",
+        "yellow",
         null,
         null
       ],
       [
         null,
         null,
-        null,
         "red",
-        null,
+        "red",
+        "red",
         null,
         null
       ],
       [
+        null,
+        null,
         "red",
-        "yellow",
-        "yellow",
         "yellow",
         "red",
         "red",
         null
       ],
       [
-        "yellow",
+        null,
         "red",
         "red",
         "yellow",
-        "yellow",
-        "yellow",
+        "red",
+        "red",
         null
-      ],
-      [
-        "yellow",
-        "red",
-        "red",
-        "yellow",
-        "red",
-        "red",
-        "yellow"
       ]
     ],
-    "game_result": "yellow"
+    "first_player": "red",
+    "first_player_mode": "random",
+    "game_result": "yellow",
+    "red_total_moves": 11,
+    "yellow_total_moves": 11,
+    "total_moves": 22
   },
   {
-    "game_id": "1769359167156_o6pm9f215",
+    "game_id": "1770305612711_93efoq54h",
+    "log_id": 21,
+    "global_turn": 21,
+    "player": "red",
+    "mode": "Human",
+    "thinking_time_ms": 958.1,
+    "nodes_explored": 0,
+    "chosen_col": 0,
+    "score": null,
+    "red_moves_so_far": 11,
+    "yellow_moves_so_far": 10,
+    "board_state": [
+      [
+        null,
+        null,
+        null,
+        "yellow",
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        "yellow",
+        "yellow",
+        "yellow",
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        "yellow",
+        "yellow",
+        "yellow",
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        "red",
+        "red",
+        "red",
+        "yellow",
+        null
+      ],
+      [
+        null,
+        null,
+        "red",
+        "yellow",
+        "red",
+        "red",
+        null
+      ],
+      [
+        null,
+        "red",
+        "red",
+        "yellow",
+        "red",
+        "red",
+        null
+      ]
+    ],
+    "first_player": "red",
+    "first_player_mode": "random",
+    "game_result": "yellow",
+    "red_total_moves": 11,
+    "yellow_total_moves": 11,
+    "total_moves": 22
+  },
+  {
+    "game_id": "1770305612711_93efoq54h",
     "log_id": 22,
     "global_turn": 21,
-    "mode": "Defend (Minimax)",
-    "thinking_time_ms": 3.5,
-    "nodes_explored": 702,
+    "player": "red",
+    "mode": "Reflex (Agresif)",
+    "thinking_time_ms": 0.6,
+    "nodes_explored": 6,
     "chosen_col": 2,
-    "score": -60,
+    "score": 1000000,
+    "red_moves_so_far": 11,
+    "yellow_moves_so_far": 10,
     "board_state": [
       [
         null,
         null,
         null,
-        null,
+        "yellow",
         null,
         null,
         null
@@ -1428,60 +1599,68 @@
       [
         null,
         null,
+        "yellow",
+        "yellow",
+        "yellow",
+        null,
+        null
+      ],
+      [
         null,
         null,
-        null,
+        "yellow",
+        "yellow",
+        "yellow",
         null,
         null
       ],
       [
         null,
         null,
+        "red",
+        "red",
+        "red",
+        "yellow",
+        null
+      ],
+      [
+        null,
         null,
         "red",
-        null,
-        null,
+        "yellow",
+        "red",
+        "red",
         null
       ],
       [
         "red",
-        "yellow",
-        "yellow",
+        "red",
+        "red",
         "yellow",
         "red",
         "red",
         null
-      ],
-      [
-        "yellow",
-        "red",
-        "red",
-        "yellow",
-        "yellow",
-        "yellow",
-        "red"
-      ],
-      [
-        "yellow",
-        "red",
-        "red",
-        "yellow",
-        "red",
-        "red",
-        "yellow"
       ]
     ],
-    "game_result": "yellow"
+    "first_player": "red",
+    "first_player_mode": "random",
+    "game_result": "yellow",
+    "red_total_moves": 11,
+    "yellow_total_moves": 11,
+    "total_moves": 22
   },
   {
-    "game_id": "1769359167156_o6pm9f215",
+    "game_id": "1770305649276_xmy8m2tut",
     "log_id": 23,
-    "global_turn": 22,
-    "mode": "Reflex (Agresif)",
-    "thinking_time_ms": 0.1,
-    "nodes_explored": 7,
+    "global_turn": 1,
+    "player": "red",
+    "mode": "Human",
+    "thinking_time_ms": 643,
+    "nodes_explored": 0,
     "chosen_col": 3,
-    "score": 500044,
+    "score": null,
+    "red_moves_so_far": 1,
+    "yellow_moves_so_far": 0,
     "board_state": [
       [
         null,
@@ -1504,51 +1683,59 @@
       [
         null,
         null,
-        "yellow",
-        "red",
+        null,
+        null,
         null,
         null,
         null
       ],
       [
-        "red",
-        "yellow",
-        "yellow",
-        "yellow",
-        "red",
-        "red",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         null
       ],
       [
-        "yellow",
-        "red",
-        "red",
-        "yellow",
-        "yellow",
-        "yellow",
-        "red"
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
       ],
       [
-        "yellow",
-        "red",
-        "red",
-        "yellow",
-        "red",
-        "red",
-        "yellow"
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
       ]
     ],
-    "game_result": "yellow"
+    "first_player": "red",
+    "first_player_mode": "random",
+    "game_result": "yellow",
+    "red_total_moves": 19,
+    "yellow_total_moves": 19,
+    "total_moves": 38
   },
   {
-    "game_id": "1769359167156_o6pm9f215",
+    "game_id": "1770305649276_xmy8m2tut",
     "log_id": 24,
-    "global_turn": 23,
+    "global_turn": 1,
+    "player": "yellow",
     "mode": "Defend (Minimax)",
-    "thinking_time_ms": 3.3,
-    "nodes_explored": 584,
-    "chosen_col": 4,
-    "score": -142,
+    "thinking_time_ms": 12.6,
+    "nodes_explored": 464,
+    "chosen_col": 1,
+    "score": -97,
+    "red_moves_so_far": 1,
+    "yellow_moves_so_far": 0,
     "board_state": [
       [
         null,
@@ -1563,7 +1750,16 @@
         null,
         null,
         null,
-        "red",
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
         null,
         null,
         null
@@ -1571,51 +1767,50 @@
       [
         null,
         null,
-        "yellow",
-        "red",
+        null,
+        null,
         null,
         null,
         null
       ],
       [
-        "red",
-        "yellow",
-        "yellow",
-        "yellow",
-        "red",
-        "red",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         null
       ],
       [
-        "yellow",
+        null,
+        null,
+        null,
         "red",
-        "red",
-        "yellow",
-        "yellow",
-        "yellow",
-        "red"
-      ],
-      [
-        "yellow",
-        "red",
-        "red",
-        "yellow",
-        "red",
-        "red",
-        "yellow"
+        null,
+        null,
+        null
       ]
     ],
-    "game_result": "yellow"
+    "first_player": "red",
+    "first_player_mode": "random",
+    "game_result": "yellow",
+    "red_total_moves": 19,
+    "yellow_total_moves": 19,
+    "total_moves": 38
   },
   {
-    "game_id": "1769359167156_o6pm9f215",
+    "game_id": "1770305649276_xmy8m2tut",
     "log_id": 25,
-    "global_turn": 24,
-    "mode": "Reflex (Agresif)",
-    "thinking_time_ms": 0,
-    "nodes_explored": 7,
-    "chosen_col": 2,
-    "score": 392,
+    "global_turn": 3,
+    "player": "red",
+    "mode": "Human",
+    "thinking_time_ms": 144.7,
+    "nodes_explored": 0,
+    "chosen_col": 4,
+    "score": null,
+    "red_moves_so_far": 2,
+    "yellow_moves_so_far": 1,
     "board_state": [
       [
         null,
@@ -1630,7 +1825,16 @@
         null,
         null,
         null,
-        "red",
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
         null,
         null,
         null
@@ -1638,51 +1842,50 @@
       [
         null,
         null,
-        "yellow",
-        "red",
-        "yellow",
+        null,
+        null,
+        null,
         null,
         null
       ],
       [
-        "red",
-        "yellow",
-        "yellow",
-        "yellow",
-        "red",
-        "red",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         null
       ],
       [
+        null,
         "yellow",
+        null,
         "red",
-        "red",
-        "yellow",
-        "yellow",
-        "yellow",
-        "red"
-      ],
-      [
-        "yellow",
-        "red",
-        "red",
-        "yellow",
-        "red",
-        "red",
-        "yellow"
+        null,
+        null,
+        null
       ]
     ],
-    "game_result": "yellow"
+    "first_player": "red",
+    "first_player_mode": "random",
+    "game_result": "yellow",
+    "red_total_moves": 19,
+    "yellow_total_moves": 19,
+    "total_moves": 38
   },
   {
-    "game_id": "1769359167156_o6pm9f215",
+    "game_id": "1770305649276_xmy8m2tut",
     "log_id": 26,
-    "global_turn": 25,
+    "global_turn": 3,
+    "player": "yellow",
     "mode": "Defend (Minimax)",
-    "thinking_time_ms": 3.3,
-    "nodes_explored": 459,
-    "chosen_col": 4,
-    "score": -144,
+    "thinking_time_ms": 5.9,
+    "nodes_explored": 490,
+    "chosen_col": 5,
+    "score": -236,
+    "red_moves_so_far": 2,
+    "yellow_moves_so_far": 1,
     "board_state": [
       [
         null,
@@ -1696,8 +1899,8 @@
       [
         null,
         null,
-        "red",
-        "red",
+        null,
+        null,
         null,
         null,
         null
@@ -1705,51 +1908,59 @@
       [
         null,
         null,
-        "yellow",
-        "red",
-        "yellow",
+        null,
+        null,
+        null,
         null,
         null
       ],
       [
-        "red",
-        "yellow",
-        "yellow",
-        "yellow",
-        "red",
-        "red",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         null
       ],
       [
-        "yellow",
-        "red",
-        "red",
-        "yellow",
-        "yellow",
-        "yellow",
-        "red"
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
       ],
       [
+        null,
         "yellow",
+        null,
         "red",
         "red",
-        "yellow",
-        "red",
-        "red",
-        "yellow"
+        null,
+        null
       ]
     ],
-    "game_result": "yellow"
+    "first_player": "red",
+    "first_player_mode": "random",
+    "game_result": "yellow",
+    "red_total_moves": 19,
+    "yellow_total_moves": 19,
+    "total_moves": 38
   },
   {
-    "game_id": "1769359167156_o6pm9f215",
+    "game_id": "1770305649276_xmy8m2tut",
     "log_id": 27,
-    "global_turn": 26,
-    "mode": "Reflex (Agresif)",
-    "thinking_time_ms": 0,
-    "nodes_explored": 7,
-    "chosen_col": 1,
-    "score": 320,
+    "global_turn": 5,
+    "player": "red",
+    "mode": "Human",
+    "thinking_time_ms": 466.8,
+    "nodes_explored": 0,
+    "chosen_col": 2,
+    "score": null,
+    "red_moves_so_far": 3,
+    "yellow_moves_so_far": 2,
     "board_state": [
       [
         null,
@@ -1763,60 +1974,68 @@
       [
         null,
         null,
-        "red",
-        "red",
-        "yellow",
+        null,
+        null,
+        null,
         null,
         null
       ],
       [
         null,
         null,
-        "yellow",
-        "red",
-        "yellow",
+        null,
+        null,
+        null,
         null,
         null
       ],
       [
-        "red",
-        "yellow",
-        "yellow",
-        "yellow",
-        "red",
-        "red",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         null
       ],
       [
-        "yellow",
-        "red",
-        "red",
-        "yellow",
-        "yellow",
-        "yellow",
-        "red"
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
       ],
       [
+        null,
         "yellow",
+        null,
         "red",
         "red",
         "yellow",
-        "red",
-        "red",
-        "yellow"
+        null
       ]
     ],
-    "game_result": "yellow"
+    "first_player": "red",
+    "first_player_mode": "random",
+    "game_result": "yellow",
+    "red_total_moves": 19,
+    "yellow_total_moves": 19,
+    "total_moves": 38
   },
   {
-    "game_id": "1769359167156_o6pm9f215",
+    "game_id": "1770305649276_xmy8m2tut",
     "log_id": 28,
-    "global_turn": 27,
+    "global_turn": 5,
+    "player": "yellow",
     "mode": "Defend (Minimax)",
-    "thinking_time_ms": 1,
-    "nodes_explored": 147,
-    "chosen_col": 1,
-    "score": 1000000,
+    "thinking_time_ms": 3.2,
+    "nodes_explored": 211,
+    "chosen_col": 3,
+    "score": -93,
+    "red_moves_so_far": 3,
+    "yellow_moves_so_far": 2,
     "board_state": [
       [
         null,
@@ -1830,60 +2049,68 @@
       [
         null,
         null,
-        "red",
-        "red",
-        "yellow",
+        null,
+        null,
+        null,
         null,
         null
       ],
       [
         null,
-        "red",
-        "yellow",
-        "red",
-        "yellow",
+        null,
+        null,
+        null,
+        null,
         null,
         null
       ],
       [
-        "red",
-        "yellow",
-        "yellow",
-        "yellow",
-        "red",
-        "red",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         null
       ],
       [
-        "yellow",
-        "red",
-        "red",
-        "yellow",
-        "yellow",
-        "yellow",
-        "red"
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
       ],
       [
+        null,
         "yellow",
         "red",
         "red",
+        "red",
         "yellow",
-        "red",
-        "red",
-        "yellow"
+        null
       ]
     ],
-    "game_result": "yellow"
+    "first_player": "red",
+    "first_player_mode": "random",
+    "game_result": "yellow",
+    "red_total_moves": 19,
+    "yellow_total_moves": 19,
+    "total_moves": 38
   },
   {
-    "game_id": "1769359246583_jk97mwq7t",
+    "game_id": "1770305649276_xmy8m2tut",
     "log_id": 29,
-    "global_turn": 0,
-    "mode": "Reflex (Agresif)",
-    "thinking_time_ms": 0.1,
-    "nodes_explored": 7,
+    "global_turn": 7,
+    "player": "red",
+    "mode": "Human",
+    "thinking_time_ms": 772.5,
+    "nodes_explored": 0,
     "chosen_col": 5,
-    "score": 28,
+    "score": null,
+    "red_moves_so_far": 4,
+    "yellow_moves_so_far": 3,
     "board_state": [
       [
         null,
@@ -1925,32 +2152,40 @@
         null,
         null,
         null,
-        null,
+        "yellow",
         null,
         null,
         null
       ],
       [
         null,
-        null,
-        null,
-        null,
-        null,
-        null,
+        "yellow",
+        "red",
+        "red",
+        "red",
+        "yellow",
         null
       ]
     ],
-    "game_result": "yellow"
+    "first_player": "red",
+    "first_player_mode": "random",
+    "game_result": "yellow",
+    "red_total_moves": 19,
+    "yellow_total_moves": 19,
+    "total_moves": 38
   },
   {
-    "game_id": "1769359246583_jk97mwq7t",
+    "game_id": "1770305649276_xmy8m2tut",
     "log_id": 30,
-    "global_turn": 1,
+    "global_turn": 7,
+    "player": "yellow",
     "mode": "Defend (Minimax)",
-    "thinking_time_ms": 3.3,
-    "nodes_explored": 639,
-    "chosen_col": 3,
-    "score": 5,
+    "thinking_time_ms": 10.2,
+    "nodes_explored": 529,
+    "chosen_col": 5,
+    "score": -78,
+    "red_moves_so_far": 4,
+    "yellow_moves_so_far": 3,
     "board_state": [
       [
         null,
@@ -1992,32 +2227,40 @@
         null,
         null,
         null,
+        "yellow",
         null,
-        null,
-        null,
+        "red",
         null
       ],
       [
         null,
-        null,
-        null,
-        null,
-        null,
+        "yellow",
         "red",
+        "red",
+        "red",
+        "yellow",
         null
       ]
     ],
-    "game_result": "yellow"
+    "first_player": "red",
+    "first_player_mode": "random",
+    "game_result": "yellow",
+    "red_total_moves": 19,
+    "yellow_total_moves": 19,
+    "total_moves": 38
   },
   {
-    "game_id": "1769359246583_jk97mwq7t",
+    "game_id": "1770305649276_xmy8m2tut",
     "log_id": 31,
-    "global_turn": 2,
-    "mode": "Reflex (Agresif)",
-    "thinking_time_ms": 0,
-    "nodes_explored": 7,
-    "chosen_col": 0,
-    "score": 17,
+    "global_turn": 9,
+    "player": "red",
+    "mode": "Human",
+    "thinking_time_ms": 1839.7,
+    "nodes_explored": 0,
+    "chosen_col": 4,
+    "score": null,
+    "red_moves_so_far": 5,
+    "yellow_moves_so_far": 4,
     "board_state": [
       [
         null,
@@ -2052,16 +2295,7 @@
         null,
         null,
         null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
+        "yellow",
         null
       ],
       [
@@ -2072,3109 +2306,371 @@
         null,
         "red",
         null
+      ],
+      [
+        null,
+        "yellow",
+        "red",
+        "red",
+        "red",
+        "yellow",
+        null
       ]
     ],
-    "game_result": "yellow"
+    "first_player": "red",
+    "first_player_mode": "random",
+    "game_result": "yellow",
+    "red_total_moves": 19,
+    "yellow_total_moves": 19,
+    "total_moves": 38
   },
   {
-    "game_id": "1769359246583_jk97mwq7t",
+    "game_id": "1770305649276_xmy8m2tut",
     "log_id": 32,
-    "global_turn": 3,
-    "mode": "Defend (Minimax)",
-    "thinking_time_ms": 2.2,
-    "nodes_explored": 394,
-    "chosen_col": 3,
-    "score": 6,
-    "board_state": [
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        "red",
-        null,
-        null,
-        "yellow",
-        null,
-        "red",
-        null
-      ]
-    ],
-    "game_result": "yellow"
-  },
-  {
-    "game_id": "1769359246583_jk97mwq7t",
-    "log_id": 33,
-    "global_turn": 4,
-    "mode": "Reflex (Agresif)",
-    "thinking_time_ms": 0,
-    "nodes_explored": 7,
-    "chosen_col": 0,
-    "score": 18,
-    "board_state": [
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        "yellow",
-        null,
-        null,
-        null
-      ],
-      [
-        "red",
-        null,
-        null,
-        "yellow",
-        null,
-        "red",
-        null
-      ]
-    ],
-    "game_result": "yellow"
-  },
-  {
-    "game_id": "1769359246583_jk97mwq7t",
-    "log_id": 34,
-    "global_turn": 5,
-    "mode": "Defend (Minimax)",
-    "thinking_time_ms": 2.5,
-    "nodes_explored": 455,
-    "chosen_col": 3,
-    "score": 11,
-    "board_state": [
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        "red",
-        null,
-        null,
-        "yellow",
-        null,
-        null,
-        null
-      ],
-      [
-        "red",
-        null,
-        null,
-        "yellow",
-        null,
-        "red",
-        null
-      ]
-    ],
-    "game_result": "yellow"
-  },
-  {
-    "game_id": "1769359246583_jk97mwq7t",
-    "log_id": 35,
-    "global_turn": 6,
-    "mode": "Reflex (Agresif)",
-    "thinking_time_ms": 0.1,
-    "nodes_explored": 7,
-    "chosen_col": 3,
-    "score": 500034,
-    "board_state": [
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        "yellow",
-        null,
-        null,
-        null
-      ],
-      [
-        "red",
-        null,
-        null,
-        "yellow",
-        null,
-        null,
-        null
-      ],
-      [
-        "red",
-        null,
-        null,
-        "yellow",
-        null,
-        "red",
-        null
-      ]
-    ],
-    "game_result": "yellow"
-  },
-  {
-    "game_id": "1769359246583_jk97mwq7t",
-    "log_id": 36,
-    "global_turn": 7,
-    "mode": "Defend (Minimax)",
-    "thinking_time_ms": 2.7,
-    "nodes_explored": 587,
-    "chosen_col": 5,
-    "score": -59,
-    "board_state": [
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        "red",
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        "yellow",
-        null,
-        null,
-        null
-      ],
-      [
-        "red",
-        null,
-        null,
-        "yellow",
-        null,
-        null,
-        null
-      ],
-      [
-        "red",
-        null,
-        null,
-        "yellow",
-        null,
-        "red",
-        null
-      ]
-    ],
-    "game_result": "yellow"
-  },
-  {
-    "game_id": "1769359246583_jk97mwq7t",
-    "log_id": 37,
-    "global_turn": 8,
-    "mode": "Reflex (Agresif)",
-    "thinking_time_ms": 0.1,
-    "nodes_explored": 7,
-    "chosen_col": 0,
-    "score": 300,
-    "board_state": [
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        "red",
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        "yellow",
-        null,
-        null,
-        null
-      ],
-      [
-        "red",
-        null,
-        null,
-        "yellow",
-        null,
-        "yellow",
-        null
-      ],
-      [
-        "red",
-        null,
-        null,
-        "yellow",
-        null,
-        "red",
-        null
-      ]
-    ],
-    "game_result": "yellow"
-  },
-  {
-    "game_id": "1769359246583_jk97mwq7t",
-    "log_id": 38,
     "global_turn": 9,
-    "mode": "Defend (Minimax)",
-    "thinking_time_ms": 1.3,
-    "nodes_explored": 175,
-    "chosen_col": 0,
-    "score": 15,
-    "board_state": [
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        "red",
-        null,
-        null,
-        null
-      ],
-      [
-        "red",
-        null,
-        null,
-        "yellow",
-        null,
-        null,
-        null
-      ],
-      [
-        "red",
-        null,
-        null,
-        "yellow",
-        null,
-        "yellow",
-        null
-      ],
-      [
-        "red",
-        null,
-        null,
-        "yellow",
-        null,
-        "red",
-        null
-      ]
-    ],
-    "game_result": "yellow"
-  },
-  {
-    "game_id": "1769359246583_jk97mwq7t",
-    "log_id": 39,
-    "global_turn": 10,
-    "mode": "Reflex (Agresif)",
-    "thinking_time_ms": 0.1,
-    "nodes_explored": 7,
-    "chosen_col": 1,
-    "score": 25,
-    "board_state": [
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        "yellow",
-        null,
-        null,
-        "red",
-        null,
-        null,
-        null
-      ],
-      [
-        "red",
-        null,
-        null,
-        "yellow",
-        null,
-        null,
-        null
-      ],
-      [
-        "red",
-        null,
-        null,
-        "yellow",
-        null,
-        "yellow",
-        null
-      ],
-      [
-        "red",
-        null,
-        null,
-        "yellow",
-        null,
-        "red",
-        null
-      ]
-    ],
-    "game_result": "yellow"
-  },
-  {
-    "game_id": "1769359246583_jk97mwq7t",
-    "log_id": 40,
-    "global_turn": 11,
-    "mode": "Defend (Minimax)",
-    "thinking_time_ms": 2.3,
-    "nodes_explored": 409,
-    "chosen_col": 1,
-    "score": 18,
-    "board_state": [
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        "yellow",
-        null,
-        null,
-        "red",
-        null,
-        null,
-        null
-      ],
-      [
-        "red",
-        null,
-        null,
-        "yellow",
-        null,
-        null,
-        null
-      ],
-      [
-        "red",
-        null,
-        null,
-        "yellow",
-        null,
-        "yellow",
-        null
-      ],
-      [
-        "red",
-        "red",
-        null,
-        "yellow",
-        null,
-        "red",
-        null
-      ]
-    ],
-    "game_result": "yellow"
-  },
-  {
-    "game_id": "1769359246583_jk97mwq7t",
-    "log_id": 41,
-    "global_turn": 12,
-    "mode": "Reflex (Agresif)",
-    "thinking_time_ms": 0,
-    "nodes_explored": 7,
-    "chosen_col": 4,
-    "score": 38,
-    "board_state": [
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        "yellow",
-        null,
-        null,
-        "red",
-        null,
-        null,
-        null
-      ],
-      [
-        "red",
-        null,
-        null,
-        "yellow",
-        null,
-        null,
-        null
-      ],
-      [
-        "red",
-        "yellow",
-        null,
-        "yellow",
-        null,
-        "yellow",
-        null
-      ],
-      [
-        "red",
-        "red",
-        null,
-        "yellow",
-        null,
-        "red",
-        null
-      ]
-    ],
-    "game_result": "yellow"
-  },
-  {
-    "game_id": "1769359246583_jk97mwq7t",
-    "log_id": 42,
-    "global_turn": 13,
-    "mode": "Defend (Minimax)",
-    "thinking_time_ms": 4.5,
-    "nodes_explored": 710,
-    "chosen_col": 4,
-    "score": 29,
-    "board_state": [
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        "yellow",
-        null,
-        null,
-        "red",
-        null,
-        null,
-        null
-      ],
-      [
-        "red",
-        null,
-        null,
-        "yellow",
-        null,
-        null,
-        null
-      ],
-      [
-        "red",
-        "yellow",
-        null,
-        "yellow",
-        null,
-        "yellow",
-        null
-      ],
-      [
-        "red",
-        "red",
-        null,
-        "yellow",
-        "red",
-        "red",
-        null
-      ]
-    ],
-    "game_result": "yellow"
-  },
-  {
-    "game_id": "1769359246583_jk97mwq7t",
-    "log_id": 43,
-    "global_turn": 14,
-    "mode": "Reflex (Agresif)",
-    "thinking_time_ms": 0,
-    "nodes_explored": 7,
-    "chosen_col": 0,
-    "score": 14,
-    "board_state": [
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        "yellow",
-        null,
-        null,
-        "red",
-        null,
-        null,
-        null
-      ],
-      [
-        "red",
-        null,
-        null,
-        "yellow",
-        null,
-        null,
-        null
-      ],
-      [
-        "red",
-        "yellow",
-        null,
-        "yellow",
-        "yellow",
-        "yellow",
-        null
-      ],
-      [
-        "red",
-        "red",
-        null,
-        "yellow",
-        "red",
-        "red",
-        null
-      ]
-    ],
-    "game_result": "yellow"
-  },
-  {
-    "game_id": "1769359246583_jk97mwq7t",
-    "log_id": 44,
-    "global_turn": 15,
-    "mode": "Defend (Minimax)",
-    "thinking_time_ms": 4.2,
-    "nodes_explored": 674,
-    "chosen_col": 5,
-    "score": 39,
-    "board_state": [
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        "red",
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        "yellow",
-        null,
-        null,
-        "red",
-        null,
-        null,
-        null
-      ],
-      [
-        "red",
-        null,
-        null,
-        "yellow",
-        null,
-        null,
-        null
-      ],
-      [
-        "red",
-        "yellow",
-        null,
-        "yellow",
-        "yellow",
-        "yellow",
-        null
-      ],
-      [
-        "red",
-        "red",
-        null,
-        "yellow",
-        "red",
-        "red",
-        null
-      ]
-    ],
-    "game_result": "yellow"
-  },
-  {
-    "game_id": "1769359246583_jk97mwq7t",
-    "log_id": 45,
-    "global_turn": 16,
-    "mode": "Reflex (Agresif)",
-    "thinking_time_ms": 0,
-    "nodes_explored": 7,
-    "chosen_col": 6,
-    "score": 11,
-    "board_state": [
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        "red",
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        "yellow",
-        null,
-        null,
-        "red",
-        null,
-        null,
-        null
-      ],
-      [
-        "red",
-        null,
-        null,
-        "yellow",
-        null,
-        "yellow",
-        null
-      ],
-      [
-        "red",
-        "yellow",
-        null,
-        "yellow",
-        "yellow",
-        "yellow",
-        null
-      ],
-      [
-        "red",
-        "red",
-        null,
-        "yellow",
-        "red",
-        "red",
-        null
-      ]
-    ],
-    "game_result": "yellow"
-  },
-  {
-    "game_id": "1769359246583_jk97mwq7t",
-    "log_id": 46,
-    "global_turn": 17,
-    "mode": "Defend (Minimax)",
-    "thinking_time_ms": 2.6,
-    "nodes_explored": 522,
-    "chosen_col": 2,
-    "score": 1000000,
-    "board_state": [
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        "red",
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        "yellow",
-        null,
-        null,
-        "red",
-        null,
-        null,
-        null
-      ],
-      [
-        "red",
-        null,
-        null,
-        "yellow",
-        null,
-        "yellow",
-        null
-      ],
-      [
-        "red",
-        "yellow",
-        null,
-        "yellow",
-        "yellow",
-        "yellow",
-        null
-      ],
-      [
-        "red",
-        "red",
-        null,
-        "yellow",
-        "red",
-        "red",
-        "red"
-      ]
-    ],
-    "game_result": "yellow"
-  },
-  {
-    "game_id": "1769359246583_jk97mwq7t",
-    "log_id": 47,
-    "global_turn": 18,
-    "mode": "Reflex (Agresif)",
-    "thinking_time_ms": 0,
-    "nodes_explored": 7,
-    "chosen_col": 2,
-    "score": 500036,
-    "board_state": [
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        "red",
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        "yellow",
-        null,
-        null,
-        "red",
-        null,
-        null,
-        null
-      ],
-      [
-        "red",
-        null,
-        null,
-        "yellow",
-        null,
-        "yellow",
-        null
-      ],
-      [
-        "red",
-        "yellow",
-        null,
-        "yellow",
-        "yellow",
-        "yellow",
-        null
-      ],
-      [
-        "red",
-        "red",
-        "yellow",
-        "yellow",
-        "red",
-        "red",
-        "red"
-      ]
-    ],
-    "game_result": "yellow"
-  },
-  {
-    "game_id": "1769359246583_jk97mwq7t",
-    "log_id": 48,
-    "global_turn": 19,
-    "mode": "Defend (Minimax)",
-    "thinking_time_ms": 5.3,
-    "nodes_explored": 647,
-    "chosen_col": 2,
-    "score": 1000000,
-    "board_state": [
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        "red",
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        "yellow",
-        null,
-        null,
-        "red",
-        null,
-        null,
-        null
-      ],
-      [
-        "red",
-        null,
-        null,
-        "yellow",
-        null,
-        "yellow",
-        null
-      ],
-      [
-        "red",
-        "yellow",
-        "red",
-        "yellow",
-        "yellow",
-        "yellow",
-        null
-      ],
-      [
-        "red",
-        "red",
-        "yellow",
-        "yellow",
-        "red",
-        "red",
-        "red"
-      ]
-    ],
-    "game_result": "yellow"
-  },
-  {
-    "game_id": "1769359246583_jk97mwq7t",
-    "log_id": 49,
-    "global_turn": 20,
-    "mode": "Reflex (Agresif)",
-    "thinking_time_ms": 0,
-    "nodes_explored": 7,
-    "chosen_col": 4,
-    "score": 500037,
-    "board_state": [
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        "red",
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        "yellow",
-        null,
-        null,
-        "red",
-        null,
-        null,
-        null
-      ],
-      [
-        "red",
-        null,
-        "yellow",
-        "yellow",
-        null,
-        "yellow",
-        null
-      ],
-      [
-        "red",
-        "yellow",
-        "red",
-        "yellow",
-        "yellow",
-        "yellow",
-        null
-      ],
-      [
-        "red",
-        "red",
-        "yellow",
-        "yellow",
-        "red",
-        "red",
-        "red"
-      ]
-    ],
-    "game_result": "yellow"
-  },
-  {
-    "game_id": "1769359246583_jk97mwq7t",
-    "log_id": 50,
-    "global_turn": 21,
-    "mode": "Defend (Minimax)",
-    "thinking_time_ms": 10.9,
-    "nodes_explored": 1228,
-    "chosen_col": 5,
-    "score": 1000000,
-    "board_state": [
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        "red",
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        "yellow",
-        null,
-        null,
-        "red",
-        null,
-        null,
-        null
-      ],
-      [
-        "red",
-        null,
-        "yellow",
-        "yellow",
-        "red",
-        "yellow",
-        null
-      ],
-      [
-        "red",
-        "yellow",
-        "red",
-        "yellow",
-        "yellow",
-        "yellow",
-        null
-      ],
-      [
-        "red",
-        "red",
-        "yellow",
-        "yellow",
-        "red",
-        "red",
-        "red"
-      ]
-    ],
-    "game_result": "yellow"
-  },
-  {
-    "game_id": "1769359246583_jk97mwq7t",
-    "log_id": 51,
-    "global_turn": 22,
-    "mode": "Reflex (Agresif)",
-    "thinking_time_ms": 0.1,
-    "nodes_explored": 7,
-    "chosen_col": 6,
-    "score": 500007,
-    "board_state": [
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        "red",
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        "yellow",
-        null,
-        null,
-        "red",
-        null,
-        "yellow",
-        null
-      ],
-      [
-        "red",
-        null,
-        "yellow",
-        "yellow",
-        "red",
-        "yellow",
-        null
-      ],
-      [
-        "red",
-        "yellow",
-        "red",
-        "yellow",
-        "yellow",
-        "yellow",
-        null
-      ],
-      [
-        "red",
-        "red",
-        "yellow",
-        "yellow",
-        "red",
-        "red",
-        "red"
-      ]
-    ],
-    "game_result": "yellow"
-  },
-  {
-    "game_id": "1769359246583_jk97mwq7t",
-    "log_id": 52,
-    "global_turn": 23,
-    "mode": "Defend (Minimax)",
-    "thinking_time_ms": 5.1,
-    "nodes_explored": 832,
-    "chosen_col": 5,
-    "score": 1000000,
-    "board_state": [
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        "red",
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        "yellow",
-        null,
-        null,
-        "red",
-        null,
-        "yellow",
-        null
-      ],
-      [
-        "red",
-        null,
-        "yellow",
-        "yellow",
-        "red",
-        "yellow",
-        null
-      ],
-      [
-        "red",
-        "yellow",
-        "red",
-        "yellow",
-        "yellow",
-        "yellow",
-        "red"
-      ],
-      [
-        "red",
-        "red",
-        "yellow",
-        "yellow",
-        "red",
-        "red",
-        "red"
-      ]
-    ],
-    "game_result": "yellow"
-  },
-  {
-    "game_id": "1769359377410_st8ty87ks",
-    "log_id": 53,
-    "global_turn": 0,
-    "mode": "Reflex (Agresif)",
-    "thinking_time_ms": 0,
-    "nodes_explored": 7,
-    "chosen_col": 2,
-    "score": 36,
-    "board_state": [
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ]
-    ],
-    "game_result": "yellow"
-  },
-  {
-    "game_id": "1769359377410_st8ty87ks",
-    "log_id": 54,
-    "global_turn": 1,
-    "mode": "Defend (Minimax)",
-    "thinking_time_ms": 2.4,
-    "nodes_explored": 532,
-    "chosen_col": 3,
-    "score": 3,
-    "board_state": [
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        "red",
-        null,
-        null,
-        null,
-        null
-      ]
-    ],
-    "game_result": "yellow"
-  },
-  {
-    "game_id": "1769359377410_st8ty87ks",
-    "log_id": 55,
-    "global_turn": 2,
-    "mode": "Reflex (Agresif)",
-    "thinking_time_ms": 0.1,
-    "nodes_explored": 7,
-    "chosen_col": 4,
-    "score": 20,
-    "board_state": [
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        "red",
-        "yellow",
-        null,
-        null,
-        null
-      ]
-    ],
-    "game_result": "yellow"
-  },
-  {
-    "game_id": "1769359377410_st8ty87ks",
-    "log_id": 56,
-    "global_turn": 3,
-    "mode": "Defend (Minimax)",
-    "thinking_time_ms": 3.1,
-    "nodes_explored": 689,
-    "chosen_col": 3,
-    "score": 8,
-    "board_state": [
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        "red",
-        "yellow",
-        "red",
-        null,
-        null
-      ]
-    ],
-    "game_result": "yellow"
-  },
-  {
-    "game_id": "1769359377410_st8ty87ks",
-    "log_id": 57,
-    "global_turn": 4,
-    "mode": "Reflex (Agresif)",
-    "thinking_time_ms": 0.1,
-    "nodes_explored": 7,
-    "chosen_col": 5,
-    "score": 27,
-    "board_state": [
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        "yellow",
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        "red",
-        "yellow",
-        "red",
-        null,
-        null
-      ]
-    ],
-    "game_result": "yellow"
-  },
-  {
-    "game_id": "1769359377410_st8ty87ks",
-    "log_id": 58,
-    "global_turn": 5,
-    "mode": "Defend (Minimax)",
-    "thinking_time_ms": 3.8,
-    "nodes_explored": 946,
-    "chosen_col": 3,
-    "score": 17,
-    "board_state": [
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        "yellow",
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        "red",
-        "yellow",
-        "red",
-        "red",
-        null
-      ]
-    ],
-    "game_result": "yellow"
-  },
-  {
-    "game_id": "1769359377410_st8ty87ks",
-    "log_id": 59,
-    "global_turn": 6,
-    "mode": "Reflex (Agresif)",
-    "thinking_time_ms": 0.1,
-    "nodes_explored": 7,
-    "chosen_col": 3,
-    "score": 500037,
-    "board_state": [
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        "yellow",
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        "yellow",
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        "red",
-        "yellow",
-        "red",
-        "red",
-        null
-      ]
-    ],
-    "game_result": "yellow"
-  },
-  {
-    "game_id": "1769359377410_st8ty87ks",
-    "log_id": 60,
-    "global_turn": 7,
-    "mode": "Defend (Minimax)",
-    "thinking_time_ms": 5.2,
-    "nodes_explored": 1304,
-    "chosen_col": 5,
-    "score": 13,
-    "board_state": [
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        "red",
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        "yellow",
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        "yellow",
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        "red",
-        "yellow",
-        "red",
-        "red",
-        null
-      ]
-    ],
-    "game_result": "yellow"
-  },
-  {
-    "game_id": "1769359377410_st8ty87ks",
-    "log_id": 61,
-    "global_turn": 8,
-    "mode": "Reflex (Agresif)",
-    "thinking_time_ms": 0,
-    "nodes_explored": 7,
-    "chosen_col": 5,
-    "score": 28,
-    "board_state": [
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        "red",
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        "yellow",
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        "yellow",
-        null,
-        "yellow",
-        null
-      ],
-      [
-        null,
-        null,
-        "red",
-        "yellow",
-        "red",
-        "red",
-        null
-      ]
-    ],
-    "game_result": "yellow"
-  },
-  {
-    "game_id": "1769359377410_st8ty87ks",
-    "log_id": 62,
-    "global_turn": 9,
-    "mode": "Defend (Minimax)",
-    "thinking_time_ms": 3.9,
-    "nodes_explored": 684,
-    "chosen_col": 4,
-    "score": 20,
-    "board_state": [
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        "red",
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        "yellow",
-        null,
-        "red",
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        "yellow",
-        null,
-        "yellow",
-        null
-      ],
-      [
-        null,
-        null,
-        "red",
-        "yellow",
-        "red",
-        "red",
-        null
-      ]
-    ],
-    "game_result": "yellow"
-  },
-  {
-    "game_id": "1769359377410_st8ty87ks",
-    "log_id": 63,
-    "global_turn": 10,
-    "mode": "Reflex (Agresif)",
-    "thinking_time_ms": 0.1,
-    "nodes_explored": 7,
-    "chosen_col": 2,
-    "score": 500020,
-    "board_state": [
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        "red",
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        "yellow",
-        null,
-        "red",
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        "yellow",
-        "yellow",
-        "yellow",
-        null
-      ],
-      [
-        null,
-        null,
-        "red",
-        "yellow",
-        "red",
-        "red",
-        null
-      ]
-    ],
-    "game_result": "yellow"
-  },
-  {
-    "game_id": "1769359377410_st8ty87ks",
-    "log_id": 64,
-    "global_turn": 11,
-    "mode": "Defend (Minimax)",
-    "thinking_time_ms": 3.8,
-    "nodes_explored": 781,
-    "chosen_col": 2,
-    "score": -51,
-    "board_state": [
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        "red",
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        "yellow",
-        null,
-        "red",
-        null
-      ],
-      [
-        null,
-        null,
-        "red",
-        "yellow",
-        "yellow",
-        "yellow",
-        null
-      ],
-      [
-        null,
-        null,
-        "red",
-        "yellow",
-        "red",
-        "red",
-        null
-      ]
-    ],
-    "game_result": "yellow"
-  },
-  {
-    "game_id": "1769359377410_st8ty87ks",
-    "log_id": 65,
-    "global_turn": 12,
-    "mode": "Reflex (Agresif)",
-    "thinking_time_ms": 0.1,
-    "nodes_explored": 7,
-    "chosen_col": 1,
-    "score": 17,
-    "board_state": [
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        "red",
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        "yellow",
-        "yellow",
-        null,
-        "red",
-        null
-      ],
-      [
-        null,
-        null,
-        "red",
-        "yellow",
-        "yellow",
-        "yellow",
-        null
-      ],
-      [
-        null,
-        null,
-        "red",
-        "yellow",
-        "red",
-        "red",
-        null
-      ]
-    ],
-    "game_result": "yellow"
-  },
-  {
-    "game_id": "1769359377410_st8ty87ks",
-    "log_id": 66,
-    "global_turn": 13,
-    "mode": "Defend (Minimax)",
-    "thinking_time_ms": 4.1,
-    "nodes_explored": 946,
-    "chosen_col": 2,
-    "score": 25,
-    "board_state": [
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        "red",
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        "yellow",
-        "yellow",
-        null,
-        "red",
-        null
-      ],
-      [
-        null,
-        null,
-        "red",
-        "yellow",
-        "yellow",
-        "yellow",
-        null
-      ],
-      [
-        null,
-        "red",
-        "red",
-        "yellow",
-        "red",
-        "red",
-        null
-      ]
-    ],
-    "game_result": "yellow"
-  },
-  {
-    "game_id": "1769359377410_st8ty87ks",
-    "log_id": 67,
-    "global_turn": 14,
-    "mode": "Reflex (Agresif)",
-    "thinking_time_ms": 0,
-    "nodes_explored": 7,
-    "chosen_col": 0,
-    "score": 15,
-    "board_state": [
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        "yellow",
-        "red",
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        "yellow",
-        "yellow",
-        null,
-        "red",
-        null
-      ],
-      [
-        null,
-        null,
-        "red",
-        "yellow",
-        "yellow",
-        "yellow",
-        null
-      ],
-      [
-        null,
-        "red",
-        "red",
-        "yellow",
-        "red",
-        "red",
-        null
-      ]
-    ],
-    "game_result": "yellow"
-  },
-  {
-    "game_id": "1769359377410_st8ty87ks",
-    "log_id": 68,
-    "global_turn": 15,
-    "mode": "Defend (Minimax)",
-    "thinking_time_ms": 2.2,
-    "nodes_explored": 468,
-    "chosen_col": 2,
-    "score": 38,
-    "board_state": [
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        "yellow",
-        "red",
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        "yellow",
-        "yellow",
-        null,
-        "red",
-        null
-      ],
-      [
-        null,
-        null,
-        "red",
-        "yellow",
-        "yellow",
-        "yellow",
-        null
-      ],
-      [
-        "red",
-        "red",
-        "red",
-        "yellow",
-        "red",
-        "red",
-        null
-      ]
-    ],
-    "game_result": "yellow"
-  },
-  {
-    "game_id": "1769359377410_st8ty87ks",
-    "log_id": 69,
-    "global_turn": 16,
-    "mode": "Reflex (Agresif)",
-    "thinking_time_ms": 0.1,
-    "nodes_explored": 7,
-    "chosen_col": 2,
-    "score": 500029,
-    "board_state": [
-      [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        "yellow",
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        "yellow",
-        "red",
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        "yellow",
-        "yellow",
-        null,
-        "red",
-        null
-      ],
-      [
-        null,
-        null,
-        "red",
-        "yellow",
-        "yellow",
-        "yellow",
-        null
-      ],
-      [
-        "red",
-        "red",
-        "red",
-        "yellow",
-        "red",
-        "red",
-        null
-      ]
-    ],
-    "game_result": "yellow"
-  },
-  {
-    "game_id": "1769359377410_st8ty87ks",
-    "log_id": 70,
-    "global_turn": 17,
-    "mode": "Defend (Minimax)",
-    "thinking_time_ms": 2.1,
-    "nodes_explored": 358,
-    "chosen_col": 3,
-    "score": 41,
-    "board_state": [
-      [
-        null,
-        null,
-        "red",
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        "yellow",
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        "yellow",
-        "red",
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        "yellow",
-        "yellow",
-        null,
-        "red",
-        null
-      ],
-      [
-        null,
-        null,
-        "red",
-        "yellow",
-        "yellow",
-        "yellow",
-        null
-      ],
-      [
-        "red",
-        "red",
-        "red",
-        "yellow",
-        "red",
-        "red",
-        null
-      ]
-    ],
-    "game_result": "yellow"
-  },
-  {
-    "game_id": "1769359377410_st8ty87ks",
-    "log_id": 71,
-    "global_turn": 18,
-    "mode": "Reflex (Agresif)",
-    "thinking_time_ms": 0,
-    "nodes_explored": 6,
-    "chosen_col": 5,
-    "score": 18,
-    "board_state": [
-      [
-        null,
-        null,
-        "red",
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        "yellow",
-        "yellow",
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        "yellow",
-        "red",
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        "yellow",
-        "yellow",
-        null,
-        "red",
-        null
-      ],
-      [
-        null,
-        null,
-        "red",
-        "yellow",
-        "yellow",
-        "yellow",
-        null
-      ],
-      [
-        "red",
-        "red",
-        "red",
-        "yellow",
-        "red",
-        "red",
-        null
-      ]
-    ],
-    "game_result": "yellow"
-  },
-  {
-    "game_id": "1769359377410_st8ty87ks",
-    "log_id": 72,
-    "global_turn": 19,
-    "mode": "Defend (Minimax)",
-    "thinking_time_ms": 3.9,
-    "nodes_explored": 476,
-    "chosen_col": 6,
-    "score": 40,
-    "board_state": [
-      [
-        null,
-        null,
-        "red",
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        "yellow",
-        "yellow",
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        "yellow",
-        "red",
-        null,
-        "red",
-        null
-      ],
-      [
-        null,
-        null,
-        "yellow",
-        "yellow",
-        null,
-        "red",
-        null
-      ],
-      [
-        null,
-        null,
-        "red",
-        "yellow",
-        "yellow",
-        "yellow",
-        null
-      ],
-      [
-        "red",
-        "red",
-        "red",
-        "yellow",
-        "red",
-        "red",
-        null
-      ]
-    ],
-    "game_result": "yellow"
-  },
-  {
-    "game_id": "1769359377410_st8ty87ks",
-    "log_id": 73,
-    "global_turn": 20,
-    "mode": "Reflex (Agresif)",
-    "thinking_time_ms": 0.1,
-    "nodes_explored": 6,
-    "chosen_col": 6,
-    "score": 500013,
-    "board_state": [
-      [
-        null,
-        null,
-        "red",
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        "yellow",
-        "yellow",
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        "yellow",
-        "red",
-        null,
-        "red",
-        null
-      ],
-      [
-        null,
-        null,
-        "yellow",
-        "yellow",
-        null,
-        "red",
-        null
-      ],
-      [
-        null,
-        null,
-        "red",
-        "yellow",
-        "yellow",
-        "yellow",
-        null
-      ],
-      [
-        "red",
-        "red",
-        "red",
-        "yellow",
-        "red",
-        "red",
-        "yellow"
-      ]
-    ],
-    "game_result": "yellow"
-  },
-  {
-    "game_id": "1769359377410_st8ty87ks",
-    "log_id": 74,
-    "global_turn": 21,
-    "mode": "Defend (Minimax)",
-    "thinking_time_ms": 6.2,
-    "nodes_explored": 623,
-    "chosen_col": 5,
-    "score": -38,
-    "board_state": [
-      [
-        null,
-        null,
-        "red",
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        "yellow",
-        "yellow",
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        "yellow",
-        "red",
-        null,
-        "red",
-        null
-      ],
-      [
-        null,
-        null,
-        "yellow",
-        "yellow",
-        null,
-        "red",
-        null
-      ],
-      [
-        null,
-        null,
-        "red",
-        "yellow",
-        "yellow",
-        "yellow",
-        "red"
-      ],
-      [
-        "red",
-        "red",
-        "red",
-        "yellow",
-        "red",
-        "red",
-        "yellow"
-      ]
-    ],
-    "game_result": "yellow"
-  },
-  {
-    "game_id": "1769359377410_st8ty87ks",
-    "log_id": 75,
-    "global_turn": 22,
-    "mode": "Reflex (Agresif)",
-    "thinking_time_ms": 0,
-    "nodes_explored": 6,
-    "chosen_col": 5,
-    "score": 25,
-    "board_state": [
-      [
-        null,
-        null,
-        "red",
-        null,
-        null,
-        null,
-        null
-      ],
-      [
-        null,
-        null,
-        "yellow",
-        "yellow",
-        null,
-        "yellow",
-        null
-      ],
-      [
-        null,
-        null,
-        "yellow",
-        "red",
-        null,
-        "red",
-        null
-      ],
-      [
-        null,
-        null,
-        "yellow",
-        "yellow",
-        null,
-        "red",
-        null
-      ],
-      [
-        null,
-        null,
-        "red",
-        "yellow",
-        "yellow",
-        "yellow",
-        "red"
-      ],
-      [
-        "red",
-        "red",
-        "red",
-        "yellow",
-        "red",
-        "red",
-        "yellow"
-      ]
-    ],
-    "game_result": "yellow"
-  },
-  {
-    "game_id": "1769359377410_st8ty87ks",
-    "log_id": 76,
-    "global_turn": 23,
+    "player": "yellow",
     "mode": "Defend (Minimax)",
     "thinking_time_ms": 2.9,
-    "nodes_explored": 234,
+    "nodes_explored": 458,
+    "chosen_col": 4,
+    "score": -78,
+    "red_moves_so_far": 5,
+    "yellow_moves_so_far": 4,
+    "board_state": [
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        "yellow",
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        "yellow",
+        "red",
+        "red",
+        null
+      ],
+      [
+        null,
+        "yellow",
+        "red",
+        "red",
+        "red",
+        "yellow",
+        null
+      ]
+    ],
+    "first_player": "red",
+    "first_player_mode": "random",
+    "game_result": "yellow",
+    "red_total_moves": 19,
+    "yellow_total_moves": 19,
+    "total_moves": 38
+  },
+  {
+    "game_id": "1770305649276_xmy8m2tut",
+    "log_id": 33,
+    "global_turn": 11,
+    "player": "red",
+    "mode": "Human",
+    "thinking_time_ms": 741.1,
+    "nodes_explored": 0,
     "chosen_col": 3,
-    "score": 39,
+    "score": null,
+    "red_moves_so_far": 6,
+    "yellow_moves_so_far": 5,
     "board_state": [
       [
         null,
         null,
-        "red",
         null,
         null,
-        "red",
+        null,
+        null,
         null
       ],
       [
         null,
         null,
-        "yellow",
-        "yellow",
         null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        "yellow",
         "yellow",
         null
       ],
       [
         null,
         null,
+        null,
         "yellow",
         "red",
-        null,
         "red",
         null
       ],
       [
         null,
-        null,
         "yellow",
-        "yellow",
-        null,
         "red",
+        "red",
+        "red",
+        "yellow",
         null
-      ],
-      [
-        null,
-        null,
-        "red",
-        "yellow",
-        "yellow",
-        "yellow",
-        "red"
-      ],
-      [
-        "red",
-        "red",
-        "red",
-        "yellow",
-        "red",
-        "red",
-        "yellow"
       ]
     ],
-    "game_result": "yellow"
+    "first_player": "red",
+    "first_player_mode": "random",
+    "game_result": "yellow",
+    "red_total_moves": 19,
+    "yellow_total_moves": 19,
+    "total_moves": 38
   },
   {
-    "game_id": "1769359377410_st8ty87ks",
-    "log_id": 77,
-    "global_turn": 24,
-    "mode": "Reflex (Agresif)",
-    "thinking_time_ms": 0.1,
-    "nodes_explored": 4,
-    "chosen_col": 1,
-    "score": 22,
-    "board_state": [
-      [
-        null,
-        null,
-        "red",
-        "yellow",
-        null,
-        "red",
-        null
-      ],
-      [
-        null,
-        null,
-        "yellow",
-        "yellow",
-        null,
-        "yellow",
-        null
-      ],
-      [
-        null,
-        null,
-        "yellow",
-        "red",
-        null,
-        "red",
-        null
-      ],
-      [
-        null,
-        null,
-        "yellow",
-        "yellow",
-        null,
-        "red",
-        null
-      ],
-      [
-        null,
-        null,
-        "red",
-        "yellow",
-        "yellow",
-        "yellow",
-        "red"
-      ],
-      [
-        "red",
-        "red",
-        "red",
-        "yellow",
-        "red",
-        "red",
-        "yellow"
-      ]
-    ],
-    "game_result": "yellow"
-  },
-  {
-    "game_id": "1769359377410_st8ty87ks",
-    "log_id": 78,
-    "global_turn": 25,
+    "game_id": "1770305649276_xmy8m2tut",
+    "log_id": 34,
+    "global_turn": 11,
+    "player": "yellow",
     "mode": "Defend (Minimax)",
-    "thinking_time_ms": 0.5,
-    "nodes_explored": 75,
+    "thinking_time_ms": 3.1,
+    "nodes_explored": 449,
+    "chosen_col": 2,
+    "score": -150,
+    "red_moves_so_far": 6,
+    "yellow_moves_so_far": 5,
+    "board_state": [
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        "red",
+        "yellow",
+        "yellow",
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        "yellow",
+        "red",
+        "red",
+        null
+      ],
+      [
+        null,
+        "yellow",
+        "red",
+        "red",
+        "red",
+        "yellow",
+        null
+      ]
+    ],
+    "first_player": "red",
+    "first_player_mode": "random",
+    "game_result": "yellow",
+    "red_total_moves": 19,
+    "yellow_total_moves": 19,
+    "total_moves": 38
+  },
+  {
+    "game_id": "1770305649276_xmy8m2tut",
+    "log_id": 35,
+    "global_turn": 13,
+    "player": "red",
+    "mode": "Human",
+    "thinking_time_ms": 3830.9,
+    "nodes_explored": 0,
+    "chosen_col": 3,
+    "score": null,
+    "red_moves_so_far": 7,
+    "yellow_moves_so_far": 6,
+    "board_state": [
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        "red",
+        "yellow",
+        "yellow",
+        null
+      ],
+      [
+        null,
+        null,
+        "yellow",
+        "yellow",
+        "red",
+        "red",
+        null
+      ],
+      [
+        null,
+        "yellow",
+        "red",
+        "red",
+        "red",
+        "yellow",
+        null
+      ]
+    ],
+    "first_player": "red",
+    "first_player_mode": "random",
+    "game_result": "yellow",
+    "red_total_moves": 19,
+    "yellow_total_moves": 19,
+    "total_moves": 38
+  },
+  {
+    "game_id": "1770305649276_xmy8m2tut",
+    "log_id": 36,
+    "global_turn": 13,
+    "player": "yellow",
+    "mode": "Defend (Minimax)",
+    "thinking_time_ms": 3.6,
+    "nodes_explored": 502,
     "chosen_col": 1,
-    "score": 1000000,
+    "score": -165,
+    "red_moves_so_far": 7,
+    "yellow_moves_so_far": 6,
     "board_state": [
       [
         null,
         null,
-        "red",
-        "yellow",
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
         null,
         "red",
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        "red",
+        "yellow",
+        "yellow",
         null
       ],
       [
@@ -5182,84 +2678,74 @@
         null,
         "yellow",
         "yellow",
-        null,
-        "yellow",
-        null
-      ],
-      [
-        null,
-        null,
-        "yellow",
         "red",
-        null,
         "red",
         null
       ],
       [
         null,
-        null,
         "yellow",
-        "yellow",
-        null,
         "red",
+        "red",
+        "red",
+        "yellow",
         null
-      ],
-      [
-        null,
-        "red",
-        "red",
-        "yellow",
-        "yellow",
-        "yellow",
-        "red"
-      ],
-      [
-        "red",
-        "red",
-        "red",
-        "yellow",
-        "red",
-        "red",
-        "yellow"
       ]
     ],
-    "game_result": "yellow"
+    "first_player": "red",
+    "first_player_mode": "random",
+    "game_result": "yellow",
+    "red_total_moves": 19,
+    "yellow_total_moves": 19,
+    "total_moves": 38
   },
   {
-    "game_id": "1769359377410_st8ty87ks",
-    "log_id": 79,
-    "global_turn": 26,
-    "mode": "Reflex (Agresif)",
-    "thinking_time_ms": 0,
-    "nodes_explored": 4,
-    "chosen_col": 0,
-    "score": 500006,
+    "game_id": "1770305649276_xmy8m2tut",
+    "log_id": 37,
+    "global_turn": 15,
+    "player": "red",
+    "mode": "Human",
+    "thinking_time_ms": 2838,
+    "nodes_explored": 0,
+    "chosen_col": 4,
+    "score": null,
+    "red_moves_so_far": 8,
+    "yellow_moves_so_far": 7,
     "board_state": [
       [
         null,
         null,
-        "red",
-        "yellow",
         null,
-        "red",
+        null,
+        null,
+        null,
         null
       ],
       [
         null,
         null,
-        "yellow",
-        "yellow",
         null,
-        "yellow",
+        null,
+        null,
+        null,
         null
       ],
       [
         null,
         null,
-        "yellow",
-        "red",
         null,
         "red",
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        "red",
+        "yellow",
+        "yellow",
         null
       ],
       [
@@ -5267,96 +2753,1750 @@
         "yellow",
         "yellow",
         "yellow",
-        null,
+        "red",
         "red",
         null
       ],
       [
         null,
-        "red",
-        "red",
         "yellow",
-        "yellow",
-        "yellow",
-        "red"
-      ],
-      [
         "red",
         "red",
         "red",
         "yellow",
-        "red",
-        "red",
-        "yellow"
+        null
       ]
     ],
-    "game_result": "yellow"
+    "first_player": "red",
+    "first_player_mode": "random",
+    "game_result": "yellow",
+    "red_total_moves": 19,
+    "yellow_total_moves": 19,
+    "total_moves": 38
   },
   {
-    "game_id": "1769359377410_st8ty87ks",
-    "log_id": 80,
+    "game_id": "1770305649276_xmy8m2tut",
+    "log_id": 38,
+    "global_turn": 15,
+    "player": "yellow",
+    "mode": "Defend (Minimax)",
+    "thinking_time_ms": 2.2,
+    "nodes_explored": 460,
+    "chosen_col": 5,
+    "score": -161,
+    "red_moves_so_far": 8,
+    "yellow_moves_so_far": 7,
+    "board_state": [
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        "red",
+        "red",
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        "red",
+        "yellow",
+        "yellow",
+        null
+      ],
+      [
+        null,
+        "yellow",
+        "yellow",
+        "yellow",
+        "red",
+        "red",
+        null
+      ],
+      [
+        null,
+        "yellow",
+        "red",
+        "red",
+        "red",
+        "yellow",
+        null
+      ]
+    ],
+    "first_player": "red",
+    "first_player_mode": "random",
+    "game_result": "yellow",
+    "red_total_moves": 19,
+    "yellow_total_moves": 19,
+    "total_moves": 38
+  },
+  {
+    "game_id": "1770305649276_xmy8m2tut",
+    "log_id": 39,
+    "global_turn": 17,
+    "player": "red",
+    "mode": "Human",
+    "thinking_time_ms": 3171.8,
+    "nodes_explored": 0,
+    "chosen_col": 2,
+    "score": null,
+    "red_moves_so_far": 9,
+    "yellow_moves_so_far": 8,
+    "board_state": [
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        "red",
+        "red",
+        "yellow",
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        "red",
+        "yellow",
+        "yellow",
+        null
+      ],
+      [
+        null,
+        "yellow",
+        "yellow",
+        "yellow",
+        "red",
+        "red",
+        null
+      ],
+      [
+        null,
+        "yellow",
+        "red",
+        "red",
+        "red",
+        "yellow",
+        null
+      ]
+    ],
+    "first_player": "red",
+    "first_player_mode": "random",
+    "game_result": "yellow",
+    "red_total_moves": 19,
+    "yellow_total_moves": 19,
+    "total_moves": 38
+  },
+  {
+    "game_id": "1770305649276_xmy8m2tut",
+    "log_id": 40,
+    "global_turn": 17,
+    "player": "yellow",
+    "mode": "Defend (Minimax)",
+    "thinking_time_ms": 2.9,
+    "nodes_explored": 320,
+    "chosen_col": 1,
+    "score": -85,
+    "red_moves_so_far": 9,
+    "yellow_moves_so_far": 8,
+    "board_state": [
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        "red",
+        "red",
+        "yellow",
+        null
+      ],
+      [
+        null,
+        null,
+        "red",
+        "red",
+        "yellow",
+        "yellow",
+        null
+      ],
+      [
+        null,
+        "yellow",
+        "yellow",
+        "yellow",
+        "red",
+        "red",
+        null
+      ],
+      [
+        null,
+        "yellow",
+        "red",
+        "red",
+        "red",
+        "yellow",
+        null
+      ]
+    ],
+    "first_player": "red",
+    "first_player_mode": "random",
+    "game_result": "yellow",
+    "red_total_moves": 19,
+    "yellow_total_moves": 19,
+    "total_moves": 38
+  },
+  {
+    "game_id": "1770305649276_xmy8m2tut",
+    "log_id": 41,
+    "global_turn": 19,
+    "player": "red",
+    "mode": "Human",
+    "thinking_time_ms": 582.3,
+    "nodes_explored": 0,
+    "chosen_col": 1,
+    "score": null,
+    "red_moves_so_far": 10,
+    "yellow_moves_so_far": 9,
+    "board_state": [
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        "red",
+        "red",
+        "yellow",
+        null
+      ],
+      [
+        null,
+        "yellow",
+        "red",
+        "red",
+        "yellow",
+        "yellow",
+        null
+      ],
+      [
+        null,
+        "yellow",
+        "yellow",
+        "yellow",
+        "red",
+        "red",
+        null
+      ],
+      [
+        null,
+        "yellow",
+        "red",
+        "red",
+        "red",
+        "yellow",
+        null
+      ]
+    ],
+    "first_player": "red",
+    "first_player_mode": "random",
+    "game_result": "yellow",
+    "red_total_moves": 19,
+    "yellow_total_moves": 19,
+    "total_moves": 38
+  },
+  {
+    "game_id": "1770305649276_xmy8m2tut",
+    "log_id": 42,
+    "global_turn": 19,
+    "player": "yellow",
+    "mode": "Defend (Minimax)",
+    "thinking_time_ms": 0.4,
+    "nodes_explored": 81,
+    "chosen_col": 2,
+    "score": -157,
+    "red_moves_so_far": 10,
+    "yellow_moves_so_far": 9,
+    "board_state": [
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        "red",
+        null,
+        "red",
+        "red",
+        "yellow",
+        null
+      ],
+      [
+        null,
+        "yellow",
+        "red",
+        "red",
+        "yellow",
+        "yellow",
+        null
+      ],
+      [
+        null,
+        "yellow",
+        "yellow",
+        "yellow",
+        "red",
+        "red",
+        null
+      ],
+      [
+        null,
+        "yellow",
+        "red",
+        "red",
+        "red",
+        "yellow",
+        null
+      ]
+    ],
+    "first_player": "red",
+    "first_player_mode": "random",
+    "game_result": "yellow",
+    "red_total_moves": 19,
+    "yellow_total_moves": 19,
+    "total_moves": 38
+  },
+  {
+    "game_id": "1770305649276_xmy8m2tut",
+    "log_id": 43,
+    "global_turn": 21,
+    "player": "red",
+    "mode": "Human",
+    "thinking_time_ms": 706.2,
+    "nodes_explored": 0,
+    "chosen_col": 3,
+    "score": null,
+    "red_moves_so_far": 11,
+    "yellow_moves_so_far": 10,
+    "board_state": [
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        "red",
+        "yellow",
+        "red",
+        "red",
+        "yellow",
+        null
+      ],
+      [
+        null,
+        "yellow",
+        "red",
+        "red",
+        "yellow",
+        "yellow",
+        null
+      ],
+      [
+        null,
+        "yellow",
+        "yellow",
+        "yellow",
+        "red",
+        "red",
+        null
+      ],
+      [
+        null,
+        "yellow",
+        "red",
+        "red",
+        "red",
+        "yellow",
+        null
+      ]
+    ],
+    "first_player": "red",
+    "first_player_mode": "random",
+    "game_result": "yellow",
+    "red_total_moves": 19,
+    "yellow_total_moves": 19,
+    "total_moves": 38
+  },
+  {
+    "game_id": "1770305649276_xmy8m2tut",
+    "log_id": 44,
+    "global_turn": 21,
+    "player": "yellow",
+    "mode": "Defend (Minimax)",
+    "thinking_time_ms": 1.3,
+    "nodes_explored": 85,
+    "chosen_col": 3,
+    "score": -408,
+    "red_moves_so_far": 11,
+    "yellow_moves_so_far": 10,
+    "board_state": [
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        "red",
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        "red",
+        "yellow",
+        "red",
+        "red",
+        "yellow",
+        null
+      ],
+      [
+        null,
+        "yellow",
+        "red",
+        "red",
+        "yellow",
+        "yellow",
+        null
+      ],
+      [
+        null,
+        "yellow",
+        "yellow",
+        "yellow",
+        "red",
+        "red",
+        null
+      ],
+      [
+        null,
+        "yellow",
+        "red",
+        "red",
+        "red",
+        "yellow",
+        null
+      ]
+    ],
+    "first_player": "red",
+    "first_player_mode": "random",
+    "game_result": "yellow",
+    "red_total_moves": 19,
+    "yellow_total_moves": 19,
+    "total_moves": 38
+  },
+  {
+    "game_id": "1770305649276_xmy8m2tut",
+    "log_id": 45,
+    "global_turn": 23,
+    "player": "red",
+    "mode": "Human",
+    "thinking_time_ms": 2291,
+    "nodes_explored": 0,
+    "chosen_col": 1,
+    "score": null,
+    "red_moves_so_far": 12,
+    "yellow_moves_so_far": 11,
+    "board_state": [
+      [
+        null,
+        null,
+        null,
+        "yellow",
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        "red",
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        "red",
+        "yellow",
+        "red",
+        "red",
+        "yellow",
+        null
+      ],
+      [
+        null,
+        "yellow",
+        "red",
+        "red",
+        "yellow",
+        "yellow",
+        null
+      ],
+      [
+        null,
+        "yellow",
+        "yellow",
+        "yellow",
+        "red",
+        "red",
+        null
+      ],
+      [
+        null,
+        "yellow",
+        "red",
+        "red",
+        "red",
+        "yellow",
+        null
+      ]
+    ],
+    "first_player": "red",
+    "first_player_mode": "random",
+    "game_result": "yellow",
+    "red_total_moves": 19,
+    "yellow_total_moves": 19,
+    "total_moves": 38
+  },
+  {
+    "game_id": "1770305649276_xmy8m2tut",
+    "log_id": 46,
+    "global_turn": 23,
+    "player": "yellow",
+    "mode": "Defend (Minimax)",
+    "thinking_time_ms": 1.7,
+    "nodes_explored": 178,
+    "chosen_col": 4,
+    "score": 72,
+    "red_moves_so_far": 12,
+    "yellow_moves_so_far": 11,
+    "board_state": [
+      [
+        null,
+        null,
+        null,
+        "yellow",
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        "red",
+        null,
+        "red",
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        "red",
+        "yellow",
+        "red",
+        "red",
+        "yellow",
+        null
+      ],
+      [
+        null,
+        "yellow",
+        "red",
+        "red",
+        "yellow",
+        "yellow",
+        null
+      ],
+      [
+        null,
+        "yellow",
+        "yellow",
+        "yellow",
+        "red",
+        "red",
+        null
+      ],
+      [
+        null,
+        "yellow",
+        "red",
+        "red",
+        "red",
+        "yellow",
+        null
+      ]
+    ],
+    "first_player": "red",
+    "first_player_mode": "random",
+    "game_result": "yellow",
+    "red_total_moves": 19,
+    "yellow_total_moves": 19,
+    "total_moves": 38
+  },
+  {
+    "game_id": "1770305649276_xmy8m2tut",
+    "log_id": 47,
+    "global_turn": 25,
+    "player": "red",
+    "mode": "Human",
+    "thinking_time_ms": 842.6,
+    "nodes_explored": 0,
+    "chosen_col": 5,
+    "score": null,
+    "red_moves_so_far": 13,
+    "yellow_moves_so_far": 12,
+    "board_state": [
+      [
+        null,
+        null,
+        null,
+        "yellow",
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        "red",
+        null,
+        "red",
+        "yellow",
+        null,
+        null
+      ],
+      [
+        null,
+        "red",
+        "yellow",
+        "red",
+        "red",
+        "yellow",
+        null
+      ],
+      [
+        null,
+        "yellow",
+        "red",
+        "red",
+        "yellow",
+        "yellow",
+        null
+      ],
+      [
+        null,
+        "yellow",
+        "yellow",
+        "yellow",
+        "red",
+        "red",
+        null
+      ],
+      [
+        null,
+        "yellow",
+        "red",
+        "red",
+        "red",
+        "yellow",
+        null
+      ]
+    ],
+    "first_player": "red",
+    "first_player_mode": "random",
+    "game_result": "yellow",
+    "red_total_moves": 19,
+    "yellow_total_moves": 19,
+    "total_moves": 38
+  },
+  {
+    "game_id": "1770305649276_xmy8m2tut",
+    "log_id": 48,
+    "global_turn": 25,
+    "player": "yellow",
+    "mode": "Defend (Minimax)",
+    "thinking_time_ms": 0.9,
+    "nodes_explored": 107,
+    "chosen_col": 2,
+    "score": 76,
+    "red_moves_so_far": 13,
+    "yellow_moves_so_far": 12,
+    "board_state": [
+      [
+        null,
+        null,
+        null,
+        "yellow",
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        "red",
+        null,
+        "red",
+        "yellow",
+        "red",
+        null
+      ],
+      [
+        null,
+        "red",
+        "yellow",
+        "red",
+        "red",
+        "yellow",
+        null
+      ],
+      [
+        null,
+        "yellow",
+        "red",
+        "red",
+        "yellow",
+        "yellow",
+        null
+      ],
+      [
+        null,
+        "yellow",
+        "yellow",
+        "yellow",
+        "red",
+        "red",
+        null
+      ],
+      [
+        null,
+        "yellow",
+        "red",
+        "red",
+        "red",
+        "yellow",
+        null
+      ]
+    ],
+    "first_player": "red",
+    "first_player_mode": "random",
+    "game_result": "yellow",
+    "red_total_moves": 19,
+    "yellow_total_moves": 19,
+    "total_moves": 38
+  },
+  {
+    "game_id": "1770305649276_xmy8m2tut",
+    "log_id": 49,
     "global_turn": 27,
+    "player": "red",
+    "mode": "Human",
+    "thinking_time_ms": 2659,
+    "nodes_explored": 0,
+    "chosen_col": 6,
+    "score": null,
+    "red_moves_so_far": 14,
+    "yellow_moves_so_far": 13,
+    "board_state": [
+      [
+        null,
+        null,
+        null,
+        "yellow",
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        "red",
+        "yellow",
+        "red",
+        "yellow",
+        "red",
+        null
+      ],
+      [
+        null,
+        "red",
+        "yellow",
+        "red",
+        "red",
+        "yellow",
+        null
+      ],
+      [
+        null,
+        "yellow",
+        "red",
+        "red",
+        "yellow",
+        "yellow",
+        null
+      ],
+      [
+        null,
+        "yellow",
+        "yellow",
+        "yellow",
+        "red",
+        "red",
+        null
+      ],
+      [
+        null,
+        "yellow",
+        "red",
+        "red",
+        "red",
+        "yellow",
+        null
+      ]
+    ],
+    "first_player": "red",
+    "first_player_mode": "random",
+    "game_result": "yellow",
+    "red_total_moves": 19,
+    "yellow_total_moves": 19,
+    "total_moves": 38
+  },
+  {
+    "game_id": "1770305649276_xmy8m2tut",
+    "log_id": 50,
+    "global_turn": 27,
+    "player": "yellow",
+    "mode": "Defend (Minimax)",
+    "thinking_time_ms": 1,
+    "nodes_explored": 120,
+    "chosen_col": 2,
+    "score": 76,
+    "red_moves_so_far": 14,
+    "yellow_moves_so_far": 13,
+    "board_state": [
+      [
+        null,
+        null,
+        null,
+        "yellow",
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        "red",
+        "yellow",
+        "red",
+        "yellow",
+        "red",
+        null
+      ],
+      [
+        null,
+        "red",
+        "yellow",
+        "red",
+        "red",
+        "yellow",
+        null
+      ],
+      [
+        null,
+        "yellow",
+        "red",
+        "red",
+        "yellow",
+        "yellow",
+        null
+      ],
+      [
+        null,
+        "yellow",
+        "yellow",
+        "yellow",
+        "red",
+        "red",
+        null
+      ],
+      [
+        null,
+        "yellow",
+        "red",
+        "red",
+        "red",
+        "yellow",
+        "red"
+      ]
+    ],
+    "first_player": "red",
+    "first_player_mode": "random",
+    "game_result": "yellow",
+    "red_total_moves": 19,
+    "yellow_total_moves": 19,
+    "total_moves": 38
+  },
+  {
+    "game_id": "1770305649276_xmy8m2tut",
+    "log_id": 51,
+    "global_turn": 29,
+    "player": "red",
+    "mode": "Human",
+    "thinking_time_ms": 1405.7,
+    "nodes_explored": 0,
+    "chosen_col": 1,
+    "score": null,
+    "red_moves_so_far": 15,
+    "yellow_moves_so_far": 14,
+    "board_state": [
+      [
+        null,
+        null,
+        "yellow",
+        "yellow",
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        "red",
+        "yellow",
+        "red",
+        "yellow",
+        "red",
+        null
+      ],
+      [
+        null,
+        "red",
+        "yellow",
+        "red",
+        "red",
+        "yellow",
+        null
+      ],
+      [
+        null,
+        "yellow",
+        "red",
+        "red",
+        "yellow",
+        "yellow",
+        null
+      ],
+      [
+        null,
+        "yellow",
+        "yellow",
+        "yellow",
+        "red",
+        "red",
+        null
+      ],
+      [
+        null,
+        "yellow",
+        "red",
+        "red",
+        "red",
+        "yellow",
+        "red"
+      ]
+    ],
+    "first_player": "red",
+    "first_player_mode": "random",
+    "game_result": "yellow",
+    "red_total_moves": 19,
+    "yellow_total_moves": 19,
+    "total_moves": 38
+  },
+  {
+    "game_id": "1770305649276_xmy8m2tut",
+    "log_id": 52,
+    "global_turn": 29,
+    "player": "yellow",
+    "mode": "Defend (Minimax)",
+    "thinking_time_ms": 0.2,
+    "nodes_explored": 38,
+    "chosen_col": 4,
+    "score": -4,
+    "red_moves_so_far": 15,
+    "yellow_moves_so_far": 14,
+    "board_state": [
+      [
+        null,
+        "red",
+        "yellow",
+        "yellow",
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        "red",
+        "yellow",
+        "red",
+        "yellow",
+        "red",
+        null
+      ],
+      [
+        null,
+        "red",
+        "yellow",
+        "red",
+        "red",
+        "yellow",
+        null
+      ],
+      [
+        null,
+        "yellow",
+        "red",
+        "red",
+        "yellow",
+        "yellow",
+        null
+      ],
+      [
+        null,
+        "yellow",
+        "yellow",
+        "yellow",
+        "red",
+        "red",
+        null
+      ],
+      [
+        null,
+        "yellow",
+        "red",
+        "red",
+        "red",
+        "yellow",
+        "red"
+      ]
+    ],
+    "first_player": "red",
+    "first_player_mode": "random",
+    "game_result": "yellow",
+    "red_total_moves": 19,
+    "yellow_total_moves": 19,
+    "total_moves": 38
+  },
+  {
+    "game_id": "1770305649276_xmy8m2tut",
+    "log_id": 53,
+    "global_turn": 31,
+    "player": "red",
+    "mode": "Human",
+    "thinking_time_ms": 347,
+    "nodes_explored": 0,
+    "chosen_col": 5,
+    "score": null,
+    "red_moves_so_far": 16,
+    "yellow_moves_so_far": 15,
+    "board_state": [
+      [
+        null,
+        "red",
+        "yellow",
+        "yellow",
+        "yellow",
+        null,
+        null
+      ],
+      [
+        null,
+        "red",
+        "yellow",
+        "red",
+        "yellow",
+        "red",
+        null
+      ],
+      [
+        null,
+        "red",
+        "yellow",
+        "red",
+        "red",
+        "yellow",
+        null
+      ],
+      [
+        null,
+        "yellow",
+        "red",
+        "red",
+        "yellow",
+        "yellow",
+        null
+      ],
+      [
+        null,
+        "yellow",
+        "yellow",
+        "yellow",
+        "red",
+        "red",
+        null
+      ],
+      [
+        null,
+        "yellow",
+        "red",
+        "red",
+        "red",
+        "yellow",
+        "red"
+      ]
+    ],
+    "first_player": "red",
+    "first_player_mode": "random",
+    "game_result": "yellow",
+    "red_total_moves": 19,
+    "yellow_total_moves": 19,
+    "total_moves": 38
+  },
+  {
+    "game_id": "1770305649276_xmy8m2tut",
+    "log_id": 54,
+    "global_turn": 31,
+    "player": "yellow",
     "mode": "Defend (Minimax)",
     "thinking_time_ms": 0.3,
-    "nodes_explored": 20,
+    "nodes_explored": 16,
     "chosen_col": 0,
-    "score": 1000000,
+    "score": -44,
+    "red_moves_so_far": 16,
+    "yellow_moves_so_far": 15,
     "board_state": [
       [
         null,
-        null,
         "red",
         "yellow",
-        null,
-        "red",
-        null
-      ],
-      [
-        null,
-        null,
         "yellow",
         "yellow",
-        null,
-        "yellow",
-        null
-      ],
-      [
-        null,
-        null,
-        "yellow",
-        "red",
-        null,
         "red",
         null
       ],
       [
         null,
+        "red",
         "yellow",
+        "red",
         "yellow",
-        "yellow",
+        "red",
+        null
+      ],
+      [
         null,
+        "red",
+        "yellow",
+        "red",
+        "red",
+        "yellow",
+        null
+      ],
+      [
+        null,
+        "yellow",
+        "red",
+        "red",
+        "yellow",
+        "yellow",
+        null
+      ],
+      [
+        null,
+        "yellow",
+        "yellow",
+        "yellow",
+        "red",
+        "red",
+        null
+      ],
+      [
+        null,
+        "yellow",
+        "red",
+        "red",
+        "red",
+        "yellow",
+        "red"
+      ]
+    ],
+    "first_player": "red",
+    "first_player_mode": "random",
+    "game_result": "yellow",
+    "red_total_moves": 19,
+    "yellow_total_moves": 19,
+    "total_moves": 38
+  },
+  {
+    "game_id": "1770305649276_xmy8m2tut",
+    "log_id": 55,
+    "global_turn": 33,
+    "player": "red",
+    "mode": "Human",
+    "thinking_time_ms": 539.2,
+    "nodes_explored": 0,
+    "chosen_col": 0,
+    "score": null,
+    "red_moves_so_far": 17,
+    "yellow_moves_so_far": 16,
+    "board_state": [
+      [
+        null,
+        "red",
+        "yellow",
+        "yellow",
+        "yellow",
+        "red",
+        null
+      ],
+      [
+        null,
+        "red",
+        "yellow",
+        "red",
+        "yellow",
+        "red",
+        null
+      ],
+      [
+        null,
+        "red",
+        "yellow",
+        "red",
+        "red",
+        "yellow",
+        null
+      ],
+      [
+        null,
+        "yellow",
+        "red",
+        "red",
+        "yellow",
+        "yellow",
+        null
+      ],
+      [
+        null,
+        "yellow",
+        "yellow",
+        "yellow",
+        "red",
+        "red",
+        null
+      ],
+      [
+        "yellow",
+        "yellow",
+        "red",
+        "red",
+        "red",
+        "yellow",
+        "red"
+      ]
+    ],
+    "first_player": "red",
+    "first_player_mode": "random",
+    "game_result": "yellow",
+    "red_total_moves": 19,
+    "yellow_total_moves": 19,
+    "total_moves": 38
+  },
+  {
+    "game_id": "1770305649276_xmy8m2tut",
+    "log_id": 56,
+    "global_turn": 33,
+    "player": "yellow",
+    "mode": "Defend (Minimax)",
+    "thinking_time_ms": 0.3,
+    "nodes_explored": 16,
+    "chosen_col": 0,
+    "score": -44,
+    "red_moves_so_far": 17,
+    "yellow_moves_so_far": 16,
+    "board_state": [
+      [
+        null,
+        "red",
+        "yellow",
+        "yellow",
+        "yellow",
+        "red",
+        null
+      ],
+      [
+        null,
+        "red",
+        "yellow",
+        "red",
+        "yellow",
+        "red",
+        null
+      ],
+      [
+        null,
+        "red",
+        "yellow",
+        "red",
+        "red",
+        "yellow",
+        null
+      ],
+      [
+        null,
+        "yellow",
+        "red",
+        "red",
+        "yellow",
+        "yellow",
+        null
+      ],
+      [
+        "red",
+        "yellow",
+        "yellow",
+        "yellow",
+        "red",
+        "red",
+        null
+      ],
+      [
+        "yellow",
+        "yellow",
+        "red",
+        "red",
+        "red",
+        "yellow",
+        "red"
+      ]
+    ],
+    "first_player": "red",
+    "first_player_mode": "random",
+    "game_result": "yellow",
+    "red_total_moves": 19,
+    "yellow_total_moves": 19,
+    "total_moves": 38
+  },
+  {
+    "game_id": "1770305649276_xmy8m2tut",
+    "log_id": 57,
+    "global_turn": 35,
+    "player": "red",
+    "mode": "Human",
+    "thinking_time_ms": 3904,
+    "nodes_explored": 0,
+    "chosen_col": 0,
+    "score": null,
+    "red_moves_so_far": 18,
+    "yellow_moves_so_far": 17,
+    "board_state": [
+      [
+        null,
+        "red",
+        "yellow",
+        "yellow",
+        "yellow",
+        "red",
+        null
+      ],
+      [
+        null,
+        "red",
+        "yellow",
+        "red",
+        "yellow",
+        "red",
+        null
+      ],
+      [
+        null,
+        "red",
+        "yellow",
+        "red",
+        "red",
+        "yellow",
+        null
+      ],
+      [
+        "yellow",
+        "yellow",
+        "red",
+        "red",
+        "yellow",
+        "yellow",
+        null
+      ],
+      [
+        "red",
+        "yellow",
+        "yellow",
+        "yellow",
+        "red",
+        "red",
+        null
+      ],
+      [
+        "yellow",
+        "yellow",
+        "red",
+        "red",
+        "red",
+        "yellow",
+        "red"
+      ]
+    ],
+    "first_player": "red",
+    "first_player_mode": "random",
+    "game_result": "yellow",
+    "red_total_moves": 19,
+    "yellow_total_moves": 19,
+    "total_moves": 38
+  },
+  {
+    "game_id": "1770305649276_xmy8m2tut",
+    "log_id": 58,
+    "global_turn": 35,
+    "player": "yellow",
+    "mode": "Defend (Minimax)",
+    "thinking_time_ms": 0.2,
+    "nodes_explored": 13,
+    "chosen_col": 0,
+    "score": -84,
+    "red_moves_so_far": 18,
+    "yellow_moves_so_far": 17,
+    "board_state": [
+      [
+        null,
+        "red",
+        "yellow",
+        "yellow",
+        "yellow",
+        "red",
+        null
+      ],
+      [
+        null,
+        "red",
+        "yellow",
+        "red",
+        "yellow",
         "red",
         null
       ],
       [
         "red",
         "red",
+        "yellow",
+        "red",
+        "red",
+        "yellow",
+        null
+      ],
+      [
+        "yellow",
+        "yellow",
+        "red",
+        "red",
+        "yellow",
+        "yellow",
+        null
+      ],
+      [
         "red",
         "yellow",
         "yellow",
         "yellow",
+        "red",
+        "red",
+        null
+      ],
+      [
+        "yellow",
+        "yellow",
+        "red",
+        "red",
+        "red",
+        "yellow",
+        "red"
+      ]
+    ],
+    "first_player": "red",
+    "first_player_mode": "random",
+    "game_result": "yellow",
+    "red_total_moves": 19,
+    "yellow_total_moves": 19,
+    "total_moves": 38
+  },
+  {
+    "game_id": "1770305649276_xmy8m2tut",
+    "log_id": 59,
+    "global_turn": 37,
+    "player": "red",
+    "mode": "Human",
+    "thinking_time_ms": 266.2,
+    "nodes_explored": 0,
+    "chosen_col": 6,
+    "score": null,
+    "red_moves_so_far": 19,
+    "yellow_moves_so_far": 18,
+    "board_state": [
+      [
+        null,
+        "red",
+        "yellow",
+        "yellow",
+        "yellow",
+        "red",
+        null
+      ],
+      [
+        "yellow",
+        "red",
+        "yellow",
+        "red",
+        "yellow",
+        "red",
+        null
+      ],
+      [
+        "red",
+        "red",
+        "yellow",
+        "red",
+        "red",
+        "yellow",
+        null
+      ],
+      [
+        "yellow",
+        "yellow",
+        "red",
+        "red",
+        "yellow",
+        "yellow",
+        null
+      ],
+      [
+        "red",
+        "yellow",
+        "yellow",
+        "yellow",
+        "red",
+        "red",
+        null
+      ],
+      [
+        "yellow",
+        "yellow",
+        "red",
+        "red",
+        "red",
+        "yellow",
+        "red"
+      ]
+    ],
+    "first_player": "red",
+    "first_player_mode": "random",
+    "game_result": "yellow",
+    "red_total_moves": 19,
+    "yellow_total_moves": 19,
+    "total_moves": 38
+  },
+  {
+    "game_id": "1770305649276_xmy8m2tut",
+    "log_id": 60,
+    "global_turn": 37,
+    "player": "yellow",
+    "mode": "Defend (Minimax)",
+    "thinking_time_ms": 0,
+    "nodes_explored": 6,
+    "chosen_col": 6,
+    "score": 1000003,
+    "red_moves_so_far": 19,
+    "yellow_moves_so_far": 18,
+    "board_state": [
+      [
+        null,
+        "red",
+        "yellow",
+        "yellow",
+        "yellow",
+        "red",
+        null
+      ],
+      [
+        "yellow",
+        "red",
+        "yellow",
+        "red",
+        "yellow",
+        "red",
+        null
+      ],
+      [
+        "red",
+        "red",
+        "yellow",
+        "red",
+        "red",
+        "yellow",
+        null
+      ],
+      [
+        "yellow",
+        "yellow",
+        "red",
+        "red",
+        "yellow",
+        "yellow",
+        null
+      ],
+      [
+        "red",
+        "yellow",
+        "yellow",
+        "yellow",
+        "red",
+        "red",
         "red"
       ],
       [
+        "yellow",
+        "yellow",
         "red",
         "red",
         "red",
         "yellow",
-        "red",
-        "red",
-        "yellow"
+        "red"
       ]
     ],
-    "game_result": "yellow"
+    "first_player": "red",
+    "first_player_mode": "random",
+    "game_result": "yellow",
+    "red_total_moves": 19,
+    "yellow_total_moves": 19,
+    "total_moves": 38
   }
 ]

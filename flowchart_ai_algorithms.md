@@ -68,7 +68,7 @@ flowchart TD
 ```mermaid
 flowchart TD
     Start([Mulai: Giliran AI Defend]) --> InitDefend[Reset Nodes Counter = 0]
-    InitDefend --> CallMinimax[Panggil Minimax<br/>depth=4, alpha=-∞, beta=+∞<br/>maximizing=true]
+    InitDefend --> CallMinimax[Panggil Minimax<br/>depth=SEARCH_DEPTH dinamis<br/>alpha=-∞, beta=+∞<br/>maximizing=true]
 
     CallMinimax --> MinimaxStart[MINIMAX FUNCTION]
     MinimaxStart --> IncrNodes[Nodes++]
@@ -252,7 +252,7 @@ sequenceDiagram
 
 | Aspek                  | Reflex Agent                    | Minimax Agent                        |
 | ---------------------- | ------------------------------- | ------------------------------------ |
-| **Depth Pencarian**    | 1 (evaluasi + immediate check)  | 4 (simulasi 4 langkah ke depan)      |
+| **Depth Pencarian**    | 1 (evaluasi + immediate check)  | 2-6 dinamis (default: 4)             |
 | **Nodes Explored**     | ~7-21 nodes/turn                | ~500-3000 nodes/turn                 |
 | **Waktu Eksekusi**     | <5ms                            | 20-150ms                             |
 | **Strategi**           | Greedy (pilih terbaik sekarang) | Optimal (asumsi lawan main sempurna) |
@@ -263,6 +263,35 @@ sequenceDiagram
 | **Move Ordering**      | Score → Center → Column         | Win → Block → Center                 |
 | **Board Handling**     | Direct mutation + restore       | Move/Undo (no deep copy)             |
 | **Terminal Score**     | Fixed (1M)                      | Depth-sensitive (prefer fast win)    |
+
+---
+
+## Sistem Difficulty Dinamis (AI Defend)
+
+```mermaid
+flowchart LR
+    subgraph DifficultySystem["DIFFICULTY CONFIGURATION"]
+        User[User memilih difficulty] --> SetDiff[setDifficulty function]
+        SetDiff --> Check{Level?}
+        Check -->|easy| Easy[SEARCH_DEPTH = 2<br/>~100-500 nodes]
+        Check -->|medium| Medium[SEARCH_DEPTH = 4<br/>~500-3000 nodes]
+        Check -->|hard| Hard[SEARCH_DEPTH = 6<br/>~3000-15000 nodes]
+
+        Easy --> Minimax[Minimax Algorithm]
+        Medium --> Minimax
+        Hard --> Minimax
+    end
+
+    style Easy fill:#c8e6c9
+    style Medium fill:#fff4e1
+    style Hard fill:#ffcdd2
+```
+
+| Level  | Depth | Nodes (est.) | Waktu (est.) | Karakteristik                        |
+| ------ | ----- | ------------ | ------------ | ------------------------------------ |
+| Easy   | 2     | ~100-500     | <10ms        | Mudah dikalahkan, cocok untuk pemula |
+| Medium | 4     | ~500-3000    | 20-150ms     | Seimbang, default untuk riset        |
+| Hard   | 6     | ~3000-15000  | 100-500ms    | Sulit dikalahkan, untuk pemain mahir |
 
 ---
 

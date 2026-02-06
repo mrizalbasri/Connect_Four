@@ -1,8 +1,46 @@
 // ai_defend.js - AI "Defend" (Bertahan & Mikir)
 // Menggunakan Minimax Algorithm dengan Alpha-Beta Pruning
 
-const SEARCH_DEPTH = 4; // Kedalaman berpikir (4 langkah ke depan)
+// Difficulty Settings - Depth dapat diubah dinamis
+let SEARCH_DEPTH = 4; // Default: Medium (4 langkah ke depan)
+let currentDifficulty = "medium"; // Track current difficulty level
 let nodesExplored_defend = 0; // Global counter untuk statistik riset
+
+// Difficulty Configuration
+const DIFFICULTY_CONFIG = {
+  easy: { depth: 2, label: "Easy", description: "2 langkah ke depan" },
+  medium: { depth: 4, label: "Medium", description: "4 langkah ke depan" },
+  hard: { depth: 6, label: "Hard", description: "6 langkah ke depan" },
+};
+
+/**
+ * Set AI difficulty level dynamically
+ * @param {string} level - 'easy', 'medium', or 'hard'
+ */
+function setDifficulty(level) {
+  if (DIFFICULTY_CONFIG[level]) {
+    SEARCH_DEPTH = DIFFICULTY_CONFIG[level].depth;
+    currentDifficulty = level;
+    console.log(
+      `[DEFEND AI] Difficulty set to ${level.toUpperCase()} (Depth: ${SEARCH_DEPTH})`,
+    );
+    return true;
+  }
+  console.warn(`[DEFEND AI] Unknown difficulty level: ${level}`);
+  return false;
+}
+
+/**
+ * Get current difficulty info
+ * @returns {object} Current difficulty configuration
+ */
+function getDifficultyInfo() {
+  return {
+    level: currentDifficulty,
+    depth: SEARCH_DEPTH,
+    ...DIFFICULTY_CONFIG[currentDifficulty],
+  };
+}
 
 function getDefendMove(boardState, playerColor) {
   const startTime = performance.now();

@@ -34,27 +34,27 @@ function getReflexMove(boardState, playerColor) {
     return immediateWin;
   }
 
-  // 2) Blokir kemenangan lawan jika ada
+  // 2) Evaluasi immediate block juga (jangan langsung return)
   const immediateBlock = findImmediateWinningMove(
     boardState,
     opponent,
     validMoves,
   );
   if (immediateBlock !== null) {
-    const timeTaken = (performance.now() - startTime).toFixed(2);
-    const chosen = { col: immediateBlock, score: 900000 };
-    if (typeof logDecision === "function") {
-      const selectedWithNodes = {
-        col: chosen.col,
-        score: chosen.score,
-        nodes: nodesExplored_reflex,
-      };
-      logDecision([chosen], selectedWithNodes, timeTaken, "Reflex (Agresif)");
+    nodesExplored_reflex++;
+    let r = getOpenRow(boardState, immediateBlock);
+    if (r !== -1) {
+      let score = evaluateReflex(boardState, r, immediateBlock, playerColor);
+      // Tambah bonus untuk blocking immediate threat
+      score += 900000;
+      moves.push({ col: immediateBlock, score: score });
     }
-    return immediateBlock;
   }
 
+  // Evaluasi semua moves lain
   for (let col of validMoves) {
+    if (col === immediateBlock) continue; // Skip yang sudah di-evaluate
+
     nodesExplored_reflex++; // 1 evaluasi = 1 node
 
     let r = getOpenRow(boardState, col);
@@ -69,10 +69,17 @@ function getReflexMove(boardState, playerColor) {
   const centerCol = Math.floor(COLS / 2);
   moves.sort((a, b) => {
     if (b.score !== a.score) return b.score - a.score;
+
+    // Calculate distance to center for tiebreaker
     const distA = Math.abs(a.col - centerCol);
     const distB = Math.abs(b.col - centerCol);
-    if (distA !== distB) return distA - distB;
-    return a.col - b.col;
+
+    // If distance difference is significant (>2 columns), prefer center
+    // This avoids extreme edges while keeping some unpredictability
+    if (Math.abs(distA - distB) > 2) return distA - distB;
+
+    // Otherwise randomize to avoid predictable patterns
+    return Math.random() - 0.5;
   });
 
   const chosen = moves[0];
@@ -121,9 +128,7 @@ function evaluateReflex(board, row, col, aiColor) {
   const oppWinCount = countImmediateWins(board, oppColor);
   if (oppWinCount > 0) score -= 100000 * oppWinCount;
 
-  // 5. Center Control
-  const centerCol = Math.floor(COLS / 2);
-  score += (centerCol - Math.abs(col - centerCol)) * 50;
+  // No center control - pure Reflex evaluation based on threats and opportunities
 
   board[row][col] = null;
 

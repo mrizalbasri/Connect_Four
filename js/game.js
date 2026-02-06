@@ -37,6 +37,207 @@ let yellowMoveCount = 0;
 let humanTurnStartTime = 0;
 let humanThinkingTime = 0;
 
+// ============================================
+// TOURNAMENT TRACKER SYSTEM
+// ============================================
+let tournamentStats = {
+  totalGames: 0,
+  player: { wins: 0, losses: 0, draws: 0 },
+  ai: { wins: 0, losses: 0, draws: 0 },
+  aiReflex: { wins: 0, losses: 0, draws: 0 },
+  aiMinimax: { wins: 0, losses: 0, draws: 0 },
+  sessionStartTime: null,
+  games: [],
+};
+
+let currentGameMoves = [];
+
+function initTournamentSession() {
+  tournamentStats = {
+    totalGames: 0,
+    player: { wins: 0, losses: 0, draws: 0 },
+    ai: { wins: 0, losses: 0, draws: 0 },
+    aiReflex: { wins: 0, losses: 0, draws: 0 },
+    aiMinimax: { wins: 0, losses: 0, draws: 0 },
+    sessionStartTime: new Date().toISOString(),
+    games: [],
+  };
+  console.log("[TOURNAMENT] Session initialized");
+}
+
+function recordMove(player, col, row, moveData = {}) {
+  const move = {
+    moveNumber: currentGameMoves.length + 1,
+    player: player,
+    column: col,
+    row: row,
+    timestamp: performance.now(),
+    boardSnapshot: JSON.parse(JSON.stringify(board)),
+    ...moveData,
+  };
+  currentGameMoves.push(move);
+}
+
+function updateTournamentStats(winner, gameData = {}) {
+  tournamentStats.totalGames++;
+
+  const gameSummary = {
+    gameId: gameId,
+    gameNumber: tournamentStats.totalGames,
+    timestamp: new Date().toISOString(),
+    mode: gameMode,
+    aiType: aiStyle,
+    difficulty:
+      typeof getDifficultyInfo === "function"
+        ? getDifficultyInfo().level
+        : "medium",
+    winner: winner,
+    totalMoves: currentGameMoves.length,
+    redMoves: redMoveCount,
+    yellowMoves: yellowMoveCount,
+    firstPlayer: currentGameMoves[0]?.player || "red",
+    moveHistory: [...currentGameMoves],
+    duration:
+      currentGameMoves.length > 0
+        ? currentGameMoves[currentGameMoves.length - 1].timestamp -
+          currentGameMoves[0].timestamp
+        : 0,
+    ...gameData,
+  };
+
+  if (gameMode === "ai") {
+    if (winner === "red") {
+      tournamentStats.player.wins++;
+      tournamentStats.ai.losses++;
+      if (aiStyle === "attack") tournamentStats.aiReflex.losses++;
+      else tournamentStats.aiMinimax.losses++;
+    } else if (winner === "yellow") {
+      tournamentStats.player.losses++;
+      tournamentStats.ai.wins++;
+      if (aiStyle === "attack") tournamentStats.aiReflex.wins++;
+      else tournamentStats.aiMinimax.wins++;
+    } else {
+      tournamentStats.player.draws++;
+      tournamentStats.ai.draws++;
+    }
+  } else if (gameMode === "ai-vs-ai") {
+    if (winner === "red") {
+      tournamentStats.aiReflex.wins++;
+      tournamentStats.aiMinimax.losses++;
+    } else if (winner === "yellow") {
+      tournamentStats.aiReflex.losses++;
+      tournamentStats.aiMinimax.wins++;
+    } else {
+      tournamentStats.aiReflex.draws++;
+      tournamentStats.aiMinimax.draws++;
+    }
+  }
+
+  tournamentStats.games.push(gameSummary);
+  console.log(
+    `[TOURNAMENT] Game ${tournamentStats.totalGames} recorded. Winner: ${winner}`,
+  );
+}
+
+function calcWinRate(stats) {
+  const total = stats.wins + stats.losses + stats.draws;
+  if (total === 0) return 0;
+  return ((stats.wins / total) * 100).toFixed(1);
+}
+
+function getTournamentSummary() {
+  return {
+    session: {
+      startTime: tournamentStats.sessionStartTime,
+      totalGames: tournamentStats.totalGames,
+    },
+    player: {
+      ...tournamentStats.player,
+      winRate: calcWinRate(tournamentStats.player),
+    },
+    ai: {
+      ...tournamentStats.ai,
+      winRate: calcWinRate(tournamentStats.ai),
+    },
+    aiReflex: {
+      ...tournamentStats.aiReflex,
+      winRate: calcWinRate(tournamentStats.aiReflex),
+    },
+    aiMinimax: {
+      ...tournamentStats.aiMinimax,
+      winRate: calcWinRate(tournamentStats.aiMinimax),
+    },
+  };
+}
+
+function exportTournamentData() {
+  const exportData = {
+    exportDate: new Date().toISOString(),
+    summary: getTournamentSummary(),
+    allGames: tournamentStats.games,
+    rawLogs: logs,
+  };
+
+  const dataStr =
+    "data:text/json;charset=utf-8," +
+    encodeURIComponent(JSON.stringify(exportData, null, 2));
+  const anchor = document.createElement("a");
+  anchor.href = dataStr;
+  anchor.download = `tournament_data_${Date.now()}.json`;
+  document.body.appendChild(anchor);
+  anchor.click();
+  anchor.remove();
+
+  console.log("[TOURNAMENT] Data exported");
+  return exportData;
+}
+
+function exportMoveHistory() {
+  const exportData = {
+    exportDate: new Date().toISOString(),
+    totalGames: tournamentStats.totalGames,
+    games: tournamentStats.games.map((g) => ({
+      gameId: g.gameId,
+      gameNumber: g.gameNumber,
+      winner: g.winner,
+      totalMoves: g.totalMoves,
+      moveHistory: g.moveHistory,
+    })),
+  };
+
+  const dataStr =
+    "data:text/json;charset=utf-8," +
+    encodeURIComponent(JSON.stringify(exportData, null, 2));
+  const anchor = document.createElement("a");
+  anchor.href = dataStr;
+  anchor.download = `move_history_${Date.now()}.json`;
+  document.body.appendChild(anchor);
+  anchor.click();
+  anchor.remove();
+
+  console.log("[TOURNAMENT] Move history exported");
+  return exportData;
+}
+
+function printTournamentSummary() {
+  const summary = getTournamentSummary();
+  console.log("\n========== TOURNAMENT SUMMARY ==========");
+  console.log(`Total Games: ${summary.session.totalGames}`);
+  console.log(
+    `\nPlayer: W:${summary.player.wins} L:${summary.player.losses} D:${summary.player.draws} (${summary.player.winRate}%)`,
+  );
+  console.log(
+    `AI Reflex: W:${summary.aiReflex.wins} L:${summary.aiReflex.losses} D:${summary.aiReflex.draws} (${summary.aiReflex.winRate}%)`,
+  );
+  console.log(
+    `AI Minimax: W:${summary.aiMinimax.wins} L:${summary.aiMinimax.losses} D:${summary.aiMinimax.draws} (${summary.aiMinimax.winRate}%)`,
+  );
+  console.log("==========================================\n");
+  return summary;
+}
+
+window.addEventListener("load", initTournamentSession);
+
 // --- GAME CONTROL ---
 
 function startGame(mode) {
@@ -52,6 +253,11 @@ function startGame(mode) {
 
   const showAiOpts = mode === "ai";
   document.getElementById("aiSelector").style.display = showAiOpts
+    ? "block"
+    : "none";
+
+  // Show difficulty selector for AI modes (affects Minimax AI)
+  document.getElementById("difficultySelector").style.display = showAiOpts
     ? "block"
     : "none";
 
@@ -95,6 +301,7 @@ function startChallengeMode() {
   document.getElementById("aiVsAiConfig").style.display = "none";
   document.getElementById("challengeHeader").style.display = "block";
   document.getElementById("aiSelector").style.display = "none";
+  document.getElementById("difficultySelector").style.display = "none";
   document.getElementById("researchPanel").style.display = "none";
 
   // Set Round 1 AI to Attack
@@ -234,6 +441,7 @@ function backToMenu() {
   document.getElementById("gameArea").style.display = "none";
   document.getElementById("researchPanel").style.display = "none";
   document.getElementById("aiVsAiConfig").style.display = "none";
+  document.getElementById("difficultySelector").style.display = "none";
   closeModal();
 }
 
@@ -285,6 +493,7 @@ function resetGame() {
   yellowMoveCount = 0;
   humanTurnStartTime = 0;
   humanThinkingTime = 0;
+  currentGameMoves = [];
   gameId =
     Date.now().toString() + "_" + Math.random().toString(36).substr(2, 9);
 
@@ -367,6 +576,13 @@ function updateAIStyle(style) {
   resetGame();
 }
 
+function updateDifficulty(level) {
+  if (typeof setDifficulty === "function") {
+    setDifficulty(level);
+    console.log(`[GAME] AI Difficulty changed to: ${level}`);
+  }
+}
+
 function updateTurnDisplay() {
   const badge = document.getElementById("turnIndicator");
   const dot = badge.querySelector(".player-dot");
@@ -375,12 +591,12 @@ function updateTurnDisplay() {
   if (currentPlayer === "red") {
     dot.style.background = "var(--red-piece)";
     if (gameMode === "ai") text.innerText = "Giliran Anda";
-    else if (gameMode === "ai-vs-ai") text.innerText = "AI Reflex (Merah)";
+    else if (gameMode === "ai-vs-ai") text.innerText = "AI Merah";
     else text.innerText = "Pemain Merah";
   } else {
     dot.style.background = "var(--yellow-piece)";
     if (gameMode === "ai") text.innerText = "AI Berpikir...";
-    else if (gameMode === "ai-vs-ai") text.innerText = "AI Defend (Kuning)";
+    else if (gameMode === "ai-vs-ai") text.innerText = "AI Kuning";
     else text.innerText = "Pemain Kuning";
   }
 }
@@ -445,6 +661,12 @@ function dropPiece(col, isHumanMove = false) {
   isProcessing = true;
   board[row][col] = currentPlayer;
   turnCount++;
+
+  // Record move for tournament tracking
+  recordMove(currentPlayer, col, row, {
+    isHumanMove: isHumanMove,
+    thinkingTime: isHumanMove ? humanThinkingTime : null,
+  });
 
   // Track moves per player
   if (currentPlayer === "red") {
@@ -601,7 +823,10 @@ function checkDraw() {
 // --- UI HELPERS ---
 
 function showWinModal(winner) {
-  if (gameMode === "ai" || gameMode === "ai-vs-ai") saveAllLogs(winner);
+  if (gameMode === "ai" || gameMode === "ai-vs-ai") {
+    saveAllLogs(winner);
+    updateTournamentStats(winner);
+  }
 
   if (isBatchRunning) {
     batchCurrent++;
@@ -658,10 +883,7 @@ function showWinModal(winner) {
     }
   } else if (gameMode === "ai-vs-ai") {
     iconEl.innerHTML = '<i class="fa-solid fa-robot"></i>';
-    msg.innerText =
-      winner === "red"
-        ? "AI Reflex (Merah) Menang!"
-        : "AI Defend (Kuning) Menang!";
+    msg.innerText = winner === "red" ? "AI Merah Menang!" : "AI Kuning Menang!";
   } else {
     iconEl.innerHTML = '<i class="fa-solid fa-trophy"></i>';
     msg.innerText = winner === "red" ? "Merah Menang!" : "Kuning Menang!";
@@ -770,7 +992,6 @@ function showChallengeRoundModal(winner) {
 
   const winnerText = winner === "red" ? "Anda" : "Komputer";
   const nextRound = challengeRound + 1;
-  const nextAlgo = aiStyle === "attack" ? "Serang" : "Defend";
 
   iconEl.innerHTML =
     winner === "red"
@@ -790,8 +1011,8 @@ function showChallengeRoundModal(winner) {
       </div>
       <div style="font-size:0.9rem; color:#666;">Anda vs Komputer</div>
     </div>
-    <div style="background:#fff4e1; padding:12px; border-radius:8px; margin-bottom:20px; font-size:0.9rem;">
-      <strong>Round ${nextRound}:</strong> Lawan AI ${nextAlgo} 🛡️
+    <div style="background:#e0f2fe; padding:12px; border-radius:8px; margin-bottom:20px; font-size:0.9rem;">
+      <strong>Round ${nextRound}:</strong> Siap melawan AI? 🎮
     </div>
     <button class="control-btn btn-primary" onclick="closeModal(); updateChallengeUI(); resetGame();" style="padding:12px 24px;">
       <i class="fa-solid fa-arrow-right"></i> Lanjut ke Round ${nextRound}
@@ -818,9 +1039,9 @@ function showChallengeEndModal() {
       <div style="font-size:1.3rem; margin-bottom:20px;">
         Anda Menang Challenge!
       </div>
-      <div style="background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%); padding:20px; border-radius:12px; margin-bottom:20px; color:white;">
-        <div style="font-size:3rem; margin-bottom:10px;">🍫</div>
-        <div style="font-size:1.2rem; font-weight:700;">Anda Dapat Coklat!</div>
+      <div style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); padding:20px; border-radius:12px; margin-bottom:20px; color:white;">
+        <div style="font-size:3rem; margin-bottom:10px;">🏆</div>
+        <div style="font-size:1.2rem; font-weight:700;">Anda Mengalahkan AI!</div>
       </div>
       <div style="background:#f8fafc; padding:15px; border-radius:12px; margin-bottom:20px;">
         <div style="font-size:0.9rem; color:#666; margin-bottom:10px;">Hasil Akhir:</div>
