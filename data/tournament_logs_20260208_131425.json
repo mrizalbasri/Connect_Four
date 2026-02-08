@@ -1,0 +1,9346 @@
+{
+  "exportDate": "2026-02-08T06:14:24.710Z",
+  "summary": {
+    "session": {
+      "startTime": "2026-02-08T06:11:32.658Z",
+      "totalGames": 3
+    },
+    "player": {
+      "wins": 2,
+      "losses": 1,
+      "draws": 0,
+      "winRate": "66.7"
+    },
+    "ai": {
+      "wins": 1,
+      "losses": 2,
+      "draws": 0,
+      "winRate": "33.3"
+    },
+    "aiReflex": {
+      "wins": 0,
+      "losses": 1,
+      "draws": 0,
+      "winRate": "0.0"
+    },
+    "aiMinimax": {
+      "wins": 1,
+      "losses": 1,
+      "draws": 0,
+      "winRate": "50.0"
+    }
+  },
+  "allGames": [
+    {
+      "gameId": "1770531101966_m3vphbjl3",
+      "gameNumber": 1,
+      "timestamp": "2026-02-08T06:11:51.987Z",
+      "mode": "ai",
+      "aiType": "attack",
+      "difficulty": "medium",
+      "winner": "red",
+      "totalMoves": 7,
+      "redMoves": 4,
+      "yellowMoves": 3,
+      "firstPlayer": "red",
+      "moveHistory": [
+        {
+          "moveNumber": 1,
+          "player": "red",
+          "column": 3,
+          "row": 5,
+          "timestamp": 11485.20000000298,
+          "boardSnapshot": [
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              "red",
+              null,
+              null,
+              null
+            ]
+          ],
+          "isHumanMove": true,
+          "thinkingTime": 1603
+        },
+        {
+          "moveNumber": 2,
+          "player": "yellow",
+          "column": 3,
+          "row": 4,
+          "timestamp": 12604.70000000298,
+          "boardSnapshot": [
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              "yellow",
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              "red",
+              null,
+              null,
+              null
+            ]
+          ],
+          "isHumanMove": false,
+          "thinkingTime": null
+        },
+        {
+          "moveNumber": 3,
+          "player": "red",
+          "column": 2,
+          "row": 5,
+          "timestamp": 14502.10000000894,
+          "boardSnapshot": [
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              "yellow",
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              "red",
+              "red",
+              null,
+              null,
+              null
+            ]
+          ],
+          "isHumanMove": true,
+          "thinkingTime": 1295.1000000089407
+        },
+        {
+          "moveNumber": 4,
+          "player": "yellow",
+          "column": 3,
+          "row": 3,
+          "timestamp": 15623.29999999702,
+          "boardSnapshot": [
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              "yellow",
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              "yellow",
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              "red",
+              "red",
+              null,
+              null,
+              null
+            ]
+          ],
+          "isHumanMove": false,
+          "thinkingTime": null
+        },
+        {
+          "moveNumber": 5,
+          "player": "red",
+          "column": 4,
+          "row": 5,
+          "timestamp": 16516.79999999702,
+          "boardSnapshot": [
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              "yellow",
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              "yellow",
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              "red",
+              "red",
+              "red",
+              null,
+              null
+            ]
+          ],
+          "isHumanMove": true,
+          "thinkingTime": 287.5
+        },
+        {
+          "moveNumber": 6,
+          "player": "yellow",
+          "column": 1,
+          "row": 5,
+          "timestamp": 17642.29999999702,
+          "boardSnapshot": [
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              "yellow",
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              "yellow",
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              "yellow",
+              "red",
+              "red",
+              "red",
+              null,
+              null
+            ]
+          ],
+          "isHumanMove": false,
+          "thinkingTime": null
+        },
+        {
+          "moveNumber": 7,
+          "player": "red",
+          "column": 5,
+          "row": 5,
+          "timestamp": 19300.20000000298,
+          "boardSnapshot": [
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              "yellow",
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              "yellow",
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              "yellow",
+              "red",
+              "red",
+              "red",
+              "red",
+              null
+            ]
+          ],
+          "isHumanMove": true,
+          "thinkingTime": 1054.6000000089407
+        }
+      ],
+      "duration": 7815
+    },
+    {
+      "gameId": "1770531114349_vz4mvwde1",
+      "gameNumber": 2,
+      "timestamp": "2026-02-08T06:12:39.004Z",
+      "mode": "ai",
+      "aiType": "defend",
+      "difficulty": "medium",
+      "winner": "yellow",
+      "totalMoves": 20,
+      "redMoves": 10,
+      "yellowMoves": 10,
+      "firstPlayer": "red",
+      "moveHistory": [
+        {
+          "moveNumber": 1,
+          "player": "red",
+          "column": 3,
+          "row": 5,
+          "timestamp": 24434.70000000298,
+          "boardSnapshot": [
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              "red",
+              null,
+              null,
+              null
+            ]
+          ],
+          "isHumanMove": true,
+          "thinkingTime": 2170
+        },
+        {
+          "moveNumber": 2,
+          "player": "yellow",
+          "column": 1,
+          "row": 5,
+          "timestamp": 25566.29999999702,
+          "boardSnapshot": [
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              "yellow",
+              null,
+              "red",
+              null,
+              null,
+              null
+            ]
+          ],
+          "isHumanMove": false,
+          "thinkingTime": null
+        },
+        {
+          "moveNumber": 3,
+          "player": "red",
+          "column": 4,
+          "row": 5,
+          "timestamp": 26213,
+          "boardSnapshot": [
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              "yellow",
+              null,
+              "red",
+              "red",
+              null,
+              null
+            ]
+          ],
+          "isHumanMove": true,
+          "thinkingTime": 46
+        },
+        {
+          "moveNumber": 4,
+          "player": "yellow",
+          "column": 5,
+          "row": 5,
+          "timestamp": 27343.40000000596,
+          "boardSnapshot": [
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              "yellow",
+              null,
+              "red",
+              "red",
+              "yellow",
+              null
+            ]
+          ],
+          "isHumanMove": false,
+          "thinkingTime": null
+        },
+        {
+          "moveNumber": 5,
+          "player": "red",
+          "column": 2,
+          "row": 5,
+          "timestamp": 28470,
+          "boardSnapshot": [
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              "yellow",
+              "red",
+              "red",
+              "red",
+              "yellow",
+              null
+            ]
+          ],
+          "isHumanMove": true,
+          "thinkingTime": 525.2000000029802
+        },
+        {
+          "moveNumber": 6,
+          "player": "yellow",
+          "column": 3,
+          "row": 4,
+          "timestamp": 29581.40000000596,
+          "boardSnapshot": [
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              "yellow",
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              "yellow",
+              "red",
+              "red",
+              "red",
+              "yellow",
+              null
+            ]
+          ],
+          "isHumanMove": false,
+          "thinkingTime": null
+        },
+        {
+          "moveNumber": 7,
+          "player": "red",
+          "column": 2,
+          "row": 4,
+          "timestamp": 33617.60000000894,
+          "boardSnapshot": [
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              "red",
+              "yellow",
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              "yellow",
+              "red",
+              "red",
+              "red",
+              "yellow",
+              null
+            ]
+          ],
+          "isHumanMove": true,
+          "thinkingTime": 3432.2999999970198
+        },
+        {
+          "moveNumber": 8,
+          "player": "yellow",
+          "column": 2,
+          "row": 3,
+          "timestamp": 34743.40000000596,
+          "boardSnapshot": [
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              "yellow",
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              "red",
+              "yellow",
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              "yellow",
+              "red",
+              "red",
+              "red",
+              "yellow",
+              null
+            ]
+          ],
+          "isHumanMove": false,
+          "thinkingTime": null
+        },
+        {
+          "moveNumber": 9,
+          "player": "red",
+          "column": 4,
+          "row": 4,
+          "timestamp": 36828.5,
+          "boardSnapshot": [
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              "yellow",
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              "red",
+              "yellow",
+              "red",
+              null,
+              null
+            ],
+            [
+              null,
+              "yellow",
+              "red",
+              "red",
+              "red",
+              "yellow",
+              null
+            ]
+          ],
+          "isHumanMove": true,
+          "thinkingTime": 1484
+        },
+        {
+          "moveNumber": 10,
+          "player": "yellow",
+          "column": 3,
+          "row": 3,
+          "timestamp": 37944.20000000298,
+          "boardSnapshot": [
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              "yellow",
+              "yellow",
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              "red",
+              "yellow",
+              "red",
+              null,
+              null
+            ],
+            [
+              null,
+              "yellow",
+              "red",
+              "red",
+              "red",
+              "yellow",
+              null
+            ]
+          ],
+          "isHumanMove": false,
+          "thinkingTime": null
+        },
+        {
+          "moveNumber": 11,
+          "player": "red",
+          "column": 3,
+          "row": 2,
+          "timestamp": 40207.29999999702,
+          "boardSnapshot": [
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              "red",
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              "yellow",
+              "yellow",
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              "red",
+              "yellow",
+              "red",
+              null,
+              null
+            ],
+            [
+              null,
+              "yellow",
+              "red",
+              "red",
+              "red",
+              "yellow",
+              null
+            ]
+          ],
+          "isHumanMove": true,
+          "thinkingTime": 1660
+        },
+        {
+          "moveNumber": 12,
+          "player": "yellow",
+          "column": 4,
+          "row": 3,
+          "timestamp": 41322.29999999702,
+          "boardSnapshot": [
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              "red",
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              "yellow",
+              "yellow",
+              "yellow",
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              "red",
+              "yellow",
+              "red",
+              null,
+              null
+            ],
+            [
+              null,
+              "yellow",
+              "red",
+              "red",
+              "red",
+              "yellow",
+              null
+            ]
+          ],
+          "isHumanMove": false,
+          "thinkingTime": null
+        },
+        {
+          "moveNumber": 13,
+          "player": "red",
+          "column": 0,
+          "row": 5,
+          "timestamp": 49305.60000000894,
+          "boardSnapshot": [
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              "red",
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              "yellow",
+              "yellow",
+              "yellow",
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              "red",
+              "yellow",
+              "red",
+              null,
+              null
+            ],
+            [
+              "red",
+              "yellow",
+              "red",
+              "red",
+              "red",
+              "yellow",
+              null
+            ]
+          ],
+          "isHumanMove": true,
+          "thinkingTime": 7381.699999988079
+        },
+        {
+          "moveNumber": 14,
+          "player": "yellow",
+          "column": 2,
+          "row": 2,
+          "timestamp": 50417.79999999702,
+          "boardSnapshot": [
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              "yellow",
+              "red",
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              "yellow",
+              "yellow",
+              "yellow",
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              "red",
+              "yellow",
+              "red",
+              null,
+              null
+            ],
+            [
+              "red",
+              "yellow",
+              "red",
+              "red",
+              "red",
+              "yellow",
+              null
+            ]
+          ],
+          "isHumanMove": false,
+          "thinkingTime": null
+        },
+        {
+          "moveNumber": 15,
+          "player": "red",
+          "column": 0,
+          "row": 4,
+          "timestamp": 52817.5,
+          "boardSnapshot": [
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              "yellow",
+              "red",
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              "yellow",
+              "yellow",
+              "yellow",
+              null,
+              null
+            ],
+            [
+              "red",
+              null,
+              "red",
+              "yellow",
+              "red",
+              null,
+              null
+            ],
+            [
+              "red",
+              "yellow",
+              "red",
+              "red",
+              "red",
+              "yellow",
+              null
+            ]
+          ],
+          "isHumanMove": true,
+          "thinkingTime": 1798.800000011921
+        },
+        {
+          "moveNumber": 16,
+          "player": "yellow",
+          "column": 0,
+          "row": 3,
+          "timestamp": 53922.60000000894,
+          "boardSnapshot": [
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              "yellow",
+              "red",
+              null,
+              null,
+              null
+            ],
+            [
+              "yellow",
+              null,
+              "yellow",
+              "yellow",
+              "yellow",
+              null,
+              null
+            ],
+            [
+              "red",
+              null,
+              "red",
+              "yellow",
+              "red",
+              null,
+              null
+            ],
+            [
+              "red",
+              "yellow",
+              "red",
+              "red",
+              "red",
+              "yellow",
+              null
+            ]
+          ],
+          "isHumanMove": false,
+          "thinkingTime": null
+        },
+        {
+          "moveNumber": 17,
+          "player": "red",
+          "column": 0,
+          "row": 2,
+          "timestamp": 58614.20000000298,
+          "boardSnapshot": [
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              "red",
+              null,
+              "yellow",
+              "red",
+              null,
+              null,
+              null
+            ],
+            [
+              "yellow",
+              null,
+              "yellow",
+              "yellow",
+              "yellow",
+              null,
+              null
+            ],
+            [
+              "red",
+              null,
+              "red",
+              "yellow",
+              "red",
+              null,
+              null
+            ],
+            [
+              "red",
+              "yellow",
+              "red",
+              "red",
+              "red",
+              "yellow",
+              null
+            ]
+          ],
+          "isHumanMove": true,
+          "thinkingTime": 4078.7999999970198
+        },
+        {
+          "moveNumber": 18,
+          "player": "yellow",
+          "column": 3,
+          "row": 1,
+          "timestamp": 59724.70000000298,
+          "boardSnapshot": [
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              "yellow",
+              null,
+              null,
+              null
+            ],
+            [
+              "red",
+              null,
+              "yellow",
+              "red",
+              null,
+              null,
+              null
+            ],
+            [
+              "yellow",
+              null,
+              "yellow",
+              "yellow",
+              "yellow",
+              null,
+              null
+            ],
+            [
+              "red",
+              null,
+              "red",
+              "yellow",
+              "red",
+              null,
+              null
+            ],
+            [
+              "red",
+              "yellow",
+              "red",
+              "red",
+              "red",
+              "yellow",
+              null
+            ]
+          ],
+          "isHumanMove": false,
+          "thinkingTime": null
+        },
+        {
+          "moveNumber": 19,
+          "player": "red",
+          "column": 5,
+          "row": 4,
+          "timestamp": 65196.40000000596,
+          "boardSnapshot": [
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              "yellow",
+              null,
+              null,
+              null
+            ],
+            [
+              "red",
+              null,
+              "yellow",
+              "red",
+              null,
+              null,
+              null
+            ],
+            [
+              "yellow",
+              null,
+              "yellow",
+              "yellow",
+              "yellow",
+              null,
+              null
+            ],
+            [
+              "red",
+              null,
+              "red",
+              "yellow",
+              "red",
+              "red",
+              null
+            ],
+            [
+              "red",
+              "yellow",
+              "red",
+              "red",
+              "red",
+              "yellow",
+              null
+            ]
+          ],
+          "isHumanMove": true,
+          "thinkingTime": 4867.300000011921
+        },
+        {
+          "moveNumber": 20,
+          "player": "yellow",
+          "column": 5,
+          "row": 3,
+          "timestamp": 66312.90000000596,
+          "boardSnapshot": [
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              "yellow",
+              null,
+              null,
+              null
+            ],
+            [
+              "red",
+              null,
+              "yellow",
+              "red",
+              null,
+              null,
+              null
+            ],
+            [
+              "yellow",
+              null,
+              "yellow",
+              "yellow",
+              "yellow",
+              "yellow",
+              null
+            ],
+            [
+              "red",
+              null,
+              "red",
+              "yellow",
+              "red",
+              "red",
+              null
+            ],
+            [
+              "red",
+              "yellow",
+              "red",
+              "red",
+              "red",
+              "yellow",
+              null
+            ]
+          ],
+          "isHumanMove": false,
+          "thinkingTime": null
+        }
+      ],
+      "duration": 41878.20000000298
+    },
+    {
+      "gameId": "1770531161913_p9vvtyi9t",
+      "gameNumber": 3,
+      "timestamp": "2026-02-08T06:14:13.397Z",
+      "mode": "ai",
+      "aiType": "defend",
+      "difficulty": "medium",
+      "winner": "red",
+      "totalMoves": 39,
+      "redMoves": 20,
+      "yellowMoves": 19,
+      "firstPlayer": "red",
+      "moveHistory": [
+        {
+          "moveNumber": 1,
+          "player": "red",
+          "column": 3,
+          "row": 5,
+          "timestamp": 72266.20000000298,
+          "boardSnapshot": [
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              "red",
+              null,
+              null,
+              null
+            ]
+          ],
+          "isHumanMove": true,
+          "thinkingTime": 2437.5999999940395
+        },
+        {
+          "moveNumber": 2,
+          "player": "yellow",
+          "column": 1,
+          "row": 5,
+          "timestamp": 73371.5,
+          "boardSnapshot": [
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              "yellow",
+              null,
+              "red",
+              null,
+              null,
+              null
+            ]
+          ],
+          "isHumanMove": false,
+          "thinkingTime": null
+        },
+        {
+          "moveNumber": 3,
+          "player": "red",
+          "column": 1,
+          "row": 4,
+          "timestamp": 75022.20000000298,
+          "boardSnapshot": [
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              "red",
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              "yellow",
+              null,
+              "red",
+              null,
+              null,
+              null
+            ]
+          ],
+          "isHumanMove": true,
+          "thinkingTime": 1048.5
+        },
+        {
+          "moveNumber": 4,
+          "player": "yellow",
+          "column": 3,
+          "row": 4,
+          "timestamp": 76143.90000000596,
+          "boardSnapshot": [
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              "red",
+              null,
+              "yellow",
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              "yellow",
+              null,
+              "red",
+              null,
+              null,
+              null
+            ]
+          ],
+          "isHumanMove": false,
+          "thinkingTime": null
+        },
+        {
+          "moveNumber": 5,
+          "player": "red",
+          "column": 2,
+          "row": 5,
+          "timestamp": 76993.70000000298,
+          "boardSnapshot": [
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              "red",
+              null,
+              "yellow",
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              "yellow",
+              "red",
+              "red",
+              null,
+              null,
+              null
+            ]
+          ],
+          "isHumanMove": true,
+          "thinkingTime": 248.90000000596046
+        },
+        {
+          "moveNumber": 6,
+          "player": "yellow",
+          "column": 4,
+          "row": 5,
+          "timestamp": 78108.90000000596,
+          "boardSnapshot": [
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              "red",
+              null,
+              "yellow",
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              "yellow",
+              "red",
+              "red",
+              "yellow",
+              null,
+              null
+            ]
+          ],
+          "isHumanMove": false,
+          "thinkingTime": null
+        },
+        {
+          "moveNumber": 7,
+          "player": "red",
+          "column": 3,
+          "row": 3,
+          "timestamp": 81461.10000000894,
+          "boardSnapshot": [
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              "red",
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              "red",
+              null,
+              "yellow",
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              "yellow",
+              "red",
+              "red",
+              "yellow",
+              null,
+              null
+            ]
+          ],
+          "isHumanMove": true,
+          "thinkingTime": 2749.1000000089407
+        },
+        {
+          "moveNumber": 8,
+          "player": "yellow",
+          "column": 1,
+          "row": 3,
+          "timestamp": 82586.90000000596,
+          "boardSnapshot": [
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              "yellow",
+              null,
+              "red",
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              "red",
+              null,
+              "yellow",
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              "yellow",
+              "red",
+              "red",
+              "yellow",
+              null,
+              null
+            ]
+          ],
+          "isHumanMove": false,
+          "thinkingTime": null
+        },
+        {
+          "moveNumber": 9,
+          "player": "red",
+          "column": 3,
+          "row": 2,
+          "timestamp": 83868.60000000894,
+          "boardSnapshot": [
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              "red",
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              "yellow",
+              null,
+              "red",
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              "red",
+              null,
+              "yellow",
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              "yellow",
+              "red",
+              "red",
+              "yellow",
+              null,
+              null
+            ]
+          ],
+          "isHumanMove": true,
+          "thinkingTime": 666.2999999970198
+        },
+        {
+          "moveNumber": 10,
+          "player": "yellow",
+          "column": 1,
+          "row": 2,
+          "timestamp": 84993.70000000298,
+          "boardSnapshot": [
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              "yellow",
+              null,
+              "red",
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              "yellow",
+              null,
+              "red",
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              "red",
+              null,
+              "yellow",
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              "yellow",
+              "red",
+              "red",
+              "yellow",
+              null,
+              null
+            ]
+          ],
+          "isHumanMove": false,
+          "thinkingTime": null
+        },
+        {
+          "moveNumber": 11,
+          "player": "red",
+          "column": 0,
+          "row": 5,
+          "timestamp": 88032,
+          "boardSnapshot": [
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              "yellow",
+              null,
+              "red",
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              "yellow",
+              null,
+              "red",
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              "red",
+              null,
+              "yellow",
+              null,
+              null,
+              null
+            ],
+            [
+              "red",
+              "yellow",
+              "red",
+              "red",
+              "yellow",
+              null,
+              null
+            ]
+          ],
+          "isHumanMove": true,
+          "thinkingTime": 2437.699999988079
+        },
+        {
+          "moveNumber": 12,
+          "player": "yellow",
+          "column": 1,
+          "row": 1,
+          "timestamp": 89159.20000000298,
+          "boardSnapshot": [
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              "yellow",
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              "yellow",
+              null,
+              "red",
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              "yellow",
+              null,
+              "red",
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              "red",
+              null,
+              "yellow",
+              null,
+              null,
+              null
+            ],
+            [
+              "red",
+              "yellow",
+              "red",
+              "red",
+              "yellow",
+              null,
+              null
+            ]
+          ],
+          "isHumanMove": false,
+          "thinkingTime": null
+        },
+        {
+          "moveNumber": 13,
+          "player": "red",
+          "column": 1,
+          "row": 0,
+          "timestamp": 90172.60000000894,
+          "boardSnapshot": [
+            [
+              null,
+              "red",
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              "yellow",
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              "yellow",
+              null,
+              "red",
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              "yellow",
+              null,
+              "red",
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              "red",
+              null,
+              "yellow",
+              null,
+              null,
+              null
+            ],
+            [
+              "red",
+              "yellow",
+              "red",
+              "red",
+              "yellow",
+              null,
+              null
+            ]
+          ],
+          "isHumanMove": true,
+          "thinkingTime": 412.20000000298023
+        },
+        {
+          "moveNumber": 14,
+          "player": "yellow",
+          "column": 3,
+          "row": 1,
+          "timestamp": 91290.5,
+          "boardSnapshot": [
+            [
+              null,
+              "red",
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              "yellow",
+              null,
+              "yellow",
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              "yellow",
+              null,
+              "red",
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              "yellow",
+              null,
+              "red",
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              "red",
+              null,
+              "yellow",
+              null,
+              null,
+              null
+            ],
+            [
+              "red",
+              "yellow",
+              "red",
+              "red",
+              "yellow",
+              null,
+              null
+            ]
+          ],
+          "isHumanMove": false,
+          "thinkingTime": null
+        },
+        {
+          "moveNumber": 15,
+          "player": "red",
+          "column": 6,
+          "row": 5,
+          "timestamp": 96770,
+          "boardSnapshot": [
+            [
+              null,
+              "red",
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              "yellow",
+              null,
+              "yellow",
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              "yellow",
+              null,
+              "red",
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              "yellow",
+              null,
+              "red",
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              "red",
+              null,
+              "yellow",
+              null,
+              null,
+              null
+            ],
+            [
+              "red",
+              "yellow",
+              "red",
+              "red",
+              "yellow",
+              null,
+              "red"
+            ]
+          ],
+          "isHumanMove": true,
+          "thinkingTime": 4877.9000000059605
+        },
+        {
+          "moveNumber": 16,
+          "player": "yellow",
+          "column": 0,
+          "row": 4,
+          "timestamp": 97893.5,
+          "boardSnapshot": [
+            [
+              null,
+              "red",
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              "yellow",
+              null,
+              "yellow",
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              "yellow",
+              null,
+              "red",
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              "yellow",
+              null,
+              "red",
+              null,
+              null,
+              null
+            ],
+            [
+              "yellow",
+              "red",
+              null,
+              "yellow",
+              null,
+              null,
+              null
+            ],
+            [
+              "red",
+              "yellow",
+              "red",
+              "red",
+              "yellow",
+              null,
+              "red"
+            ]
+          ],
+          "isHumanMove": false,
+          "thinkingTime": null
+        },
+        {
+          "moveNumber": 17,
+          "player": "red",
+          "column": 6,
+          "row": 4,
+          "timestamp": 103871.5,
+          "boardSnapshot": [
+            [
+              null,
+              "red",
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              "yellow",
+              null,
+              "yellow",
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              "yellow",
+              null,
+              "red",
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              "yellow",
+              null,
+              "red",
+              null,
+              null,
+              null
+            ],
+            [
+              "yellow",
+              "red",
+              null,
+              "yellow",
+              null,
+              null,
+              "red"
+            ],
+            [
+              "red",
+              "yellow",
+              "red",
+              "red",
+              "yellow",
+              null,
+              "red"
+            ]
+          ],
+          "isHumanMove": true,
+          "thinkingTime": 5376.5
+        },
+        {
+          "moveNumber": 18,
+          "player": "yellow",
+          "column": 0,
+          "row": 3,
+          "timestamp": 105000.70000000298,
+          "boardSnapshot": [
+            [
+              null,
+              "red",
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              "yellow",
+              null,
+              "yellow",
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              "yellow",
+              null,
+              "red",
+              null,
+              null,
+              null
+            ],
+            [
+              "yellow",
+              "yellow",
+              null,
+              "red",
+              null,
+              null,
+              null
+            ],
+            [
+              "yellow",
+              "red",
+              null,
+              "yellow",
+              null,
+              null,
+              "red"
+            ],
+            [
+              "red",
+              "yellow",
+              "red",
+              "red",
+              "yellow",
+              null,
+              "red"
+            ]
+          ],
+          "isHumanMove": false,
+          "thinkingTime": null
+        },
+        {
+          "moveNumber": 19,
+          "player": "red",
+          "column": 0,
+          "row": 2,
+          "timestamp": 107090.60000000894,
+          "boardSnapshot": [
+            [
+              null,
+              "red",
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              null,
+              "yellow",
+              null,
+              "yellow",
+              null,
+              null,
+              null
+            ],
+            [
+              "red",
+              "yellow",
+              null,
+              "red",
+              null,
+              null,
+              null
+            ],
+            [
+              "yellow",
+              "yellow",
+              null,
+              "red",
+              null,
+              null,
+              null
+            ],
+            [
+              "yellow",
+              "red",
+              null,
+              "yellow",
+              null,
+              null,
+              "red"
+            ],
+            [
+              "red",
+              "yellow",
+              "red",
+              "red",
+              "yellow",
+              null,
+              "red"
+            ]
+          ],
+          "isHumanMove": true,
+          "thinkingTime": 1485.2999999970198
+        },
+        {
+          "moveNumber": 20,
+          "player": "yellow",
+          "column": 0,
+          "row": 1,
+          "timestamp": 108207.5,
+          "boardSnapshot": [
+            [
+              null,
+              "red",
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              "yellow",
+              "yellow",
+              null,
+              "yellow",
+              null,
+              null,
+              null
+            ],
+            [
+              "red",
+              "yellow",
+              null,
+              "red",
+              null,
+              null,
+              null
+            ],
+            [
+              "yellow",
+              "yellow",
+              null,
+              "red",
+              null,
+              null,
+              null
+            ],
+            [
+              "yellow",
+              "red",
+              null,
+              "yellow",
+              null,
+              null,
+              "red"
+            ],
+            [
+              "red",
+              "yellow",
+              "red",
+              "red",
+              "yellow",
+              null,
+              "red"
+            ]
+          ],
+          "isHumanMove": false,
+          "thinkingTime": null
+        },
+        {
+          "moveNumber": 21,
+          "player": "red",
+          "column": 6,
+          "row": 3,
+          "timestamp": 111156.5,
+          "boardSnapshot": [
+            [
+              null,
+              "red",
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              "yellow",
+              "yellow",
+              null,
+              "yellow",
+              null,
+              null,
+              null
+            ],
+            [
+              "red",
+              "yellow",
+              null,
+              "red",
+              null,
+              null,
+              null
+            ],
+            [
+              "yellow",
+              "yellow",
+              null,
+              "red",
+              null,
+              null,
+              "red"
+            ],
+            [
+              "yellow",
+              "red",
+              null,
+              "yellow",
+              null,
+              null,
+              "red"
+            ],
+            [
+              "red",
+              "yellow",
+              "red",
+              "red",
+              "yellow",
+              null,
+              "red"
+            ]
+          ],
+          "isHumanMove": true,
+          "thinkingTime": 2336.4000000059605
+        },
+        {
+          "moveNumber": 22,
+          "player": "yellow",
+          "column": 6,
+          "row": 2,
+          "timestamp": 112279.10000000894,
+          "boardSnapshot": [
+            [
+              null,
+              "red",
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              "yellow",
+              "yellow",
+              null,
+              "yellow",
+              null,
+              null,
+              null
+            ],
+            [
+              "red",
+              "yellow",
+              null,
+              "red",
+              null,
+              null,
+              "yellow"
+            ],
+            [
+              "yellow",
+              "yellow",
+              null,
+              "red",
+              null,
+              null,
+              "red"
+            ],
+            [
+              "yellow",
+              "red",
+              null,
+              "yellow",
+              null,
+              null,
+              "red"
+            ],
+            [
+              "red",
+              "yellow",
+              "red",
+              "red",
+              "yellow",
+              null,
+              "red"
+            ]
+          ],
+          "isHumanMove": false,
+          "thinkingTime": null
+        },
+        {
+          "moveNumber": 23,
+          "player": "red",
+          "column": 5,
+          "row": 5,
+          "timestamp": 114900.79999999702,
+          "boardSnapshot": [
+            [
+              null,
+              "red",
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            [
+              "yellow",
+              "yellow",
+              null,
+              "yellow",
+              null,
+              null,
+              null
+            ],
+            [
+              "red",
+              "yellow",
+              null,
+              "red",
+              null,
+              null,
+              "yellow"
+            ],
+            [
+              "yellow",
+              "yellow",
+              null,
+              "red",
+              null,
+              null,
+              "red"
+            ],
+            [
+              "yellow",
+              "red",
+              null,
+              "yellow",
+              null,
+              null,
+              "red"
+            ],
+            [
+              "red",
+              "yellow",
+              "red",
+              "red",
+              "yellow",
+              "red",
+              "red"
+            ]
+          ],
+          "isHumanMove": true,
+          "thinkingTime": 2018
+        },
+        {
+          "moveNumber": 24,
+          "player": "yellow",
+          "column": 3,
+          "row": 0,
+          "timestamp": 116015.79999999702,
+          "boardSnapshot": [
+            [
+              null,
+              "red",
+              null,
+              "yellow",
+              null,
+              null,
+              null
+            ],
+            [
+              "yellow",
+              "yellow",
+              null,
+              "yellow",
+              null,
+              null,
+              null
+            ],
+            [
+              "red",
+              "yellow",
+              null,
+              "red",
+              null,
+              null,
+              "yellow"
+            ],
+            [
+              "yellow",
+              "yellow",
+              null,
+              "red",
+              null,
+              null,
+              "red"
+            ],
+            [
+              "yellow",
+              "red",
+              null,
+              "yellow",
+              null,
+              null,
+              "red"
+            ],
+            [
+              "red",
+              "yellow",
+              "red",
+              "red",
+              "yellow",
+              "red",
+              "red"
+            ]
+          ],
+          "isHumanMove": false,
+          "thinkingTime": null
+        },
+        {
+          "moveNumber": 25,
+          "player": "red",
+          "column": 5,
+          "row": 4,
+          "timestamp": 118023.60000000894,
+          "boardSnapshot": [
+            [
+              null,
+              "red",
+              null,
+              "yellow",
+              null,
+              null,
+              null
+            ],
+            [
+              "yellow",
+              "yellow",
+              null,
+              "yellow",
+              null,
+              null,
+              null
+            ],
+            [
+              "red",
+              "yellow",
+              null,
+              "red",
+              null,
+              null,
+              "yellow"
+            ],
+            [
+              "yellow",
+              "yellow",
+              null,
+              "red",
+              null,
+              null,
+              "red"
+            ],
+            [
+              "yellow",
+              "red",
+              null,
+              "yellow",
+              null,
+              "red",
+              "red"
+            ],
+            [
+              "red",
+              "yellow",
+              "red",
+              "red",
+              "yellow",
+              "red",
+              "red"
+            ]
+          ],
+          "isHumanMove": true,
+          "thinkingTime": 1400.2999999970198
+        },
+        {
+          "moveNumber": 26,
+          "player": "yellow",
+          "column": 5,
+          "row": 3,
+          "timestamp": 119140.79999999702,
+          "boardSnapshot": [
+            [
+              null,
+              "red",
+              null,
+              "yellow",
+              null,
+              null,
+              null
+            ],
+            [
+              "yellow",
+              "yellow",
+              null,
+              "yellow",
+              null,
+              null,
+              null
+            ],
+            [
+              "red",
+              "yellow",
+              null,
+              "red",
+              null,
+              null,
+              "yellow"
+            ],
+            [
+              "yellow",
+              "yellow",
+              null,
+              "red",
+              null,
+              "yellow",
+              "red"
+            ],
+            [
+              "yellow",
+              "red",
+              null,
+              "yellow",
+              null,
+              "red",
+              "red"
+            ],
+            [
+              "red",
+              "yellow",
+              "red",
+              "red",
+              "yellow",
+              "red",
+              "red"
+            ]
+          ],
+          "isHumanMove": false,
+          "thinkingTime": null
+        },
+        {
+          "moveNumber": 27,
+          "player": "red",
+          "column": 4,
+          "row": 4,
+          "timestamp": 131197.5,
+          "boardSnapshot": [
+            [
+              null,
+              "red",
+              null,
+              "yellow",
+              null,
+              null,
+              null
+            ],
+            [
+              "yellow",
+              "yellow",
+              null,
+              "yellow",
+              null,
+              null,
+              null
+            ],
+            [
+              "red",
+              "yellow",
+              null,
+              "red",
+              null,
+              null,
+              "yellow"
+            ],
+            [
+              "yellow",
+              "yellow",
+              null,
+              "red",
+              null,
+              "yellow",
+              "red"
+            ],
+            [
+              "yellow",
+              "red",
+              null,
+              "yellow",
+              "red",
+              "red",
+              "red"
+            ],
+            [
+              "red",
+              "yellow",
+              "red",
+              "red",
+              "yellow",
+              "red",
+              "red"
+            ]
+          ],
+          "isHumanMove": true,
+          "thinkingTime": 11453.70000000298
+        },
+        {
+          "moveNumber": 28,
+          "player": "yellow",
+          "column": 4,
+          "row": 3,
+          "timestamp": 132305.70000000298,
+          "boardSnapshot": [
+            [
+              null,
+              "red",
+              null,
+              "yellow",
+              null,
+              null,
+              null
+            ],
+            [
+              "yellow",
+              "yellow",
+              null,
+              "yellow",
+              null,
+              null,
+              null
+            ],
+            [
+              "red",
+              "yellow",
+              null,
+              "red",
+              null,
+              null,
+              "yellow"
+            ],
+            [
+              "yellow",
+              "yellow",
+              null,
+              "red",
+              "yellow",
+              "yellow",
+              "red"
+            ],
+            [
+              "yellow",
+              "red",
+              null,
+              "yellow",
+              "red",
+              "red",
+              "red"
+            ],
+            [
+              "red",
+              "yellow",
+              "red",
+              "red",
+              "yellow",
+              "red",
+              "red"
+            ]
+          ],
+          "isHumanMove": false,
+          "thinkingTime": null
+        },
+        {
+          "moveNumber": 29,
+          "player": "red",
+          "column": 5,
+          "row": 2,
+          "timestamp": 134007.90000000596,
+          "boardSnapshot": [
+            [
+              null,
+              "red",
+              null,
+              "yellow",
+              null,
+              null,
+              null
+            ],
+            [
+              "yellow",
+              "yellow",
+              null,
+              "yellow",
+              null,
+              null,
+              null
+            ],
+            [
+              "red",
+              "yellow",
+              null,
+              "red",
+              null,
+              "red",
+              "yellow"
+            ],
+            [
+              "yellow",
+              "yellow",
+              null,
+              "red",
+              "yellow",
+              "yellow",
+              "red"
+            ],
+            [
+              "yellow",
+              "red",
+              null,
+              "yellow",
+              "red",
+              "red",
+              "red"
+            ],
+            [
+              "red",
+              "yellow",
+              "red",
+              "red",
+              "yellow",
+              "red",
+              "red"
+            ]
+          ],
+          "isHumanMove": true,
+          "thinkingTime": 1101
+        },
+        {
+          "moveNumber": 30,
+          "player": "yellow",
+          "column": 4,
+          "row": 2,
+          "timestamp": 135131.40000000596,
+          "boardSnapshot": [
+            [
+              null,
+              "red",
+              null,
+              "yellow",
+              null,
+              null,
+              null
+            ],
+            [
+              "yellow",
+              "yellow",
+              null,
+              "yellow",
+              null,
+              null,
+              null
+            ],
+            [
+              "red",
+              "yellow",
+              null,
+              "red",
+              "yellow",
+              "red",
+              "yellow"
+            ],
+            [
+              "yellow",
+              "yellow",
+              null,
+              "red",
+              "yellow",
+              "yellow",
+              "red"
+            ],
+            [
+              "yellow",
+              "red",
+              null,
+              "yellow",
+              "red",
+              "red",
+              "red"
+            ],
+            [
+              "red",
+              "yellow",
+              "red",
+              "red",
+              "yellow",
+              "red",
+              "red"
+            ]
+          ],
+          "isHumanMove": false,
+          "thinkingTime": null
+        },
+        {
+          "moveNumber": 31,
+          "player": "red",
+          "column": 4,
+          "row": 1,
+          "timestamp": 139031.10000000894,
+          "boardSnapshot": [
+            [
+              null,
+              "red",
+              null,
+              "yellow",
+              null,
+              null,
+              null
+            ],
+            [
+              "yellow",
+              "yellow",
+              null,
+              "yellow",
+              "red",
+              null,
+              null
+            ],
+            [
+              "red",
+              "yellow",
+              null,
+              "red",
+              "yellow",
+              "red",
+              "yellow"
+            ],
+            [
+              "yellow",
+              "yellow",
+              null,
+              "red",
+              "yellow",
+              "yellow",
+              "red"
+            ],
+            [
+              "yellow",
+              "red",
+              null,
+              "yellow",
+              "red",
+              "red",
+              "red"
+            ],
+            [
+              "red",
+              "yellow",
+              "red",
+              "red",
+              "yellow",
+              "red",
+              "red"
+            ]
+          ],
+          "isHumanMove": true,
+          "thinkingTime": 3298.7000000029802
+        },
+        {
+          "moveNumber": 32,
+          "player": "yellow",
+          "column": 4,
+          "row": 0,
+          "timestamp": 140153.90000000596,
+          "boardSnapshot": [
+            [
+              null,
+              "red",
+              null,
+              "yellow",
+              "yellow",
+              null,
+              null
+            ],
+            [
+              "yellow",
+              "yellow",
+              null,
+              "yellow",
+              "red",
+              null,
+              null
+            ],
+            [
+              "red",
+              "yellow",
+              null,
+              "red",
+              "yellow",
+              "red",
+              "yellow"
+            ],
+            [
+              "yellow",
+              "yellow",
+              null,
+              "red",
+              "yellow",
+              "yellow",
+              "red"
+            ],
+            [
+              "yellow",
+              "red",
+              null,
+              "yellow",
+              "red",
+              "red",
+              "red"
+            ],
+            [
+              "red",
+              "yellow",
+              "red",
+              "red",
+              "yellow",
+              "red",
+              "red"
+            ]
+          ],
+          "isHumanMove": false,
+          "thinkingTime": null
+        },
+        {
+          "moveNumber": 33,
+          "player": "red",
+          "column": 5,
+          "row": 1,
+          "timestamp": 146415.90000000596,
+          "boardSnapshot": [
+            [
+              null,
+              "red",
+              null,
+              "yellow",
+              "yellow",
+              null,
+              null
+            ],
+            [
+              "yellow",
+              "yellow",
+              null,
+              "yellow",
+              "red",
+              "red",
+              null
+            ],
+            [
+              "red",
+              "yellow",
+              null,
+              "red",
+              "yellow",
+              "red",
+              "yellow"
+            ],
+            [
+              "yellow",
+              "yellow",
+              null,
+              "red",
+              "yellow",
+              "yellow",
+              "red"
+            ],
+            [
+              "yellow",
+              "red",
+              null,
+              "yellow",
+              "red",
+              "red",
+              "red"
+            ],
+            [
+              "red",
+              "yellow",
+              "red",
+              "red",
+              "yellow",
+              "red",
+              "red"
+            ]
+          ],
+          "isHumanMove": true,
+          "thinkingTime": 5655.29999999702
+        },
+        {
+          "moveNumber": 34,
+          "player": "yellow",
+          "column": 5,
+          "row": 0,
+          "timestamp": 147534.79999999702,
+          "boardSnapshot": [
+            [
+              null,
+              "red",
+              null,
+              "yellow",
+              "yellow",
+              "yellow",
+              null
+            ],
+            [
+              "yellow",
+              "yellow",
+              null,
+              "yellow",
+              "red",
+              "red",
+              null
+            ],
+            [
+              "red",
+              "yellow",
+              null,
+              "red",
+              "yellow",
+              "red",
+              "yellow"
+            ],
+            [
+              "yellow",
+              "yellow",
+              null,
+              "red",
+              "yellow",
+              "yellow",
+              "red"
+            ],
+            [
+              "yellow",
+              "red",
+              null,
+              "yellow",
+              "red",
+              "red",
+              "red"
+            ],
+            [
+              "red",
+              "yellow",
+              "red",
+              "red",
+              "yellow",
+              "red",
+              "red"
+            ]
+          ],
+          "isHumanMove": false,
+          "thinkingTime": null
+        },
+        {
+          "moveNumber": 35,
+          "player": "red",
+          "column": 0,
+          "row": 0,
+          "timestamp": 150271.10000000894,
+          "boardSnapshot": [
+            [
+              "red",
+              "red",
+              null,
+              "yellow",
+              "yellow",
+              "yellow",
+              null
+            ],
+            [
+              "yellow",
+              "yellow",
+              null,
+              "yellow",
+              "red",
+              "red",
+              null
+            ],
+            [
+              "red",
+              "yellow",
+              null,
+              "red",
+              "yellow",
+              "red",
+              "yellow"
+            ],
+            [
+              "yellow",
+              "yellow",
+              null,
+              "red",
+              "yellow",
+              "yellow",
+              "red"
+            ],
+            [
+              "yellow",
+              "red",
+              null,
+              "yellow",
+              "red",
+              "red",
+              "red"
+            ],
+            [
+              "red",
+              "yellow",
+              "red",
+              "red",
+              "yellow",
+              "red",
+              "red"
+            ]
+          ],
+          "isHumanMove": true,
+          "thinkingTime": 2135
+        },
+        {
+          "moveNumber": 36,
+          "player": "yellow",
+          "column": 6,
+          "row": 1,
+          "timestamp": 151386.40000000596,
+          "boardSnapshot": [
+            [
+              "red",
+              "red",
+              null,
+              "yellow",
+              "yellow",
+              "yellow",
+              null
+            ],
+            [
+              "yellow",
+              "yellow",
+              null,
+              "yellow",
+              "red",
+              "red",
+              "yellow"
+            ],
+            [
+              "red",
+              "yellow",
+              null,
+              "red",
+              "yellow",
+              "red",
+              "yellow"
+            ],
+            [
+              "yellow",
+              "yellow",
+              null,
+              "red",
+              "yellow",
+              "yellow",
+              "red"
+            ],
+            [
+              "yellow",
+              "red",
+              null,
+              "yellow",
+              "red",
+              "red",
+              "red"
+            ],
+            [
+              "red",
+              "yellow",
+              "red",
+              "red",
+              "yellow",
+              "red",
+              "red"
+            ]
+          ],
+          "isHumanMove": false,
+          "thinkingTime": null
+        },
+        {
+          "moveNumber": 37,
+          "player": "red",
+          "column": 6,
+          "row": 0,
+          "timestamp": 152801.20000000298,
+          "boardSnapshot": [
+            [
+              "red",
+              "red",
+              null,
+              "yellow",
+              "yellow",
+              "yellow",
+              "red"
+            ],
+            [
+              "yellow",
+              "yellow",
+              null,
+              "yellow",
+              "red",
+              "red",
+              "yellow"
+            ],
+            [
+              "red",
+              "yellow",
+              null,
+              "red",
+              "yellow",
+              "red",
+              "yellow"
+            ],
+            [
+              "yellow",
+              "yellow",
+              null,
+              "red",
+              "yellow",
+              "yellow",
+              "red"
+            ],
+            [
+              "yellow",
+              "red",
+              null,
+              "yellow",
+              "red",
+              "red",
+              "red"
+            ],
+            [
+              "red",
+              "yellow",
+              "red",
+              "red",
+              "yellow",
+              "red",
+              "red"
+            ]
+          ],
+          "isHumanMove": true,
+          "thinkingTime": 813.2999999970198
+        },
+        {
+          "moveNumber": 38,
+          "player": "yellow",
+          "column": 2,
+          "row": 4,
+          "timestamp": 153917.10000000894,
+          "boardSnapshot": [
+            [
+              "red",
+              "red",
+              null,
+              "yellow",
+              "yellow",
+              "yellow",
+              "red"
+            ],
+            [
+              "yellow",
+              "yellow",
+              null,
+              "yellow",
+              "red",
+              "red",
+              "yellow"
+            ],
+            [
+              "red",
+              "yellow",
+              null,
+              "red",
+              "yellow",
+              "red",
+              "yellow"
+            ],
+            [
+              "yellow",
+              "yellow",
+              null,
+              "red",
+              "yellow",
+              "yellow",
+              "red"
+            ],
+            [
+              "yellow",
+              "red",
+              "yellow",
+              "yellow",
+              "red",
+              "red",
+              "red"
+            ],
+            [
+              "red",
+              "yellow",
+              "red",
+              "red",
+              "yellow",
+              "red",
+              "red"
+            ]
+          ],
+          "isHumanMove": false,
+          "thinkingTime": null
+        },
+        {
+          "moveNumber": 39,
+          "player": "red",
+          "column": 2,
+          "row": 3,
+          "timestamp": 160706.29999999702,
+          "boardSnapshot": [
+            [
+              "red",
+              "red",
+              null,
+              "yellow",
+              "yellow",
+              "yellow",
+              "red"
+            ],
+            [
+              "yellow",
+              "yellow",
+              null,
+              "yellow",
+              "red",
+              "red",
+              "yellow"
+            ],
+            [
+              "red",
+              "yellow",
+              null,
+              "red",
+              "yellow",
+              "red",
+              "yellow"
+            ],
+            [
+              "yellow",
+              "yellow",
+              "red",
+              "red",
+              "yellow",
+              "yellow",
+              "red"
+            ],
+            [
+              "yellow",
+              "red",
+              "yellow",
+              "yellow",
+              "red",
+              "red",
+              "red"
+            ],
+            [
+              "red",
+              "yellow",
+              "red",
+              "red",
+              "yellow",
+              "red",
+              "red"
+            ]
+          ],
+          "isHumanMove": true,
+          "thinkingTime": 6187.9000000059605
+        }
+      ],
+      "duration": 88440.09999999404
+    }
+  ],
+  "rawLogs": [
+    {
+      "game_id": "1770531101966_m3vphbjl3",
+      "log_id": 1,
+      "global_turn": 1,
+      "player": "red",
+      "mode": "Human",
+      "thinking_time_ms": 1603,
+      "nodes_explored": 0,
+      "chosen_col": 3,
+      "score": null,
+      "red_moves_so_far": 1,
+      "yellow_moves_so_far": 0,
+      "board_state": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "first_player": "red",
+      "first_player_mode": "random",
+      "game_result": "red",
+      "red_total_moves": 4,
+      "yellow_total_moves": 3,
+      "total_moves": 7
+    },
+    {
+      "game_id": "1770531101966_m3vphbjl3",
+      "log_id": 2,
+      "global_turn": 1,
+      "player": "yellow",
+      "mode": "Reflex (Agresif)",
+      "thinking_time_ms": 0.6,
+      "nodes_explored": 21,
+      "chosen_col": 3,
+      "score": 0,
+      "red_moves_so_far": 1,
+      "yellow_moves_so_far": 0,
+      "board_state": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "red",
+          null,
+          null,
+          null
+        ]
+      ],
+      "first_player": "red",
+      "first_player_mode": "random",
+      "game_result": "red",
+      "red_total_moves": 4,
+      "yellow_total_moves": 3,
+      "total_moves": 7
+    },
+    {
+      "game_id": "1770531101966_m3vphbjl3",
+      "log_id": 3,
+      "global_turn": 3,
+      "player": "red",
+      "mode": "Human",
+      "thinking_time_ms": 1295.1,
+      "nodes_explored": 0,
+      "chosen_col": 2,
+      "score": null,
+      "red_moves_so_far": 2,
+      "yellow_moves_so_far": 1,
+      "board_state": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "yellow",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "red",
+          null,
+          null,
+          null
+        ]
+      ],
+      "first_player": "red",
+      "first_player_mode": "random",
+      "game_result": "red",
+      "red_total_moves": 4,
+      "yellow_total_moves": 3,
+      "total_moves": 7
+    },
+    {
+      "game_id": "1770531101966_m3vphbjl3",
+      "log_id": 4,
+      "global_turn": 3,
+      "player": "yellow",
+      "mode": "Reflex (Agresif)",
+      "thinking_time_ms": 0.6,
+      "nodes_explored": 21,
+      "chosen_col": 3,
+      "score": 200,
+      "red_moves_so_far": 2,
+      "yellow_moves_so_far": 1,
+      "board_state": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "yellow",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "red",
+          "red",
+          null,
+          null,
+          null
+        ]
+      ],
+      "first_player": "red",
+      "first_player_mode": "random",
+      "game_result": "red",
+      "red_total_moves": 4,
+      "yellow_total_moves": 3,
+      "total_moves": 7
+    },
+    {
+      "game_id": "1770531101966_m3vphbjl3",
+      "log_id": 5,
+      "global_turn": 5,
+      "player": "red",
+      "mode": "Human",
+      "thinking_time_ms": 287.5,
+      "nodes_explored": 0,
+      "chosen_col": 4,
+      "score": null,
+      "red_moves_so_far": 3,
+      "yellow_moves_so_far": 2,
+      "board_state": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "yellow",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "yellow",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "red",
+          "red",
+          null,
+          null,
+          null
+        ]
+      ],
+      "first_player": "red",
+      "first_player_mode": "random",
+      "game_result": "red",
+      "red_total_moves": 4,
+      "yellow_total_moves": 3,
+      "total_moves": 7
+    },
+    {
+      "game_id": "1770531101966_m3vphbjl3",
+      "log_id": 6,
+      "global_turn": 5,
+      "player": "yellow",
+      "mode": "Reflex (Agresif)",
+      "thinking_time_ms": 0.3,
+      "nodes_explored": 21,
+      "chosen_col": 1,
+      "score": 800000,
+      "red_moves_so_far": 3,
+      "yellow_moves_so_far": 2,
+      "board_state": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "yellow",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "yellow",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "red",
+          "red",
+          "red",
+          null,
+          null
+        ]
+      ],
+      "first_player": "red",
+      "first_player_mode": "random",
+      "game_result": "red",
+      "red_total_moves": 4,
+      "yellow_total_moves": 3,
+      "total_moves": 7
+    },
+    {
+      "game_id": "1770531101966_m3vphbjl3",
+      "log_id": 7,
+      "global_turn": 7,
+      "player": "red",
+      "mode": "Human",
+      "thinking_time_ms": 1054.6,
+      "nodes_explored": 0,
+      "chosen_col": 5,
+      "score": null,
+      "red_moves_so_far": 4,
+      "yellow_moves_so_far": 3,
+      "board_state": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "yellow",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "yellow",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "yellow",
+          "red",
+          "red",
+          "red",
+          null,
+          null
+        ]
+      ],
+      "first_player": "red",
+      "first_player_mode": "random",
+      "game_result": "red",
+      "red_total_moves": 4,
+      "yellow_total_moves": 3,
+      "total_moves": 7
+    },
+    {
+      "game_id": "1770531114349_vz4mvwde1",
+      "log_id": 8,
+      "global_turn": 1,
+      "player": "red",
+      "mode": "Human",
+      "thinking_time_ms": 2170,
+      "nodes_explored": 0,
+      "chosen_col": 3,
+      "score": null,
+      "red_moves_so_far": 1,
+      "yellow_moves_so_far": 0,
+      "board_state": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "first_player": "red",
+      "first_player_mode": "random",
+      "game_result": "yellow",
+      "red_total_moves": 10,
+      "yellow_total_moves": 10,
+      "total_moves": 20
+    },
+    {
+      "game_id": "1770531114349_vz4mvwde1",
+      "log_id": 9,
+      "global_turn": 1,
+      "player": "yellow",
+      "mode": "Defend (Minimax)",
+      "thinking_time_ms": 9.1,
+      "nodes_explored": 464,
+      "chosen_col": 1,
+      "score": -97,
+      "red_moves_so_far": 1,
+      "yellow_moves_so_far": 0,
+      "board_state": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "red",
+          null,
+          null,
+          null
+        ]
+      ],
+      "first_player": "red",
+      "first_player_mode": "random",
+      "game_result": "yellow",
+      "red_total_moves": 10,
+      "yellow_total_moves": 10,
+      "total_moves": 20
+    },
+    {
+      "game_id": "1770531114349_vz4mvwde1",
+      "log_id": 10,
+      "global_turn": 3,
+      "player": "red",
+      "mode": "Human",
+      "thinking_time_ms": 46,
+      "nodes_explored": 0,
+      "chosen_col": 4,
+      "score": null,
+      "red_moves_so_far": 2,
+      "yellow_moves_so_far": 1,
+      "board_state": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "yellow",
+          null,
+          "red",
+          null,
+          null,
+          null
+        ]
+      ],
+      "first_player": "red",
+      "first_player_mode": "random",
+      "game_result": "yellow",
+      "red_total_moves": 10,
+      "yellow_total_moves": 10,
+      "total_moves": 20
+    },
+    {
+      "game_id": "1770531114349_vz4mvwde1",
+      "log_id": 11,
+      "global_turn": 3,
+      "player": "yellow",
+      "mode": "Defend (Minimax)",
+      "thinking_time_ms": 4.6,
+      "nodes_explored": 490,
+      "chosen_col": 5,
+      "score": -236,
+      "red_moves_so_far": 2,
+      "yellow_moves_so_far": 1,
+      "board_state": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "yellow",
+          null,
+          "red",
+          "red",
+          null,
+          null
+        ]
+      ],
+      "first_player": "red",
+      "first_player_mode": "random",
+      "game_result": "yellow",
+      "red_total_moves": 10,
+      "yellow_total_moves": 10,
+      "total_moves": 20
+    },
+    {
+      "game_id": "1770531114349_vz4mvwde1",
+      "log_id": 12,
+      "global_turn": 5,
+      "player": "red",
+      "mode": "Human",
+      "thinking_time_ms": 525.2,
+      "nodes_explored": 0,
+      "chosen_col": 2,
+      "score": null,
+      "red_moves_so_far": 3,
+      "yellow_moves_so_far": 2,
+      "board_state": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "yellow",
+          null,
+          "red",
+          "red",
+          "yellow",
+          null
+        ]
+      ],
+      "first_player": "red",
+      "first_player_mode": "random",
+      "game_result": "yellow",
+      "red_total_moves": 10,
+      "yellow_total_moves": 10,
+      "total_moves": 20
+    },
+    {
+      "game_id": "1770531114349_vz4mvwde1",
+      "log_id": 13,
+      "global_turn": 5,
+      "player": "yellow",
+      "mode": "Defend (Minimax)",
+      "thinking_time_ms": 2.9,
+      "nodes_explored": 211,
+      "chosen_col": 3,
+      "score": -93,
+      "red_moves_so_far": 3,
+      "yellow_moves_so_far": 2,
+      "board_state": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "yellow",
+          "red",
+          "red",
+          "red",
+          "yellow",
+          null
+        ]
+      ],
+      "first_player": "red",
+      "first_player_mode": "random",
+      "game_result": "yellow",
+      "red_total_moves": 10,
+      "yellow_total_moves": 10,
+      "total_moves": 20
+    },
+    {
+      "game_id": "1770531114349_vz4mvwde1",
+      "log_id": 14,
+      "global_turn": 7,
+      "player": "red",
+      "mode": "Human",
+      "thinking_time_ms": 3432.3,
+      "nodes_explored": 0,
+      "chosen_col": 2,
+      "score": null,
+      "red_moves_so_far": 4,
+      "yellow_moves_so_far": 3,
+      "board_state": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "yellow",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "yellow",
+          "red",
+          "red",
+          "red",
+          "yellow",
+          null
+        ]
+      ],
+      "first_player": "red",
+      "first_player_mode": "random",
+      "game_result": "yellow",
+      "red_total_moves": 10,
+      "yellow_total_moves": 10,
+      "total_moves": 20
+    },
+    {
+      "game_id": "1770531114349_vz4mvwde1",
+      "log_id": 15,
+      "global_turn": 7,
+      "player": "yellow",
+      "mode": "Defend (Minimax)",
+      "thinking_time_ms": 5.9,
+      "nodes_explored": 360,
+      "chosen_col": 2,
+      "score": -118,
+      "red_moves_so_far": 4,
+      "yellow_moves_so_far": 3,
+      "board_state": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "red",
+          "yellow",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "yellow",
+          "red",
+          "red",
+          "red",
+          "yellow",
+          null
+        ]
+      ],
+      "first_player": "red",
+      "first_player_mode": "random",
+      "game_result": "yellow",
+      "red_total_moves": 10,
+      "yellow_total_moves": 10,
+      "total_moves": 20
+    },
+    {
+      "game_id": "1770531114349_vz4mvwde1",
+      "log_id": 16,
+      "global_turn": 9,
+      "player": "red",
+      "mode": "Human",
+      "thinking_time_ms": 1484,
+      "nodes_explored": 0,
+      "chosen_col": 4,
+      "score": null,
+      "red_moves_so_far": 5,
+      "yellow_moves_so_far": 4,
+      "board_state": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "yellow",
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "red",
+          "yellow",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "yellow",
+          "red",
+          "red",
+          "red",
+          "yellow",
+          null
+        ]
+      ],
+      "first_player": "red",
+      "first_player_mode": "random",
+      "game_result": "yellow",
+      "red_total_moves": 10,
+      "yellow_total_moves": 10,
+      "total_moves": 20
+    },
+    {
+      "game_id": "1770531114349_vz4mvwde1",
+      "log_id": 17,
+      "global_turn": 9,
+      "player": "yellow",
+      "mode": "Defend (Minimax)",
+      "thinking_time_ms": 2.9,
+      "nodes_explored": 247,
+      "chosen_col": 3,
+      "score": -131,
+      "red_moves_so_far": 5,
+      "yellow_moves_so_far": 4,
+      "board_state": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "yellow",
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "red",
+          "yellow",
+          "red",
+          null,
+          null
+        ],
+        [
+          null,
+          "yellow",
+          "red",
+          "red",
+          "red",
+          "yellow",
+          null
+        ]
+      ],
+      "first_player": "red",
+      "first_player_mode": "random",
+      "game_result": "yellow",
+      "red_total_moves": 10,
+      "yellow_total_moves": 10,
+      "total_moves": 20
+    },
+    {
+      "game_id": "1770531114349_vz4mvwde1",
+      "log_id": 18,
+      "global_turn": 11,
+      "player": "red",
+      "mode": "Human",
+      "thinking_time_ms": 1660,
+      "nodes_explored": 0,
+      "chosen_col": 3,
+      "score": null,
+      "red_moves_so_far": 6,
+      "yellow_moves_so_far": 5,
+      "board_state": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "yellow",
+          "yellow",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "red",
+          "yellow",
+          "red",
+          null,
+          null
+        ],
+        [
+          null,
+          "yellow",
+          "red",
+          "red",
+          "red",
+          "yellow",
+          null
+        ]
+      ],
+      "first_player": "red",
+      "first_player_mode": "random",
+      "game_result": "yellow",
+      "red_total_moves": 10,
+      "yellow_total_moves": 10,
+      "total_moves": 20
+    },
+    {
+      "game_id": "1770531114349_vz4mvwde1",
+      "log_id": 19,
+      "global_turn": 11,
+      "player": "yellow",
+      "mode": "Defend (Minimax)",
+      "thinking_time_ms": 4.3,
+      "nodes_explored": 388,
+      "chosen_col": 4,
+      "score": 59,
+      "red_moves_so_far": 6,
+      "yellow_moves_so_far": 5,
+      "board_state": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "red",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "yellow",
+          "yellow",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "red",
+          "yellow",
+          "red",
+          null,
+          null
+        ],
+        [
+          null,
+          "yellow",
+          "red",
+          "red",
+          "red",
+          "yellow",
+          null
+        ]
+      ],
+      "first_player": "red",
+      "first_player_mode": "random",
+      "game_result": "yellow",
+      "red_total_moves": 10,
+      "yellow_total_moves": 10,
+      "total_moves": 20
+    },
+    {
+      "game_id": "1770531114349_vz4mvwde1",
+      "log_id": 20,
+      "global_turn": 13,
+      "player": "red",
+      "mode": "Human",
+      "thinking_time_ms": 7381.7,
+      "nodes_explored": 0,
+      "chosen_col": 0,
+      "score": null,
+      "red_moves_so_far": 7,
+      "yellow_moves_so_far": 6,
+      "board_state": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "red",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "yellow",
+          "yellow",
+          "yellow",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "red",
+          "yellow",
+          "red",
+          null,
+          null
+        ],
+        [
+          null,
+          "yellow",
+          "red",
+          "red",
+          "red",
+          "yellow",
+          null
+        ]
+      ],
+      "first_player": "red",
+      "first_player_mode": "random",
+      "game_result": "yellow",
+      "red_total_moves": 10,
+      "yellow_total_moves": 10,
+      "total_moves": 20
+    },
+    {
+      "game_id": "1770531114349_vz4mvwde1",
+      "log_id": 21,
+      "global_turn": 13,
+      "player": "yellow",
+      "mode": "Defend (Minimax)",
+      "thinking_time_ms": 3.5,
+      "nodes_explored": 400,
+      "chosen_col": 2,
+      "score": 99,
+      "red_moves_so_far": 7,
+      "yellow_moves_so_far": 6,
+      "board_state": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "red",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "yellow",
+          "yellow",
+          "yellow",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "red",
+          "yellow",
+          "red",
+          null,
+          null
+        ],
+        [
+          "red",
+          "yellow",
+          "red",
+          "red",
+          "red",
+          "yellow",
+          null
+        ]
+      ],
+      "first_player": "red",
+      "first_player_mode": "random",
+      "game_result": "yellow",
+      "red_total_moves": 10,
+      "yellow_total_moves": 10,
+      "total_moves": 20
+    },
+    {
+      "game_id": "1770531114349_vz4mvwde1",
+      "log_id": 22,
+      "global_turn": 15,
+      "player": "red",
+      "mode": "Human",
+      "thinking_time_ms": 1798.8,
+      "nodes_explored": 0,
+      "chosen_col": 0,
+      "score": null,
+      "red_moves_so_far": 8,
+      "yellow_moves_so_far": 7,
+      "board_state": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "yellow",
+          "red",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "yellow",
+          "yellow",
+          "yellow",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "red",
+          "yellow",
+          "red",
+          null,
+          null
+        ],
+        [
+          "red",
+          "yellow",
+          "red",
+          "red",
+          "red",
+          "yellow",
+          null
+        ]
+      ],
+      "first_player": "red",
+      "first_player_mode": "random",
+      "game_result": "yellow",
+      "red_total_moves": 10,
+      "yellow_total_moves": 10,
+      "total_moves": 20
+    },
+    {
+      "game_id": "1770531114349_vz4mvwde1",
+      "log_id": 23,
+      "global_turn": 15,
+      "player": "yellow",
+      "mode": "Defend (Minimax)",
+      "thinking_time_ms": 4.5,
+      "nodes_explored": 529,
+      "chosen_col": 0,
+      "score": 124,
+      "red_moves_so_far": 8,
+      "yellow_moves_so_far": 7,
+      "board_state": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "yellow",
+          "red",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "yellow",
+          "yellow",
+          "yellow",
+          null,
+          null
+        ],
+        [
+          "red",
+          null,
+          "red",
+          "yellow",
+          "red",
+          null,
+          null
+        ],
+        [
+          "red",
+          "yellow",
+          "red",
+          "red",
+          "red",
+          "yellow",
+          null
+        ]
+      ],
+      "first_player": "red",
+      "first_player_mode": "random",
+      "game_result": "yellow",
+      "red_total_moves": 10,
+      "yellow_total_moves": 10,
+      "total_moves": 20
+    },
+    {
+      "game_id": "1770531114349_vz4mvwde1",
+      "log_id": 24,
+      "global_turn": 17,
+      "player": "red",
+      "mode": "Human",
+      "thinking_time_ms": 4078.8,
+      "nodes_explored": 0,
+      "chosen_col": 0,
+      "score": null,
+      "red_moves_so_far": 9,
+      "yellow_moves_so_far": 8,
+      "board_state": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "yellow",
+          "red",
+          null,
+          null,
+          null
+        ],
+        [
+          "yellow",
+          null,
+          "yellow",
+          "yellow",
+          "yellow",
+          null,
+          null
+        ],
+        [
+          "red",
+          null,
+          "red",
+          "yellow",
+          "red",
+          null,
+          null
+        ],
+        [
+          "red",
+          "yellow",
+          "red",
+          "red",
+          "red",
+          "yellow",
+          null
+        ]
+      ],
+      "first_player": "red",
+      "first_player_mode": "random",
+      "game_result": "yellow",
+      "red_total_moves": 10,
+      "yellow_total_moves": 10,
+      "total_moves": 20
+    },
+    {
+      "game_id": "1770531114349_vz4mvwde1",
+      "log_id": 25,
+      "global_turn": 17,
+      "player": "yellow",
+      "mode": "Defend (Minimax)",
+      "thinking_time_ms": 2.2,
+      "nodes_explored": 234,
+      "chosen_col": 3,
+      "score": 132,
+      "red_moves_so_far": 9,
+      "yellow_moves_so_far": 8,
+      "board_state": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "red",
+          null,
+          "yellow",
+          "red",
+          null,
+          null,
+          null
+        ],
+        [
+          "yellow",
+          null,
+          "yellow",
+          "yellow",
+          "yellow",
+          null,
+          null
+        ],
+        [
+          "red",
+          null,
+          "red",
+          "yellow",
+          "red",
+          null,
+          null
+        ],
+        [
+          "red",
+          "yellow",
+          "red",
+          "red",
+          "red",
+          "yellow",
+          null
+        ]
+      ],
+      "first_player": "red",
+      "first_player_mode": "random",
+      "game_result": "yellow",
+      "red_total_moves": 10,
+      "yellow_total_moves": 10,
+      "total_moves": 20
+    },
+    {
+      "game_id": "1770531114349_vz4mvwde1",
+      "log_id": 26,
+      "global_turn": 19,
+      "player": "red",
+      "mode": "Human",
+      "thinking_time_ms": 4867.3,
+      "nodes_explored": 0,
+      "chosen_col": 5,
+      "score": null,
+      "red_moves_so_far": 10,
+      "yellow_moves_so_far": 9,
+      "board_state": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "yellow",
+          null,
+          null,
+          null
+        ],
+        [
+          "red",
+          null,
+          "yellow",
+          "red",
+          null,
+          null,
+          null
+        ],
+        [
+          "yellow",
+          null,
+          "yellow",
+          "yellow",
+          "yellow",
+          null,
+          null
+        ],
+        [
+          "red",
+          null,
+          "red",
+          "yellow",
+          "red",
+          null,
+          null
+        ],
+        [
+          "red",
+          "yellow",
+          "red",
+          "red",
+          "red",
+          "yellow",
+          null
+        ]
+      ],
+      "first_player": "red",
+      "first_player_mode": "random",
+      "game_result": "yellow",
+      "red_total_moves": 10,
+      "yellow_total_moves": 10,
+      "total_moves": 20
+    },
+    {
+      "game_id": "1770531114349_vz4mvwde1",
+      "log_id": 27,
+      "global_turn": 19,
+      "player": "yellow",
+      "mode": "Defend (Minimax)",
+      "thinking_time_ms": 0.6,
+      "nodes_explored": 79,
+      "chosen_col": 5,
+      "score": 1000003,
+      "red_moves_so_far": 10,
+      "yellow_moves_so_far": 9,
+      "board_state": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "yellow",
+          null,
+          null,
+          null
+        ],
+        [
+          "red",
+          null,
+          "yellow",
+          "red",
+          null,
+          null,
+          null
+        ],
+        [
+          "yellow",
+          null,
+          "yellow",
+          "yellow",
+          "yellow",
+          null,
+          null
+        ],
+        [
+          "red",
+          null,
+          "red",
+          "yellow",
+          "red",
+          "red",
+          null
+        ],
+        [
+          "red",
+          "yellow",
+          "red",
+          "red",
+          "red",
+          "yellow",
+          null
+        ]
+      ],
+      "first_player": "red",
+      "first_player_mode": "random",
+      "game_result": "yellow",
+      "red_total_moves": 10,
+      "yellow_total_moves": 10,
+      "total_moves": 20
+    },
+    {
+      "game_id": "1770531161913_p9vvtyi9t",
+      "log_id": 28,
+      "global_turn": 1,
+      "player": "red",
+      "mode": "Human",
+      "thinking_time_ms": 2437.6,
+      "nodes_explored": 0,
+      "chosen_col": 3,
+      "score": null,
+      "red_moves_so_far": 1,
+      "yellow_moves_so_far": 0,
+      "board_state": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "first_player": "red",
+      "first_player_mode": "random",
+      "game_result": "red",
+      "red_total_moves": 20,
+      "yellow_total_moves": 19,
+      "total_moves": 39
+    },
+    {
+      "game_id": "1770531161913_p9vvtyi9t",
+      "log_id": 29,
+      "global_turn": 1,
+      "player": "yellow",
+      "mode": "Defend (Minimax)",
+      "thinking_time_ms": 3,
+      "nodes_explored": 464,
+      "chosen_col": 1,
+      "score": -97,
+      "red_moves_so_far": 1,
+      "yellow_moves_so_far": 0,
+      "board_state": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "red",
+          null,
+          null,
+          null
+        ]
+      ],
+      "first_player": "red",
+      "first_player_mode": "random",
+      "game_result": "red",
+      "red_total_moves": 20,
+      "yellow_total_moves": 19,
+      "total_moves": 39
+    },
+    {
+      "game_id": "1770531161913_p9vvtyi9t",
+      "log_id": 30,
+      "global_turn": 3,
+      "player": "red",
+      "mode": "Human",
+      "thinking_time_ms": 1048.5,
+      "nodes_explored": 0,
+      "chosen_col": 1,
+      "score": null,
+      "red_moves_so_far": 2,
+      "yellow_moves_so_far": 1,
+      "board_state": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "yellow",
+          null,
+          "red",
+          null,
+          null,
+          null
+        ]
+      ],
+      "first_player": "red",
+      "first_player_mode": "random",
+      "game_result": "red",
+      "red_total_moves": 20,
+      "yellow_total_moves": 19,
+      "total_moves": 39
+    },
+    {
+      "game_id": "1770531161913_p9vvtyi9t",
+      "log_id": 31,
+      "global_turn": 3,
+      "player": "yellow",
+      "mode": "Defend (Minimax)",
+      "thinking_time_ms": 1.8,
+      "nodes_explored": 286,
+      "chosen_col": 3,
+      "score": -112,
+      "red_moves_so_far": 2,
+      "yellow_moves_so_far": 1,
+      "board_state": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "red",
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "yellow",
+          null,
+          "red",
+          null,
+          null,
+          null
+        ]
+      ],
+      "first_player": "red",
+      "first_player_mode": "random",
+      "game_result": "red",
+      "red_total_moves": 20,
+      "yellow_total_moves": 19,
+      "total_moves": 39
+    },
+    {
+      "game_id": "1770531161913_p9vvtyi9t",
+      "log_id": 32,
+      "global_turn": 5,
+      "player": "red",
+      "mode": "Human",
+      "thinking_time_ms": 248.9,
+      "nodes_explored": 0,
+      "chosen_col": 2,
+      "score": null,
+      "red_moves_so_far": 3,
+      "yellow_moves_so_far": 2,
+      "board_state": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "red",
+          null,
+          "yellow",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "yellow",
+          null,
+          "red",
+          null,
+          null,
+          null
+        ]
+      ],
+      "first_player": "red",
+      "first_player_mode": "random",
+      "game_result": "red",
+      "red_total_moves": 20,
+      "yellow_total_moves": 19,
+      "total_moves": 39
+    },
+    {
+      "game_id": "1770531161913_p9vvtyi9t",
+      "log_id": 33,
+      "global_turn": 5,
+      "player": "yellow",
+      "mode": "Defend (Minimax)",
+      "thinking_time_ms": 3.5,
+      "nodes_explored": 550,
+      "chosen_col": 4,
+      "score": -133,
+      "red_moves_so_far": 3,
+      "yellow_moves_so_far": 2,
+      "board_state": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "red",
+          null,
+          "yellow",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "yellow",
+          "red",
+          "red",
+          null,
+          null,
+          null
+        ]
+      ],
+      "first_player": "red",
+      "first_player_mode": "random",
+      "game_result": "red",
+      "red_total_moves": 20,
+      "yellow_total_moves": 19,
+      "total_moves": 39
+    },
+    {
+      "game_id": "1770531161913_p9vvtyi9t",
+      "log_id": 34,
+      "global_turn": 7,
+      "player": "red",
+      "mode": "Human",
+      "thinking_time_ms": 2749.1,
+      "nodes_explored": 0,
+      "chosen_col": 3,
+      "score": null,
+      "red_moves_so_far": 4,
+      "yellow_moves_so_far": 3,
+      "board_state": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "red",
+          null,
+          "yellow",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "yellow",
+          "red",
+          "red",
+          "yellow",
+          null,
+          null
+        ]
+      ],
+      "first_player": "red",
+      "first_player_mode": "random",
+      "game_result": "red",
+      "red_total_moves": 20,
+      "yellow_total_moves": 19,
+      "total_moves": 39
+    },
+    {
+      "game_id": "1770531161913_p9vvtyi9t",
+      "log_id": 35,
+      "global_turn": 7,
+      "player": "yellow",
+      "mode": "Defend (Minimax)",
+      "thinking_time_ms": 2.3,
+      "nodes_explored": 479,
+      "chosen_col": 1,
+      "score": -173,
+      "red_moves_so_far": 4,
+      "yellow_moves_so_far": 3,
+      "board_state": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "red",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "red",
+          null,
+          "yellow",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "yellow",
+          "red",
+          "red",
+          "yellow",
+          null,
+          null
+        ]
+      ],
+      "first_player": "red",
+      "first_player_mode": "random",
+      "game_result": "red",
+      "red_total_moves": 20,
+      "yellow_total_moves": 19,
+      "total_moves": 39
+    },
+    {
+      "game_id": "1770531161913_p9vvtyi9t",
+      "log_id": 36,
+      "global_turn": 9,
+      "player": "red",
+      "mode": "Human",
+      "thinking_time_ms": 666.3,
+      "nodes_explored": 0,
+      "chosen_col": 3,
+      "score": null,
+      "red_moves_so_far": 5,
+      "yellow_moves_so_far": 4,
+      "board_state": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "yellow",
+          null,
+          "red",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "red",
+          null,
+          "yellow",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "yellow",
+          "red",
+          "red",
+          "yellow",
+          null,
+          null
+        ]
+      ],
+      "first_player": "red",
+      "first_player_mode": "random",
+      "game_result": "red",
+      "red_total_moves": 20,
+      "yellow_total_moves": 19,
+      "total_moves": 39
+    },
+    {
+      "game_id": "1770531161913_p9vvtyi9t",
+      "log_id": 37,
+      "global_turn": 9,
+      "player": "yellow",
+      "mode": "Defend (Minimax)",
+      "thinking_time_ms": 2.7,
+      "nodes_explored": 496,
+      "chosen_col": 1,
+      "score": -253,
+      "red_moves_so_far": 5,
+      "yellow_moves_so_far": 4,
+      "board_state": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "red",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "yellow",
+          null,
+          "red",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "red",
+          null,
+          "yellow",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "yellow",
+          "red",
+          "red",
+          "yellow",
+          null,
+          null
+        ]
+      ],
+      "first_player": "red",
+      "first_player_mode": "random",
+      "game_result": "red",
+      "red_total_moves": 20,
+      "yellow_total_moves": 19,
+      "total_moves": 39
+    },
+    {
+      "game_id": "1770531161913_p9vvtyi9t",
+      "log_id": 38,
+      "global_turn": 11,
+      "player": "red",
+      "mode": "Human",
+      "thinking_time_ms": 2437.7,
+      "nodes_explored": 0,
+      "chosen_col": 0,
+      "score": null,
+      "red_moves_so_far": 6,
+      "yellow_moves_so_far": 5,
+      "board_state": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "yellow",
+          null,
+          "red",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "yellow",
+          null,
+          "red",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "red",
+          null,
+          "yellow",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "yellow",
+          "red",
+          "red",
+          "yellow",
+          null,
+          null
+        ]
+      ],
+      "first_player": "red",
+      "first_player_mode": "random",
+      "game_result": "red",
+      "red_total_moves": 20,
+      "yellow_total_moves": 19,
+      "total_moves": 39
+    },
+    {
+      "game_id": "1770531161913_p9vvtyi9t",
+      "log_id": 39,
+      "global_turn": 11,
+      "player": "yellow",
+      "mode": "Defend (Minimax)",
+      "thinking_time_ms": 1.9,
+      "nodes_explored": 266,
+      "chosen_col": 1,
+      "score": -185,
+      "red_moves_so_far": 6,
+      "yellow_moves_so_far": 5,
+      "board_state": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "yellow",
+          null,
+          "red",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "yellow",
+          null,
+          "red",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "red",
+          null,
+          "yellow",
+          null,
+          null,
+          null
+        ],
+        [
+          "red",
+          "yellow",
+          "red",
+          "red",
+          "yellow",
+          null,
+          null
+        ]
+      ],
+      "first_player": "red",
+      "first_player_mode": "random",
+      "game_result": "red",
+      "red_total_moves": 20,
+      "yellow_total_moves": 19,
+      "total_moves": 39
+    },
+    {
+      "game_id": "1770531161913_p9vvtyi9t",
+      "log_id": 40,
+      "global_turn": 13,
+      "player": "red",
+      "mode": "Human",
+      "thinking_time_ms": 412.2,
+      "nodes_explored": 0,
+      "chosen_col": 1,
+      "score": null,
+      "red_moves_so_far": 7,
+      "yellow_moves_so_far": 6,
+      "board_state": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "yellow",
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "yellow",
+          null,
+          "red",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "yellow",
+          null,
+          "red",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "red",
+          null,
+          "yellow",
+          null,
+          null,
+          null
+        ],
+        [
+          "red",
+          "yellow",
+          "red",
+          "red",
+          "yellow",
+          null,
+          null
+        ]
+      ],
+      "first_player": "red",
+      "first_player_mode": "random",
+      "game_result": "red",
+      "red_total_moves": 20,
+      "yellow_total_moves": 19,
+      "total_moves": 39
+    },
+    {
+      "game_id": "1770531161913_p9vvtyi9t",
+      "log_id": 41,
+      "global_turn": 13,
+      "player": "yellow",
+      "mode": "Defend (Minimax)",
+      "thinking_time_ms": 1.5,
+      "nodes_explored": 238,
+      "chosen_col": 3,
+      "score": -286,
+      "red_moves_so_far": 7,
+      "yellow_moves_so_far": 6,
+      "board_state": [
+        [
+          null,
+          "red",
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "yellow",
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "yellow",
+          null,
+          "red",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "yellow",
+          null,
+          "red",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "red",
+          null,
+          "yellow",
+          null,
+          null,
+          null
+        ],
+        [
+          "red",
+          "yellow",
+          "red",
+          "red",
+          "yellow",
+          null,
+          null
+        ]
+      ],
+      "first_player": "red",
+      "first_player_mode": "random",
+      "game_result": "red",
+      "red_total_moves": 20,
+      "yellow_total_moves": 19,
+      "total_moves": 39
+    },
+    {
+      "game_id": "1770531161913_p9vvtyi9t",
+      "log_id": 42,
+      "global_turn": 15,
+      "player": "red",
+      "mode": "Human",
+      "thinking_time_ms": 4877.9,
+      "nodes_explored": 0,
+      "chosen_col": 6,
+      "score": null,
+      "red_moves_so_far": 8,
+      "yellow_moves_so_far": 7,
+      "board_state": [
+        [
+          null,
+          "red",
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "yellow",
+          null,
+          "yellow",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "yellow",
+          null,
+          "red",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "yellow",
+          null,
+          "red",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "red",
+          null,
+          "yellow",
+          null,
+          null,
+          null
+        ],
+        [
+          "red",
+          "yellow",
+          "red",
+          "red",
+          "yellow",
+          null,
+          null
+        ]
+      ],
+      "first_player": "red",
+      "first_player_mode": "random",
+      "game_result": "red",
+      "red_total_moves": 20,
+      "yellow_total_moves": 19,
+      "total_moves": 39
+    },
+    {
+      "game_id": "1770531161913_p9vvtyi9t",
+      "log_id": 43,
+      "global_turn": 15,
+      "player": "yellow",
+      "mode": "Defend (Minimax)",
+      "thinking_time_ms": 2.3,
+      "nodes_explored": 342,
+      "chosen_col": 0,
+      "score": -280,
+      "red_moves_so_far": 8,
+      "yellow_moves_so_far": 7,
+      "board_state": [
+        [
+          null,
+          "red",
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "yellow",
+          null,
+          "yellow",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "yellow",
+          null,
+          "red",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "yellow",
+          null,
+          "red",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "red",
+          null,
+          "yellow",
+          null,
+          null,
+          null
+        ],
+        [
+          "red",
+          "yellow",
+          "red",
+          "red",
+          "yellow",
+          null,
+          "red"
+        ]
+      ],
+      "first_player": "red",
+      "first_player_mode": "random",
+      "game_result": "red",
+      "red_total_moves": 20,
+      "yellow_total_moves": 19,
+      "total_moves": 39
+    },
+    {
+      "game_id": "1770531161913_p9vvtyi9t",
+      "log_id": 44,
+      "global_turn": 17,
+      "player": "red",
+      "mode": "Human",
+      "thinking_time_ms": 5376.5,
+      "nodes_explored": 0,
+      "chosen_col": 6,
+      "score": null,
+      "red_moves_so_far": 9,
+      "yellow_moves_so_far": 8,
+      "board_state": [
+        [
+          null,
+          "red",
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "yellow",
+          null,
+          "yellow",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "yellow",
+          null,
+          "red",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "yellow",
+          null,
+          "red",
+          null,
+          null,
+          null
+        ],
+        [
+          "yellow",
+          "red",
+          null,
+          "yellow",
+          null,
+          null,
+          null
+        ],
+        [
+          "red",
+          "yellow",
+          "red",
+          "red",
+          "yellow",
+          null,
+          "red"
+        ]
+      ],
+      "first_player": "red",
+      "first_player_mode": "random",
+      "game_result": "red",
+      "red_total_moves": 20,
+      "yellow_total_moves": 19,
+      "total_moves": 39
+    },
+    {
+      "game_id": "1770531161913_p9vvtyi9t",
+      "log_id": 45,
+      "global_turn": 17,
+      "player": "yellow",
+      "mode": "Defend (Minimax)",
+      "thinking_time_ms": 2.4,
+      "nodes_explored": 353,
+      "chosen_col": 0,
+      "score": -290,
+      "red_moves_so_far": 9,
+      "yellow_moves_so_far": 8,
+      "board_state": [
+        [
+          null,
+          "red",
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "yellow",
+          null,
+          "yellow",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "yellow",
+          null,
+          "red",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "yellow",
+          null,
+          "red",
+          null,
+          null,
+          null
+        ],
+        [
+          "yellow",
+          "red",
+          null,
+          "yellow",
+          null,
+          null,
+          "red"
+        ],
+        [
+          "red",
+          "yellow",
+          "red",
+          "red",
+          "yellow",
+          null,
+          "red"
+        ]
+      ],
+      "first_player": "red",
+      "first_player_mode": "random",
+      "game_result": "red",
+      "red_total_moves": 20,
+      "yellow_total_moves": 19,
+      "total_moves": 39
+    },
+    {
+      "game_id": "1770531161913_p9vvtyi9t",
+      "log_id": 46,
+      "global_turn": 19,
+      "player": "red",
+      "mode": "Human",
+      "thinking_time_ms": 1485.3,
+      "nodes_explored": 0,
+      "chosen_col": 0,
+      "score": null,
+      "red_moves_so_far": 10,
+      "yellow_moves_so_far": 9,
+      "board_state": [
+        [
+          null,
+          "red",
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "yellow",
+          null,
+          "yellow",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "yellow",
+          null,
+          "red",
+          null,
+          null,
+          null
+        ],
+        [
+          "yellow",
+          "yellow",
+          null,
+          "red",
+          null,
+          null,
+          null
+        ],
+        [
+          "yellow",
+          "red",
+          null,
+          "yellow",
+          null,
+          null,
+          "red"
+        ],
+        [
+          "red",
+          "yellow",
+          "red",
+          "red",
+          "yellow",
+          null,
+          "red"
+        ]
+      ],
+      "first_player": "red",
+      "first_player_mode": "random",
+      "game_result": "red",
+      "red_total_moves": 20,
+      "yellow_total_moves": 19,
+      "total_moves": 39
+    },
+    {
+      "game_id": "1770531161913_p9vvtyi9t",
+      "log_id": 47,
+      "global_turn": 19,
+      "player": "yellow",
+      "mode": "Defend (Minimax)",
+      "thinking_time_ms": 1.3,
+      "nodes_explored": 198,
+      "chosen_col": 0,
+      "score": -190,
+      "red_moves_so_far": 10,
+      "yellow_moves_so_far": 9,
+      "board_state": [
+        [
+          null,
+          "red",
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "yellow",
+          null,
+          "yellow",
+          null,
+          null,
+          null
+        ],
+        [
+          "red",
+          "yellow",
+          null,
+          "red",
+          null,
+          null,
+          null
+        ],
+        [
+          "yellow",
+          "yellow",
+          null,
+          "red",
+          null,
+          null,
+          null
+        ],
+        [
+          "yellow",
+          "red",
+          null,
+          "yellow",
+          null,
+          null,
+          "red"
+        ],
+        [
+          "red",
+          "yellow",
+          "red",
+          "red",
+          "yellow",
+          null,
+          "red"
+        ]
+      ],
+      "first_player": "red",
+      "first_player_mode": "random",
+      "game_result": "red",
+      "red_total_moves": 20,
+      "yellow_total_moves": 19,
+      "total_moves": 39
+    },
+    {
+      "game_id": "1770531161913_p9vvtyi9t",
+      "log_id": 48,
+      "global_turn": 21,
+      "player": "red",
+      "mode": "Human",
+      "thinking_time_ms": 2336.4,
+      "nodes_explored": 0,
+      "chosen_col": 6,
+      "score": null,
+      "red_moves_so_far": 11,
+      "yellow_moves_so_far": 10,
+      "board_state": [
+        [
+          null,
+          "red",
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "yellow",
+          "yellow",
+          null,
+          "yellow",
+          null,
+          null,
+          null
+        ],
+        [
+          "red",
+          "yellow",
+          null,
+          "red",
+          null,
+          null,
+          null
+        ],
+        [
+          "yellow",
+          "yellow",
+          null,
+          "red",
+          null,
+          null,
+          null
+        ],
+        [
+          "yellow",
+          "red",
+          null,
+          "yellow",
+          null,
+          null,
+          "red"
+        ],
+        [
+          "red",
+          "yellow",
+          "red",
+          "red",
+          "yellow",
+          null,
+          "red"
+        ]
+      ],
+      "first_player": "red",
+      "first_player_mode": "random",
+      "game_result": "red",
+      "red_total_moves": 20,
+      "yellow_total_moves": 19,
+      "total_moves": 39
+    },
+    {
+      "game_id": "1770531161913_p9vvtyi9t",
+      "log_id": 49,
+      "global_turn": 21,
+      "player": "yellow",
+      "mode": "Defend (Minimax)",
+      "thinking_time_ms": 0.8,
+      "nodes_explored": 98,
+      "chosen_col": 6,
+      "score": -160,
+      "red_moves_so_far": 11,
+      "yellow_moves_so_far": 10,
+      "board_state": [
+        [
+          null,
+          "red",
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "yellow",
+          "yellow",
+          null,
+          "yellow",
+          null,
+          null,
+          null
+        ],
+        [
+          "red",
+          "yellow",
+          null,
+          "red",
+          null,
+          null,
+          null
+        ],
+        [
+          "yellow",
+          "yellow",
+          null,
+          "red",
+          null,
+          null,
+          "red"
+        ],
+        [
+          "yellow",
+          "red",
+          null,
+          "yellow",
+          null,
+          null,
+          "red"
+        ],
+        [
+          "red",
+          "yellow",
+          "red",
+          "red",
+          "yellow",
+          null,
+          "red"
+        ]
+      ],
+      "first_player": "red",
+      "first_player_mode": "random",
+      "game_result": "red",
+      "red_total_moves": 20,
+      "yellow_total_moves": 19,
+      "total_moves": 39
+    },
+    {
+      "game_id": "1770531161913_p9vvtyi9t",
+      "log_id": 50,
+      "global_turn": 23,
+      "player": "red",
+      "mode": "Human",
+      "thinking_time_ms": 2018,
+      "nodes_explored": 0,
+      "chosen_col": 5,
+      "score": null,
+      "red_moves_so_far": 12,
+      "yellow_moves_so_far": 11,
+      "board_state": [
+        [
+          null,
+          "red",
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "yellow",
+          "yellow",
+          null,
+          "yellow",
+          null,
+          null,
+          null
+        ],
+        [
+          "red",
+          "yellow",
+          null,
+          "red",
+          null,
+          null,
+          "yellow"
+        ],
+        [
+          "yellow",
+          "yellow",
+          null,
+          "red",
+          null,
+          null,
+          "red"
+        ],
+        [
+          "yellow",
+          "red",
+          null,
+          "yellow",
+          null,
+          null,
+          "red"
+        ],
+        [
+          "red",
+          "yellow",
+          "red",
+          "red",
+          "yellow",
+          null,
+          "red"
+        ]
+      ],
+      "first_player": "red",
+      "first_player_mode": "random",
+      "game_result": "red",
+      "red_total_moves": 20,
+      "yellow_total_moves": 19,
+      "total_moves": 39
+    },
+    {
+      "game_id": "1770531161913_p9vvtyi9t",
+      "log_id": 51,
+      "global_turn": 23,
+      "player": "yellow",
+      "mode": "Defend (Minimax)",
+      "thinking_time_ms": 1.6,
+      "nodes_explored": 203,
+      "chosen_col": 3,
+      "score": -247,
+      "red_moves_so_far": 12,
+      "yellow_moves_so_far": 11,
+      "board_state": [
+        [
+          null,
+          "red",
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "yellow",
+          "yellow",
+          null,
+          "yellow",
+          null,
+          null,
+          null
+        ],
+        [
+          "red",
+          "yellow",
+          null,
+          "red",
+          null,
+          null,
+          "yellow"
+        ],
+        [
+          "yellow",
+          "yellow",
+          null,
+          "red",
+          null,
+          null,
+          "red"
+        ],
+        [
+          "yellow",
+          "red",
+          null,
+          "yellow",
+          null,
+          null,
+          "red"
+        ],
+        [
+          "red",
+          "yellow",
+          "red",
+          "red",
+          "yellow",
+          "red",
+          "red"
+        ]
+      ],
+      "first_player": "red",
+      "first_player_mode": "random",
+      "game_result": "red",
+      "red_total_moves": 20,
+      "yellow_total_moves": 19,
+      "total_moves": 39
+    },
+    {
+      "game_id": "1770531161913_p9vvtyi9t",
+      "log_id": 52,
+      "global_turn": 25,
+      "player": "red",
+      "mode": "Human",
+      "thinking_time_ms": 1400.3,
+      "nodes_explored": 0,
+      "chosen_col": 5,
+      "score": null,
+      "red_moves_so_far": 13,
+      "yellow_moves_so_far": 12,
+      "board_state": [
+        [
+          null,
+          "red",
+          null,
+          "yellow",
+          null,
+          null,
+          null
+        ],
+        [
+          "yellow",
+          "yellow",
+          null,
+          "yellow",
+          null,
+          null,
+          null
+        ],
+        [
+          "red",
+          "yellow",
+          null,
+          "red",
+          null,
+          null,
+          "yellow"
+        ],
+        [
+          "yellow",
+          "yellow",
+          null,
+          "red",
+          null,
+          null,
+          "red"
+        ],
+        [
+          "yellow",
+          "red",
+          null,
+          "yellow",
+          null,
+          null,
+          "red"
+        ],
+        [
+          "red",
+          "yellow",
+          "red",
+          "red",
+          "yellow",
+          "red",
+          "red"
+        ]
+      ],
+      "first_player": "red",
+      "first_player_mode": "random",
+      "game_result": "red",
+      "red_total_moves": 20,
+      "yellow_total_moves": 19,
+      "total_moves": 39
+    },
+    {
+      "game_id": "1770531161913_p9vvtyi9t",
+      "log_id": 53,
+      "global_turn": 25,
+      "player": "yellow",
+      "mode": "Defend (Minimax)",
+      "thinking_time_ms": 0.8,
+      "nodes_explored": 155,
+      "chosen_col": 5,
+      "score": -257,
+      "red_moves_so_far": 13,
+      "yellow_moves_so_far": 12,
+      "board_state": [
+        [
+          null,
+          "red",
+          null,
+          "yellow",
+          null,
+          null,
+          null
+        ],
+        [
+          "yellow",
+          "yellow",
+          null,
+          "yellow",
+          null,
+          null,
+          null
+        ],
+        [
+          "red",
+          "yellow",
+          null,
+          "red",
+          null,
+          null,
+          "yellow"
+        ],
+        [
+          "yellow",
+          "yellow",
+          null,
+          "red",
+          null,
+          null,
+          "red"
+        ],
+        [
+          "yellow",
+          "red",
+          null,
+          "yellow",
+          null,
+          "red",
+          "red"
+        ],
+        [
+          "red",
+          "yellow",
+          "red",
+          "red",
+          "yellow",
+          "red",
+          "red"
+        ]
+      ],
+      "first_player": "red",
+      "first_player_mode": "random",
+      "game_result": "red",
+      "red_total_moves": 20,
+      "yellow_total_moves": 19,
+      "total_moves": 39
+    },
+    {
+      "game_id": "1770531161913_p9vvtyi9t",
+      "log_id": 54,
+      "global_turn": 27,
+      "player": "red",
+      "mode": "Human",
+      "thinking_time_ms": 11453.7,
+      "nodes_explored": 0,
+      "chosen_col": 4,
+      "score": null,
+      "red_moves_so_far": 14,
+      "yellow_moves_so_far": 13,
+      "board_state": [
+        [
+          null,
+          "red",
+          null,
+          "yellow",
+          null,
+          null,
+          null
+        ],
+        [
+          "yellow",
+          "yellow",
+          null,
+          "yellow",
+          null,
+          null,
+          null
+        ],
+        [
+          "red",
+          "yellow",
+          null,
+          "red",
+          null,
+          null,
+          "yellow"
+        ],
+        [
+          "yellow",
+          "yellow",
+          null,
+          "red",
+          null,
+          "yellow",
+          "red"
+        ],
+        [
+          "yellow",
+          "red",
+          null,
+          "yellow",
+          null,
+          "red",
+          "red"
+        ],
+        [
+          "red",
+          "yellow",
+          "red",
+          "red",
+          "yellow",
+          "red",
+          "red"
+        ]
+      ],
+      "first_player": "red",
+      "first_player_mode": "random",
+      "game_result": "red",
+      "red_total_moves": 20,
+      "yellow_total_moves": 19,
+      "total_moves": 39
+    },
+    {
+      "game_id": "1770531161913_p9vvtyi9t",
+      "log_id": 55,
+      "global_turn": 27,
+      "player": "yellow",
+      "mode": "Defend (Minimax)",
+      "thinking_time_ms": 0.5,
+      "nodes_explored": 77,
+      "chosen_col": 4,
+      "score": -144,
+      "red_moves_so_far": 14,
+      "yellow_moves_so_far": 13,
+      "board_state": [
+        [
+          null,
+          "red",
+          null,
+          "yellow",
+          null,
+          null,
+          null
+        ],
+        [
+          "yellow",
+          "yellow",
+          null,
+          "yellow",
+          null,
+          null,
+          null
+        ],
+        [
+          "red",
+          "yellow",
+          null,
+          "red",
+          null,
+          null,
+          "yellow"
+        ],
+        [
+          "yellow",
+          "yellow",
+          null,
+          "red",
+          null,
+          "yellow",
+          "red"
+        ],
+        [
+          "yellow",
+          "red",
+          null,
+          "yellow",
+          "red",
+          "red",
+          "red"
+        ],
+        [
+          "red",
+          "yellow",
+          "red",
+          "red",
+          "yellow",
+          "red",
+          "red"
+        ]
+      ],
+      "first_player": "red",
+      "first_player_mode": "random",
+      "game_result": "red",
+      "red_total_moves": 20,
+      "yellow_total_moves": 19,
+      "total_moves": 39
+    },
+    {
+      "game_id": "1770531161913_p9vvtyi9t",
+      "log_id": 56,
+      "global_turn": 29,
+      "player": "red",
+      "mode": "Human",
+      "thinking_time_ms": 1101,
+      "nodes_explored": 0,
+      "chosen_col": 5,
+      "score": null,
+      "red_moves_so_far": 15,
+      "yellow_moves_so_far": 14,
+      "board_state": [
+        [
+          null,
+          "red",
+          null,
+          "yellow",
+          null,
+          null,
+          null
+        ],
+        [
+          "yellow",
+          "yellow",
+          null,
+          "yellow",
+          null,
+          null,
+          null
+        ],
+        [
+          "red",
+          "yellow",
+          null,
+          "red",
+          null,
+          null,
+          "yellow"
+        ],
+        [
+          "yellow",
+          "yellow",
+          null,
+          "red",
+          "yellow",
+          "yellow",
+          "red"
+        ],
+        [
+          "yellow",
+          "red",
+          null,
+          "yellow",
+          "red",
+          "red",
+          "red"
+        ],
+        [
+          "red",
+          "yellow",
+          "red",
+          "red",
+          "yellow",
+          "red",
+          "red"
+        ]
+      ],
+      "first_player": "red",
+      "first_player_mode": "random",
+      "game_result": "red",
+      "red_total_moves": 20,
+      "yellow_total_moves": 19,
+      "total_moves": 39
+    },
+    {
+      "game_id": "1770531161913_p9vvtyi9t",
+      "log_id": 57,
+      "global_turn": 29,
+      "player": "yellow",
+      "mode": "Defend (Minimax)",
+      "thinking_time_ms": 1.3,
+      "nodes_explored": 154,
+      "chosen_col": 4,
+      "score": -50,
+      "red_moves_so_far": 15,
+      "yellow_moves_so_far": 14,
+      "board_state": [
+        [
+          null,
+          "red",
+          null,
+          "yellow",
+          null,
+          null,
+          null
+        ],
+        [
+          "yellow",
+          "yellow",
+          null,
+          "yellow",
+          null,
+          null,
+          null
+        ],
+        [
+          "red",
+          "yellow",
+          null,
+          "red",
+          null,
+          "red",
+          "yellow"
+        ],
+        [
+          "yellow",
+          "yellow",
+          null,
+          "red",
+          "yellow",
+          "yellow",
+          "red"
+        ],
+        [
+          "yellow",
+          "red",
+          null,
+          "yellow",
+          "red",
+          "red",
+          "red"
+        ],
+        [
+          "red",
+          "yellow",
+          "red",
+          "red",
+          "yellow",
+          "red",
+          "red"
+        ]
+      ],
+      "first_player": "red",
+      "first_player_mode": "random",
+      "game_result": "red",
+      "red_total_moves": 20,
+      "yellow_total_moves": 19,
+      "total_moves": 39
+    },
+    {
+      "game_id": "1770531161913_p9vvtyi9t",
+      "log_id": 58,
+      "global_turn": 31,
+      "player": "red",
+      "mode": "Human",
+      "thinking_time_ms": 3298.7,
+      "nodes_explored": 0,
+      "chosen_col": 4,
+      "score": null,
+      "red_moves_so_far": 16,
+      "yellow_moves_so_far": 15,
+      "board_state": [
+        [
+          null,
+          "red",
+          null,
+          "yellow",
+          null,
+          null,
+          null
+        ],
+        [
+          "yellow",
+          "yellow",
+          null,
+          "yellow",
+          null,
+          null,
+          null
+        ],
+        [
+          "red",
+          "yellow",
+          null,
+          "red",
+          "yellow",
+          "red",
+          "yellow"
+        ],
+        [
+          "yellow",
+          "yellow",
+          null,
+          "red",
+          "yellow",
+          "yellow",
+          "red"
+        ],
+        [
+          "yellow",
+          "red",
+          null,
+          "yellow",
+          "red",
+          "red",
+          "red"
+        ],
+        [
+          "red",
+          "yellow",
+          "red",
+          "red",
+          "yellow",
+          "red",
+          "red"
+        ]
+      ],
+      "first_player": "red",
+      "first_player_mode": "random",
+      "game_result": "red",
+      "red_total_moves": 20,
+      "yellow_total_moves": 19,
+      "total_moves": 39
+    },
+    {
+      "game_id": "1770531161913_p9vvtyi9t",
+      "log_id": 59,
+      "global_turn": 31,
+      "player": "yellow",
+      "mode": "Defend (Minimax)",
+      "thinking_time_ms": 0.6,
+      "nodes_explored": 118,
+      "chosen_col": 4,
+      "score": -50,
+      "red_moves_so_far": 16,
+      "yellow_moves_so_far": 15,
+      "board_state": [
+        [
+          null,
+          "red",
+          null,
+          "yellow",
+          null,
+          null,
+          null
+        ],
+        [
+          "yellow",
+          "yellow",
+          null,
+          "yellow",
+          "red",
+          null,
+          null
+        ],
+        [
+          "red",
+          "yellow",
+          null,
+          "red",
+          "yellow",
+          "red",
+          "yellow"
+        ],
+        [
+          "yellow",
+          "yellow",
+          null,
+          "red",
+          "yellow",
+          "yellow",
+          "red"
+        ],
+        [
+          "yellow",
+          "red",
+          null,
+          "yellow",
+          "red",
+          "red",
+          "red"
+        ],
+        [
+          "red",
+          "yellow",
+          "red",
+          "red",
+          "yellow",
+          "red",
+          "red"
+        ]
+      ],
+      "first_player": "red",
+      "first_player_mode": "random",
+      "game_result": "red",
+      "red_total_moves": 20,
+      "yellow_total_moves": 19,
+      "total_moves": 39
+    },
+    {
+      "game_id": "1770531161913_p9vvtyi9t",
+      "log_id": 60,
+      "global_turn": 33,
+      "player": "red",
+      "mode": "Human",
+      "thinking_time_ms": 5655.3,
+      "nodes_explored": 0,
+      "chosen_col": 5,
+      "score": null,
+      "red_moves_so_far": 17,
+      "yellow_moves_so_far": 16,
+      "board_state": [
+        [
+          null,
+          "red",
+          null,
+          "yellow",
+          "yellow",
+          null,
+          null
+        ],
+        [
+          "yellow",
+          "yellow",
+          null,
+          "yellow",
+          "red",
+          null,
+          null
+        ],
+        [
+          "red",
+          "yellow",
+          null,
+          "red",
+          "yellow",
+          "red",
+          "yellow"
+        ],
+        [
+          "yellow",
+          "yellow",
+          null,
+          "red",
+          "yellow",
+          "yellow",
+          "red"
+        ],
+        [
+          "yellow",
+          "red",
+          null,
+          "yellow",
+          "red",
+          "red",
+          "red"
+        ],
+        [
+          "red",
+          "yellow",
+          "red",
+          "red",
+          "yellow",
+          "red",
+          "red"
+        ]
+      ],
+      "first_player": "red",
+      "first_player_mode": "random",
+      "game_result": "red",
+      "red_total_moves": 20,
+      "yellow_total_moves": 19,
+      "total_moves": 39
+    },
+    {
+      "game_id": "1770531161913_p9vvtyi9t",
+      "log_id": 61,
+      "global_turn": 33,
+      "player": "yellow",
+      "mode": "Defend (Minimax)",
+      "thinking_time_ms": 0.2,
+      "nodes_explored": 53,
+      "chosen_col": 5,
+      "score": 80,
+      "red_moves_so_far": 17,
+      "yellow_moves_so_far": 16,
+      "board_state": [
+        [
+          null,
+          "red",
+          null,
+          "yellow",
+          "yellow",
+          null,
+          null
+        ],
+        [
+          "yellow",
+          "yellow",
+          null,
+          "yellow",
+          "red",
+          "red",
+          null
+        ],
+        [
+          "red",
+          "yellow",
+          null,
+          "red",
+          "yellow",
+          "red",
+          "yellow"
+        ],
+        [
+          "yellow",
+          "yellow",
+          null,
+          "red",
+          "yellow",
+          "yellow",
+          "red"
+        ],
+        [
+          "yellow",
+          "red",
+          null,
+          "yellow",
+          "red",
+          "red",
+          "red"
+        ],
+        [
+          "red",
+          "yellow",
+          "red",
+          "red",
+          "yellow",
+          "red",
+          "red"
+        ]
+      ],
+      "first_player": "red",
+      "first_player_mode": "random",
+      "game_result": "red",
+      "red_total_moves": 20,
+      "yellow_total_moves": 19,
+      "total_moves": 39
+    },
+    {
+      "game_id": "1770531161913_p9vvtyi9t",
+      "log_id": 62,
+      "global_turn": 35,
+      "player": "red",
+      "mode": "Human",
+      "thinking_time_ms": 2135,
+      "nodes_explored": 0,
+      "chosen_col": 0,
+      "score": null,
+      "red_moves_so_far": 18,
+      "yellow_moves_so_far": 17,
+      "board_state": [
+        [
+          null,
+          "red",
+          null,
+          "yellow",
+          "yellow",
+          "yellow",
+          null
+        ],
+        [
+          "yellow",
+          "yellow",
+          null,
+          "yellow",
+          "red",
+          "red",
+          null
+        ],
+        [
+          "red",
+          "yellow",
+          null,
+          "red",
+          "yellow",
+          "red",
+          "yellow"
+        ],
+        [
+          "yellow",
+          "yellow",
+          null,
+          "red",
+          "yellow",
+          "yellow",
+          "red"
+        ],
+        [
+          "yellow",
+          "red",
+          null,
+          "yellow",
+          "red",
+          "red",
+          "red"
+        ],
+        [
+          "red",
+          "yellow",
+          "red",
+          "red",
+          "yellow",
+          "red",
+          "red"
+        ]
+      ],
+      "first_player": "red",
+      "first_player_mode": "random",
+      "game_result": "red",
+      "red_total_moves": 20,
+      "yellow_total_moves": 19,
+      "total_moves": 39
+    },
+    {
+      "game_id": "1770531161913_p9vvtyi9t",
+      "log_id": 63,
+      "global_turn": 35,
+      "player": "yellow",
+      "mode": "Defend (Minimax)",
+      "thinking_time_ms": 0.1,
+      "nodes_explored": 11,
+      "chosen_col": 6,
+      "score": -1000000,
+      "red_moves_so_far": 18,
+      "yellow_moves_so_far": 17,
+      "board_state": [
+        [
+          "red",
+          "red",
+          null,
+          "yellow",
+          "yellow",
+          "yellow",
+          null
+        ],
+        [
+          "yellow",
+          "yellow",
+          null,
+          "yellow",
+          "red",
+          "red",
+          null
+        ],
+        [
+          "red",
+          "yellow",
+          null,
+          "red",
+          "yellow",
+          "red",
+          "yellow"
+        ],
+        [
+          "yellow",
+          "yellow",
+          null,
+          "red",
+          "yellow",
+          "yellow",
+          "red"
+        ],
+        [
+          "yellow",
+          "red",
+          null,
+          "yellow",
+          "red",
+          "red",
+          "red"
+        ],
+        [
+          "red",
+          "yellow",
+          "red",
+          "red",
+          "yellow",
+          "red",
+          "red"
+        ]
+      ],
+      "first_player": "red",
+      "first_player_mode": "random",
+      "game_result": "red",
+      "red_total_moves": 20,
+      "yellow_total_moves": 19,
+      "total_moves": 39
+    },
+    {
+      "game_id": "1770531161913_p9vvtyi9t",
+      "log_id": 64,
+      "global_turn": 37,
+      "player": "red",
+      "mode": "Human",
+      "thinking_time_ms": 813.3,
+      "nodes_explored": 0,
+      "chosen_col": 6,
+      "score": null,
+      "red_moves_so_far": 19,
+      "yellow_moves_so_far": 18,
+      "board_state": [
+        [
+          "red",
+          "red",
+          null,
+          "yellow",
+          "yellow",
+          "yellow",
+          null
+        ],
+        [
+          "yellow",
+          "yellow",
+          null,
+          "yellow",
+          "red",
+          "red",
+          "yellow"
+        ],
+        [
+          "red",
+          "yellow",
+          null,
+          "red",
+          "yellow",
+          "red",
+          "yellow"
+        ],
+        [
+          "yellow",
+          "yellow",
+          null,
+          "red",
+          "yellow",
+          "yellow",
+          "red"
+        ],
+        [
+          "yellow",
+          "red",
+          null,
+          "yellow",
+          "red",
+          "red",
+          "red"
+        ],
+        [
+          "red",
+          "yellow",
+          "red",
+          "red",
+          "yellow",
+          "red",
+          "red"
+        ]
+      ],
+      "first_player": "red",
+      "first_player_mode": "random",
+      "game_result": "red",
+      "red_total_moves": 20,
+      "yellow_total_moves": 19,
+      "total_moves": 39
+    },
+    {
+      "game_id": "1770531161913_p9vvtyi9t",
+      "log_id": 65,
+      "global_turn": 37,
+      "player": "yellow",
+      "mode": "Defend (Minimax)",
+      "thinking_time_ms": 0,
+      "nodes_explored": 3,
+      "chosen_col": 2,
+      "score": -1000002,
+      "red_moves_so_far": 19,
+      "yellow_moves_so_far": 18,
+      "board_state": [
+        [
+          "red",
+          "red",
+          null,
+          "yellow",
+          "yellow",
+          "yellow",
+          "red"
+        ],
+        [
+          "yellow",
+          "yellow",
+          null,
+          "yellow",
+          "red",
+          "red",
+          "yellow"
+        ],
+        [
+          "red",
+          "yellow",
+          null,
+          "red",
+          "yellow",
+          "red",
+          "yellow"
+        ],
+        [
+          "yellow",
+          "yellow",
+          null,
+          "red",
+          "yellow",
+          "yellow",
+          "red"
+        ],
+        [
+          "yellow",
+          "red",
+          null,
+          "yellow",
+          "red",
+          "red",
+          "red"
+        ],
+        [
+          "red",
+          "yellow",
+          "red",
+          "red",
+          "yellow",
+          "red",
+          "red"
+        ]
+      ],
+      "first_player": "red",
+      "first_player_mode": "random",
+      "game_result": "red",
+      "red_total_moves": 20,
+      "yellow_total_moves": 19,
+      "total_moves": 39
+    },
+    {
+      "game_id": "1770531161913_p9vvtyi9t",
+      "log_id": 66,
+      "global_turn": 39,
+      "player": "red",
+      "mode": "Human",
+      "thinking_time_ms": 6187.9,
+      "nodes_explored": 0,
+      "chosen_col": 2,
+      "score": null,
+      "red_moves_so_far": 20,
+      "yellow_moves_so_far": 19,
+      "board_state": [
+        [
+          "red",
+          "red",
+          null,
+          "yellow",
+          "yellow",
+          "yellow",
+          "red"
+        ],
+        [
+          "yellow",
+          "yellow",
+          null,
+          "yellow",
+          "red",
+          "red",
+          "yellow"
+        ],
+        [
+          "red",
+          "yellow",
+          null,
+          "red",
+          "yellow",
+          "red",
+          "yellow"
+        ],
+        [
+          "yellow",
+          "yellow",
+          null,
+          "red",
+          "yellow",
+          "yellow",
+          "red"
+        ],
+        [
+          "yellow",
+          "red",
+          "yellow",
+          "yellow",
+          "red",
+          "red",
+          "red"
+        ],
+        [
+          "red",
+          "yellow",
+          "red",
+          "red",
+          "yellow",
+          "red",
+          "red"
+        ]
+      ],
+      "first_player": "red",
+      "first_player_mode": "random",
+      "game_result": "red",
+      "red_total_moves": 20,
+      "yellow_total_moves": 19,
+      "total_moves": 39
+    }
+  ],
+  "challengeResult": {
+    "winner": "player",
+    "finalScore": "2-1",
+    "rounds": [
+      {
+        "round": 1,
+        "winner": "player",
+        "algorithm": "attack"
+      },
+      {
+        "round": 2,
+        "winner": "computer",
+        "algorithm": "defend"
+      },
+      {
+        "round": 3,
+        "winner": "player",
+        "algorithm": "defend"
+      }
+    ]
+  }
+}

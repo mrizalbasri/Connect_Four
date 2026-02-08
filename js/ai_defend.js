@@ -2,15 +2,15 @@
 // Menggunakan Minimax Algorithm dengan Alpha-Beta Pruning
 
 // Difficulty Settings - Depth dapat diubah dinamis
-let SEARCH_DEPTH = 4; // Default: Medium (4 langkah ke depan)
+let SEARCH_DEPTH = 6; // Default: Medium (6 langkah ke depan)
 let currentDifficulty = "medium"; // Track current difficulty level
 let nodesExplored_defend = 0; // Global counter untuk statistik riset
 
 // Difficulty Configuration
 const DIFFICULTY_CONFIG = {
-  easy: { depth: 2, label: "Easy", description: "2 langkah ke depan" },
-  medium: { depth: 4, label: "Medium", description: "4 langkah ke depan" },
-  hard: { depth: 6, label: "Hard", description: "6 langkah ke depan" },
+  easy: { depth: 3, label: "Easy", description: "3 langkah ke depan" },
+  medium: { depth: 6, label: "Medium", description: "6 langkah ke depan" },
+  hard: { depth: 9, label: "Hard", description: "9 langkah ke depan" },
 };
 
 /**

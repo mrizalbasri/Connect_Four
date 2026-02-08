@@ -192,6 +192,48 @@ function exportTournamentData() {
   return exportData;
 }
 
+// ============================================
+// AUTO-SAVE TO SERVER (Python Flask)
+// ============================================
+async function autoSaveTournamentToServer() {
+  const exportData = {
+    exportDate: new Date().toISOString(),
+    summary: getTournamentSummary(),
+    allGames: tournamentStats.games,
+    rawLogs: logs,
+    challengeResult: {
+      winner: challengeScores.player >= 2 ? "player" : "computer",
+      finalScore: `${challengeScores.player}-${challengeScores.computer}`,
+      rounds: challengeHistory,
+    },
+  };
+
+  try {
+    console.log("[TOURNAMENT] Mengirim data ke server...");
+    const response = await fetch("http://localhost:5000/save-tournament", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(exportData),
+    });
+
+    const result = await response.json();
+
+    if (result.success) {
+      console.log(`✅ [SERVER] Data tersimpan: ${result.filename}`);
+      return true;
+    } else {
+      console.error("❌ [SERVER] Gagal menyimpan:", result.error);
+      return false;
+    }
+  } catch (error) {
+    console.error("❌ [SERVER] Error koneksi:", error.message);
+    console.log("💡 Pastikan Python server berjalan: python server.py");
+    return false;
+  }
+}
+
 function exportMoveHistory() {
   const exportData = {
     exportDate: new Date().toISOString(),
@@ -287,6 +329,29 @@ function startGame(mode) {
   resetGame();
 }
 
+function showChallengeConfig() {
+  document.getElementById("modeSelection").style.display = "none";
+  document.getElementById("challengeConfig").style.display = "block";
+  // Set default to random
+  selectChallengeFirstPlayer("random");
+}
+
+function selectChallengeFirstPlayer(mode) {
+  firstPlayerMode = mode;
+  console.log(`[CHALLENGE CONFIG] First player mode set to: ${mode}`);
+
+  // Update UI selection
+  document
+    .querySelectorAll("#challengeConfig .config-option")
+    .forEach((opt) => {
+      opt.classList.remove("selected");
+    });
+  const selected = document.querySelector(
+    `#challengeConfig .config-option[data-mode="${mode}"]`,
+  );
+  if (selected) selected.classList.add("selected");
+}
+
 function startChallengeMode() {
   console.log("Starting Challenge Mode!");
 
@@ -297,16 +362,19 @@ function startChallengeMode() {
   challengeHistory = [];
 
   document.getElementById("modeSelection").style.display = "none";
+  document.getElementById("challengeConfig").style.display = "none"; // Hide config panel
   document.getElementById("gameArea").style.display = "block";
   document.getElementById("aiVsAiConfig").style.display = "none";
   document.getElementById("challengeHeader").style.display = "block";
   document.getElementById("aiSelector").style.display = "none";
   document.getElementById("difficultySelector").style.display = "none";
+  document.getElementById("firstPlayerSelector").style.display = "none"; // Hide selector in game
   document.getElementById("researchPanel").style.display = "none";
 
   // Set Round 1 AI to Attack
   aiStyle = "attack";
 
+  console.log(`[CHALLENGE] Starting with firstPlayerMode: ${firstPlayerMode}`);
   updateChallengeUI();
   resetGame();
 }
@@ -441,7 +509,14 @@ function backToMenu() {
   document.getElementById("gameArea").style.display = "none";
   document.getElementById("researchPanel").style.display = "none";
   document.getElementById("aiVsAiConfig").style.display = "none";
+  document.getElementById("challengeConfig").style.display = "none";
+  document.getElementById("challengeHeader").style.display = "none";
   document.getElementById("difficultySelector").style.display = "none";
+  document.getElementById("firstPlayerSelector").style.display = "none";
+
+  // Reset challenge mode state
+  isChallengeMode = false;
+
   closeModal();
 }
 
@@ -483,7 +558,37 @@ function resetGame() {
       console.log(`[WATCH MODE] First player: ${currentPlayer.toUpperCase()}`);
     }
   } else {
-    currentPlayer = "red"; // Default untuk mode lain
+    // CHALLENGE MODE + other modes
+    if (isChallengeMode) {
+      // Respect firstPlayerMode setting in challenge mode
+      switch (firstPlayerMode) {
+        case "random":
+          currentPlayer = Math.random() < 0.5 ? "red" : "yellow";
+          console.log(
+            `[CHALLENGE] Random first player: ${currentPlayer.toUpperCase()}`,
+          );
+          break;
+        case "red":
+          currentPlayer = "red";
+          console.log(`[CHALLENGE] First player: RED (Player)`);
+          break;
+        case "yellow":
+          currentPlayer = "yellow";
+          console.log(`[CHALLENGE] First player: YELLOW (AI)`);
+          break;
+        case "alternate":
+          currentPlayer = alternateCounter % 2 === 0 ? "red" : "yellow";
+          console.log(
+            `[CHALLENGE] Game #${alternateCounter + 1}, First player: ${currentPlayer.toUpperCase()}`,
+          );
+          alternateCounter++;
+          break;
+        default:
+          currentPlayer = "red";
+      }
+    } else {
+      currentPlayer = "red"; // Default untuk mode lain
+    }
   }
 
   gameOver = false;
@@ -506,9 +611,15 @@ function resetGame() {
     humanTurnStartTime = performance.now();
   }
 
+  // Auto-trigger AI in ai-vs-ai mode
   if (gameMode === "ai-vs-ai") {
     const delay = isBatchRunning ? 100 : 1000; // Faster in batch mode
     setTimeout(triggerAI, delay);
+  }
+
+  // Auto-trigger AI in challenge mode if AI goes first
+  if (gameMode === "ai" && currentPlayer === "yellow") {
+    setTimeout(triggerAI, 500);
   }
 }
 
@@ -911,8 +1022,43 @@ function handleChallengeRoundEnd(winner) {
     `[CHALLENGE] Score: Player ${challengeScores.player} - ${challengeScores.computer} Computer`,
   );
 
-  // Check if someone won (2 wins)
-  if (challengeScores.player >= 2 || challengeScores.computer >= 2) {
+  // Check if someone won (2 wins) OR 3 rounds completed (even if tied)
+  const totalRoundsPlayed = challengeScores.player + challengeScores.computer;
+  const tournamentEnd =
+    challengeScores.player >= 2 ||
+    challengeScores.computer >= 2 ||
+    totalRoundsPlayed >= 3;
+
+  if (tournamentEnd) {
+    // Show final alert
+    let finalMessage;
+    if (challengeScores.player >= 2) {
+      finalMessage =
+        "🎉 SELAMAT! Kamu Menang Tournament!\n\nFinal Score: " +
+        challengeScores.player +
+        " - " +
+        challengeScores.computer;
+    } else if (challengeScores.computer >= 2) {
+      finalMessage =
+        "😢 Komputer Menang Tournament!\n\nFinal Score: " +
+        challengeScores.player +
+        " - " +
+        challengeScores.computer;
+    } else {
+      // Tied after 3 rounds
+      finalMessage =
+        "🤝 Tournament Seri!\n\nFinal Score: " +
+        challengeScores.player +
+        " - " +
+        challengeScores.computer;
+    }
+    alert(finalMessage);
+
+    // Auto-save data ke server Python
+    console.log("[TOURNAMENT] Challenge selesai, auto-save ke server...");
+    autoSaveTournamentToServer();
+
+    // Show final modal
     showChallengeEndModal();
     return;
   }
@@ -925,8 +1071,25 @@ function handleChallengeRoundEnd(winner) {
     aiStyle = "defend";
   }
 
-  // Show round end modal
-  showChallengeRoundModal(winner);
+  // Show alert notification
+  const roundWinnerText =
+    winner === "red"
+      ? "✅ Kamu Menang Round " + challengeRound + "!"
+      : "❌ Komputer Menang Round " + challengeRound;
+  alert(
+    roundWinnerText +
+      "\n\nSkor: " +
+      challengeScores.player +
+      " - " +
+      challengeScores.computer,
+  );
+
+  // Auto-continue tanpa modal (otomatis lanjut ke round berikutnya)
+  console.log(`[CHALLENGE] Auto-lanjut ke Round ${challengeRound + 1}`);
+  updateChallengeUI();
+  setTimeout(() => {
+    resetGame();
+  }, 1500); // Delay 1.5 detik untuk transisi
 }
 
 function updateBatchUI() {
@@ -955,6 +1118,22 @@ function showDrawModal() {
 
   // CHALLENGE MODE - Draw = replay round
   if (isChallengeMode) {
+    // Count draws in history
+    const totalGamesPlayed = challengeHistory.length;
+
+    // If already played 5+ games (too many draws), force end tournament
+    if (totalGamesPlayed >= 5) {
+      alert(
+        "⚠️ Terlalu banyak DRAW!\n\nTournament berakhir.\n\nFinal Score: " +
+          challengeScores.player +
+          " - " +
+          challengeScores.computer,
+      );
+      autoSaveTournamentToServer();
+      showChallengeEndModal();
+      return;
+    }
+
     const modal = document.getElementById("winOverlay");
     const msg = document.getElementById("winMessage");
     const iconEl = document.getElementById("winIcon");
@@ -1192,7 +1371,15 @@ function logDecision(moves, selected, timeTaken, modeName) {
   const entryId = logs.length + 1;
 
   // Determine current player from mode
-  const player = modeName && modeName.includes("Reflex") ? "red" : "yellow";
+  // In 'ai' mode (challenge), AI is always YELLOW (player is RED)
+  // In 'ai-vs-ai' mode, Reflex=RED, Minimax=YELLOW
+  let player;
+  if (gameMode === "ai-vs-ai") {
+    player = modeName && modeName.includes("Reflex") ? "red" : "yellow";
+  } else {
+    // Challenge mode: AI is always yellow
+    player = currentPlayer; // Use actual current player (AI = yellow in challenge)
+  }
 
   const logData = {
     game_id: gameId,
@@ -1277,7 +1464,7 @@ function logHumanDecision(col, thinkingTime) {
     game_id: gameId,
     log_id: entryId,
     global_turn: turnCount + 1, // Will be incremented after
-    player: "red",
+    player: currentPlayer, // Use actual current player (should be "red" in challenge mode)
     mode: "Human",
     thinking_time_ms: parseFloat(timeTaken),
     nodes_explored: 0, // Human doesn't explore nodes

@@ -411,6 +411,12 @@
             box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
         }
         
+        .config-option.selected .option-content {
+            border-color: #667eea;
+            background: linear-gradient(135deg, #f0f4ff 0%, #e8eeff 100%);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+        }
+        
         .option-icon {
             font-size: 2rem;
             margin-bottom: 8px;
@@ -547,7 +553,7 @@
             <button class="mode-btn" onclick="startGame('ai')">
                 <i class="fa-solid fa-robot"></i> Lawan Komputer
             </button>
-            <button class="mode-btn" onclick="startChallengeMode()" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; border: none;">
+            <button class="mode-btn" onclick="showChallengeConfig()" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; border: none;">
                 <i class="fa-solid fa-trophy"></i> Challenge Mode 
             </button>
             <button class="mode-btn" onclick="startGame('player')">
@@ -559,6 +565,76 @@
             <button class="mode-btn" onclick="showAIvsAIConfig()">
                 <i class="fa-solid fa-flask"></i> Mode Eksperimen
             </button>
+        </div>
+        
+        <!-- CHALLENGE MODE CONFIGURATION PANEL -->
+        <div id="challengeConfig" style="display:none; margin-top:30px; max-width:500px; width:100%;">
+            <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); padding:20px; border-radius:16px 16px 0 0; color:white;">
+                <h2 style="margin:0; font-size:1.5rem; display:flex; align-items:center; gap:10px;">
+                    <i class="fa-solid fa-trophy"></i> Challenge Mode
+                </h2>
+                <p style="margin:10px 0 0 0; opacity:0.9; font-size:0.9rem;">Best of 3 - Siapkan strategi terbaikmu!</p>
+            </div>
+            
+            <div style="background:white; padding:25px; border-radius:0 0 16px 16px; box-shadow:0 10px 30px rgba(0,0,0,0.1);">
+                <!-- FIRST PLAYER SELECTION -->
+                <div style="margin-bottom:25px;">
+                    <label style="display:block; font-weight:700; font-size:1.1rem; margin-bottom:15px; color:#2b2d42;">
+                        <i class="fa-solid fa-flag-checkered"></i> Siapa yang Jalan Duluan?
+                    </label>
+                    <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+                        <label class="config-option" data-mode="random" onclick="selectChallengeFirstPlayer('random')">
+                            <div class="option-content">
+                                <div class="option-icon">🎲</div>
+                                <div class="option-title">Random</div>
+                                <div class="option-desc">Acak setiap round</div>
+                                <div class="option-badge recommended">Rekomendasi</div>
+                            </div>
+                        </label>
+                        
+                        <label class="config-option" data-mode="alternate" onclick="selectChallengeFirstPlayer('alternate')">
+                            <div class="option-content">
+                                <div class="option-icon">🔄</div>
+                                <div class="option-title">Bergantian</div>
+                                <div class="option-desc">Ganti-ganti</div>
+                            </div>
+                        </label>
+                        
+                        <label class="config-option" data-mode="red" onclick="selectChallengeFirstPlayer('red')">
+                            <div class="option-content">
+                                <div class="option-icon">🔴</div>
+                                <div class="option-title">Kamu Duluan</div>
+                                <div class="option-desc">Player selalu first</div>
+                            </div>
+                        </label>
+                        
+                        <label class="config-option" data-mode="yellow" onclick="selectChallengeFirstPlayer('yellow')">
+                            <div class="option-content">
+                                <div class="option-icon">🟡</div>
+                                <div class="option-title">AI Duluan</div>
+                                <div class="option-desc">AI selalu first</div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                
+                <!-- INFO -->
+                <div style="background:#fef3c7; padding:15px; border-radius:8px; margin-bottom:20px; border-left:4px solid #f59e0b;">
+                    <div style="font-size:0.9rem; color:#92400e;">
+                        <i class="fa-solid fa-lightbulb"></i> <strong>Tips:</strong> Pilih "Random" untuk hasil yang paling fair dan objektif!
+                    </div>
+                </div>
+                
+                <!-- ACTION BUTTONS -->
+                <div style="display:flex; gap:10px;">
+                    <button onclick="backToMenu()" class="control-btn btn-secondary" style="flex:1;">
+                        <i class="fa-solid fa-arrow-left"></i> Kembali
+                    </button>
+                    <button onclick="startChallengeMode()" class="control-btn btn-primary" style="flex:2; background:linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border:none;">
+                        <i class="fa-solid fa-play"></i> Mulai Challenge!
+                    </button>
+                </div>
+            </div>
         </div>
         
         <!-- AI VS AI CONFIGURATION PANEL -->
@@ -720,6 +796,15 @@
                         <option value="easy">Easy (Depth 2)</option>
                         <option value="medium" selected>Medium (Depth 4)</option>
                         <option value="hard">Hard (Depth 6)</option>
+                    </select>
+                </div>
+
+                <div class="difficulty-selector" id="firstPlayerSelector" style="display:none;">
+                    <select onchange="updateFirstPlayerMode(this.value)">
+                        <option value="random">🎲 Random</option>
+                        <option value="red">🔴 Player Duluan</option>
+                        <option value="yellow">🟡 AI Duluan</option>
+                        <option value="alternate">🔄 Bergantian</option>
                     </select>
                 </div>
 
